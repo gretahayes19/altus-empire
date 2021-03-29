@@ -1,0 +1,55 @@
+.map-page {
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 700px;
+    width: 700px;
+}
+
+.search-bar {
+    width: 70%;
+    margin: 40px auto;
+    font-size:  24px;
+    margin-bottom: 0;
+    z-index: 1;
+    
+}
+
+.search-input {
+    box-shadow: 0 0 0 15px rgba(255, 255, 255, .45);
+    display: flex;
+    justify-content: left;
+    background-color: white;
+    background-clip: padding-box;
+    border-radius: 6px;
+}
+
+.search-input input {
+    width: 100%;
+    color: black;
+    text-align: left;
+    border: none;
+}   
+
+.search-input svg {
+    color: black;
+    padding: 20px;
+    cursor: text;
+}
+
+.search-input button {
+    background-color: brown;
+    padding: 20px 30px;
+    border: none;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    cursor: pointer;
+}
+
+.map-div {
+    position: relative;
+    width: 500px;
+    height: 300px;
+}
