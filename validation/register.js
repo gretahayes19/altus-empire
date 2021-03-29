@@ -9,7 +9,7 @@ module.exports = function validateRegisterInput(data) {
     data.email = validText(data.email) ? data.email : '';
     data.password = validText(data.password) ? data.password : '';
     data.password2 = validText(data.password2) ? data.password2 : '';
-    data.dob = validText(data.dob) ? data.dob : '';
+    data.dob = data.dob instanceof Date ? data.dob : new Date(data.dob);
 
     if (!validAge(data.dob)) {
         errors.dob = "Must be over 21+ to sign up";

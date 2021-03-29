@@ -19,17 +19,21 @@ class NavBar extends React.Component {
       if (this.props.loggedIn) {
         return (
             <div>
-                <Link to={'/profile'}>Profile</Link>
+                <Link to={'/home'}>Profile</Link>
                 <button onClick={this.logoutUser}>Logout</button>
             </div>
         );
       } else {
         return (
-            <div>
-                {/* Open modal pass in from props */}
-                {/* <button onClick={() => openModal('login')}>Log in</button>
-                <button onClick={() => openModal('signup')}>Sign up</button> */}
-            </div>
+          <div>
+            {/* Open modal pass in from props */}
+            <button onClick={() => this.props.openModal("login")}>
+              Log in
+            </button>
+            <button onClick={() => this.props.openModal("signup")}>
+              Sign up
+            </button>
+          </div>
         );
       }
   }
