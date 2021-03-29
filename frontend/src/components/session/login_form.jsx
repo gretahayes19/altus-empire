@@ -78,6 +78,8 @@ class LoginForm extends React.Component {
             {this.renderErrors()}
           </div>
         </form>
+        <div><span>New User?</span></div>
+        <button onClick={this.props.openModal('signup')}>Sign up</button>
       </div>
     );
   }
