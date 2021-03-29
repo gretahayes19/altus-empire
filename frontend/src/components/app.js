@@ -6,13 +6,13 @@ import { Route } from "react-router-dom";
 import Modal from './modal/modal'
 
 import MainPage from './main/main_page';
-import GoogleApiWrapper from './map/map';
+import MapPage from './map/map_page';
 
 const App = () => (
     <div>
         <Modal />
         <NavBarContainer />
-        <Route path="/" component={GoogleApiWrapper} />
+        <Route path="/map" component={MapPage} />
         <Switch>
             <AuthRoute exact path="/" component={MainPage} />
         </Switch>
