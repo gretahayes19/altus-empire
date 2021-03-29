@@ -3,7 +3,7 @@ import MainPage from './main_page';
 import { openModal } from '../../actions/modal_actions';
 
 const mSTP = state => ({
-    // state
+    loggedIn: state.session.isAuthenticated
 });
 
 const mDTP = dispatch => ({

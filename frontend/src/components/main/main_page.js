@@ -8,19 +8,18 @@ class MainPage extends React.Component {
 
   render() {
     const { openModal } = this.props;
-    debugger;
 
     return (
       <div className="main-page">
         <div className="main-page-div">
           <h1 className="main-page-logo">Altus Empire</h1>
           <div className="main-page-top-buttons">
-            <button onClick={() => openModal('login')}>Already a member?</button>
+            <button onClick={() => openModal("login")}>Already a member?</button>
             <button onClick={() => {}}>Business Login</button>
           </div>
           <div className="main-page-bottom-buttons">
             <button onClick={() => {}}>Under 21</button>
-            <button onClick={() => openModal('signup')}>21+ Older</button>
+            <button onClick={() => openModal("signup")}>21+ Older</button>
           </div>
         </div>
         <footer className="main-page-footer">
