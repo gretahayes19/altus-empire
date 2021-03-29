@@ -58,6 +58,7 @@ class LoginForm extends React.Component {
   }
 
   render() {
+    
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
@@ -79,7 +80,7 @@ class LoginForm extends React.Component {
           </div>
         </form>
         <div><span>New User?</span></div>
-        <button onClick={this.props.openModal('signup')}>Sign up</button>
+        <button onClick={() => this.props.openModal('signup')}>Sign up</button>
       </div>
     );
   }

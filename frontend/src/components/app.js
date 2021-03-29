@@ -5,7 +5,7 @@ import NavBarContainer from './nav/navbar_container';
 import { Route } from "react-router-dom";
 import Modal from './modal/modal'
 
-import MainPage from './main/main_page';
+import MainPageContainer from './main/main_page_container';
 import MapPage from './map/map_page';
 
 const App = () => (
@@ -14,7 +14,7 @@ const App = () => (
         <NavBarContainer />
         <Route path="/map" component={MapPage} />
         <Switch>
-            <AuthRoute exact path="/" component={MainPage} />
+            <AuthRoute exact path="/" component={MainPageContainer} />
         </Switch>
     </div>
 );
