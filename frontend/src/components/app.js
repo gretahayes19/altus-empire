@@ -12,7 +12,7 @@ const App = () => (
     <div>
         <Modal />
         <NavBarContainer />
-        <Route path="/" component={GoogleApiWrapper} />
+        <Route path="/map" component={GoogleApiWrapper} />
         <Switch>
             <AuthRoute exact path="/" component={MainPage} />
         </Switch>
