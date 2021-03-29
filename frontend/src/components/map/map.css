@@ -1,0 +1,29 @@
+.map-page {
+    background-color: aquamarine;
+    height: 700px;
+    width: 700px;
+}
+
+.search-bar {
+    width: 70%;
+    margin: 40px auto;
+    font-size:  24px;
+    margin-bottom: 0;
+    z-index: 1;
+    
+}
+
+.search-input {
+    box-shadow: 0 0 0 15px rgba(255, 255, 255, .45);
+    display: flex;
+    justify-content: left;
+    background-color: white;
+    background-clip: padding-box;
+    border-radius: 6px;
+}
+
+.map-div {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
