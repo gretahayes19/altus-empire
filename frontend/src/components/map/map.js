@@ -55,6 +55,7 @@ export class MapContainer extends Component {
                     onClose={this.onClose}
                 >
                     <div>
+                        
                         <h4>{this.state.selectedPlace.name}</h4>
                     </div>
                 </InfoWindow>
