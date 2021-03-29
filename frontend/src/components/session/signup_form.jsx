@@ -99,7 +99,6 @@ class SignupForm extends React.Component {
             <br />
             <label>Date of Birth</label>
             <DatePicker selected={this.state.dob} onChange={date => this.setState({dob: date})}/>
-            {/* <input type="text"/> */}
             <br />
             <input type="submit" value="Submit" />
             {this.renderErrors()}
