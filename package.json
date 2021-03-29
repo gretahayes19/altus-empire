@@ -24,6 +24,7 @@
     "validator": "^13.5.2"
   },
   "dependencies": {
-    "concurrently": "^6.0.0"
+    "concurrently": "^6.0.0",
+    "google-maps-react": "^2.0.6"
   }
 }
