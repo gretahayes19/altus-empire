@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from "prop-types";
 import { withRouter } from 'react-router-dom';
-import { DatePicker } from 'react-datepicker';
+import DatePicker from "react-datepicker";
 
 class SignupForm extends React.Component {
   constructor(props) {
@@ -31,6 +32,10 @@ class SignupForm extends React.Component {
     return e => this.setState({
       [field]: e.currentTarget.value
     });
+  }
+
+  componentDidMount() {
+    console.log(this.state);
   }
 
   handleSubmit(e) {
@@ -94,6 +99,7 @@ class SignupForm extends React.Component {
             <br />
             <label>Date of Birth</label>
             <DatePicker selected={this.state.dob} onChange={date => this.setState({dob: date})}/>
+            {/* <input type="text"/> */}
             <br />
             <input type="submit" value="Submit" />
             {this.renderErrors()}
