@@ -30,7 +30,8 @@ router.post('/register', (req, res) => {
                 const newUser = new User({
                     username: req.body.username,
                     email: req.body.email,
-                    password: req.body.password
+                    password: req.body.password,
+                    dob: req.body.dob,
                 })
 
                 bcrypt.genSalt(10, (err, salt) => {
@@ -100,7 +101,8 @@ router.get('/current', passport.authenticate('jwt', { session: false }), (req, r
     res.json({
         id: req.user.id,
         username: req.user.username,
-        email: req.user.email
+        email: req.user.email,
+        dob: req.user.dob
     });
 })
 
