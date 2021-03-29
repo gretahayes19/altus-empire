@@ -10,6 +10,7 @@ const mapStyles = {
 export class MapContainer extends Component {
     render() {
         return (
+            <>
             <Map
                 google={this.props.google}
                 zoom={14}
@@ -21,6 +22,7 @@ export class MapContainer extends Component {
                     }
                 }
             />
+            </>
         );
     }
 }
