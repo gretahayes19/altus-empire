@@ -27,7 +27,7 @@ class MainPage extends React.Component {
 
           </div>
           <div className="main-page-copyright">
-            <p>Privacy Policy</p>    
+            <p>Privacy Policy</p>
             <p>Sitemap</p>
             <p>Copyright &copy; 2021 AE</p>
           </div>
