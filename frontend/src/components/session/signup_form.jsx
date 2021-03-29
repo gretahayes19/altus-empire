@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import { withRouter } from 'react-router-dom';
 import DatePicker from "react-datepicker";
 
+import './form.css'
+
 class SignupForm extends React.Component {
   constructor(props) {
     super(props);
@@ -11,7 +13,7 @@ class SignupForm extends React.Component {
       username: '',
       password: '',
       password2: '',
-      dob: new Date(),
+      dob: '',
       errors: {}
     };
 
@@ -68,38 +70,36 @@ class SignupForm extends React.Component {
       <div className="signup-form-container">
         <form onSubmit={this.handleSubmit}>
           <div className="signup-form">
-            <br />
             <input
               type="email"
               value={this.state.email}
               onChange={this.update("email")}
               placeholder="Email"
             />
-            <br />
             <input
               type="text"
               value={this.state.username}
               onChange={this.update("username")}
               placeholder="Username"
             />
-            <br />
             <input
               type="password"
               value={this.state.password}
               onChange={this.update("password")}
               placeholder="Password"
             />
-            <br />
             <input
               type="password"
               value={this.state.password2}
               onChange={this.update("password2")}
               placeholder="Confirm Password"
             />
-            <br />
             <label>Date of Birth</label>
-            <DatePicker selected={this.state.dob} onChange={date => this.setState({dob: date})}/>
-            <br />
+            <input 
+              type="date" 
+              value={this.state.dob} 
+              onChange={this.update('dob')}
+            />
             <input type="submit" value="Submit" />
             {this.renderErrors()}
           </div>
