@@ -1,10 +1,10 @@
 import React from 'react';
-import { closeModal } from '../../actions/modal_action';
+import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from '../session/login_form_container';
 import SignupFormContainer from '../session/signup_form_container';
 
-const Modal = ({modal, closeModal}) => {
+function Modal({modal, closeModal}) {
     if (!modal) return null;
     let component;
     switch (modal) {
