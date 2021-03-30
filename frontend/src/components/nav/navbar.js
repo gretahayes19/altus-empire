@@ -24,17 +24,7 @@ class NavBar extends React.Component {
             </div>
         );
       } else {
-        return (
-          <div>
-            {/* Open modal pass in from props */}
-            {/* <button onClick={() => this.props.openModal("login")}>
-              Log in
-            </button>
-            <button onClick={() => this.props.openModal("signup")}>
-              Sign up
-            </button> */}
-          </div>
-        );
+        return null;
       }
   }
 
