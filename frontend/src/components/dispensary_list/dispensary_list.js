@@ -1,4 +1,5 @@
 import React from 'react';
+import DispensaryEntry from './dispensary_entry';
 
 class DispensaryList extends React.Component {
     constructor(props) {
@@ -8,16 +9,20 @@ class DispensaryList extends React.Component {
         }
     }
 
-    componentDidMount() {
-        debugger
+    componentDidUpdate(prevProps) {
+        if (prevProps.dispensaries !== this.props.dispensaries) {
+            this.setState({
+                dispensaries: this.props.dispensaries
+            })
+        }
     }
 
     render() {
         const {dispensaries} = this.state;
-        const items = dispensaries.map(dispensary => console.log(dispensary.dispensaryName))
+        const items = dispensaries.map(dispensary => <DispensaryEntry dispensary={dispensary}/>)
         return (
             <div className="dispensary-list">
-                {items};
+                {items}
             </div>
         )
     }

@@ -13,22 +13,20 @@ class MapPage extends React.Component {
     }
 
     componentDidMount() {
-        console.log("hi");
         this.props.fetchDispensaries().then(() => this.setState({dispensaries: this.props.dispensaries}));
     }
 
     render () {
-        if (!this.props.dispensaries) return null;
+        if (!this.props.dispensaries.length) return null;
         const { dispensaries } = this.props
-
 
         return (
             <>
             <div className="map-page">  
                 <SearchBar className="search-bar"/>
                 <GoogleApiWrapper dispensaries={dispensaries}/>
+                <DispensaryListContainer />
             </div>
-               
             </>
         )
 
