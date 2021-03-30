@@ -18,7 +18,6 @@ class MapPage extends React.Component {
     }
 
     render () {
-        debugger
         if (!this.props.dispensaries) return null;
         const { dispensaries } = this.props
 
@@ -31,7 +30,6 @@ class MapPage extends React.Component {
         //     lat: 40.7484,
         //     lng: -73.9857
         // }]
-        debugger
 
         return (
             <>
