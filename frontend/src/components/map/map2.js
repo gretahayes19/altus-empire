@@ -14,7 +14,14 @@ class SimpleMap extends Component {
         zoom: 11
     };
 
-    
+    state = {
+        show: false
+    }
+
+    onMarkerClick = (e) =>
+        this.setState({
+            show: !this.state.show
+        });
 
     render() {
 
@@ -27,7 +34,8 @@ class SimpleMap extends Component {
                 key={index}
                 lat={mark.latitude} 
                 lng={mark.longitude }
-                onClick={this.onMarkerClick}/>
+                onClick={this.onMarkerClick}
+                show={this.state.show}/>
             )
           
             

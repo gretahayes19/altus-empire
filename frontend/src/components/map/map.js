@@ -36,15 +36,19 @@ export class MapContainer extends Component {
     render() {
         if (!this.props.dispensaries) return null;
 
+        
+        
         const {dispensaries} = this.props
-        const dispMarks = dispensaries.data.map((mark, index) => 
+        const dispMarks = dispensaries.map((mark, index) => 
             <Marker 
                 key={index} 
                 icon={cannabisMarker}
                 position={{ lat: mark.latitude, lng: mark.longitude }}
                 onClick={this.onMarkerClick} 
+                name={mark.dispensaryName}
             />)
         
+
 
 
 

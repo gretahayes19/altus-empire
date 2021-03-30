@@ -54,6 +54,11 @@
     height: 1000px;
 }
 
+.map-div img {
+    height: 50px;
+    width: 50px;
+}
+
 .marker-img {
     z-index: 99;
 }
