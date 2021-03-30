@@ -8,6 +8,7 @@ import cannabisMarker from '../../assets/cannabis-solid.svg'
 
 
 
+
 export class MapContainer extends Component {
 
     state = {
@@ -36,7 +37,6 @@ export class MapContainer extends Component {
         if (!this.props.dispensaries) return null;
 
         const {dispensaries} = this.props
-        debugger
         const dispMarks = dispensaries.data.map((mark, index) => 
             <Marker 
                 key={index} 
