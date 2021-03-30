@@ -21,22 +21,11 @@ class SignupForm extends React.Component {
     this.clearedErrors = false;
   }
 
-  // componentWillReceiveProps(nextProps) {
-  //   debugger
-  //   if (nextProps.signedIn === true) {
-  //     this.props.history.push("/home");
-  //     debugger
-  //     this.props.closeModal();
-  //   }
-
-  //   this.setState({errors: nextProps.errors})
-  // }
-
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.signedIn !== this.props.signedIn) {
-      debugger;
-
-      this.props.history.push("/home");
+      this.props.login({email: this.state.email, password: this.state.password}).then(
+        this.props.history.push("/home")
+      )
     }
 
     if (prevProps.errors !== this.props.errors) {
