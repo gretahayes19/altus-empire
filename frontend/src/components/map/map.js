@@ -8,6 +8,7 @@ import cannabisMarker from '../../assets/cannabis-solid.svg'
 
 
 
+
 export class MapContainer extends Component {
 
     state = {
@@ -33,13 +34,14 @@ export class MapContainer extends Component {
     };
 
     render() {
-        
+        if (!this.props.dispensaries) return null;
+
         const {dispensaries} = this.props
-        const dispMarks = dispensaries.map((mark, index) => 
+        const dispMarks = dispensaries.data.map((mark, index) => 
             <Marker 
                 key={index} 
                 icon={cannabisMarker}
-                position={{ lat: mark.lat, lng: mark.lng }} 
+                position={{ lat: mark.latitude, lng: mark.longitude }}
                 onClick={this.onMarkerClick} 
             />)
         
