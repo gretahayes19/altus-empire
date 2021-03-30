@@ -1,6 +1,7 @@
 import React from "react";
-import GoogleApiWrapper from "../map/map";
-import SearchBar from "../search/searchbar";
+// import GoogleApiWrapper from "../map/map";
+import MapPage from "../map/map_page";
+// import SearchBar from "../search/searchbar";
 import "../../styles/home.css";
 
 class HomePage extends React.Component {
@@ -11,8 +12,7 @@ class HomePage extends React.Component {
   render() {
     return (
       <div className="home-page">
-        <SearchBar className="home-search-bar" />
-        <GoogleApiWrapper className="home-map"/>
+        <MapPage />
       </div>
     );
   }

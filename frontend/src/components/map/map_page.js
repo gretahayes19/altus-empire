@@ -21,8 +21,6 @@ class MapPage extends React.Component {
                 <GoogleApiWrapper dispensaries={dispensaries}/>
             </div>
         )
-
-
     }
 }
 

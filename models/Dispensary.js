@@ -29,6 +29,9 @@ const DispensarySchema = new Schema({
     website: {
         type: String,
         required: true
+    },
+    postphoto: {
+        type: String
     }
 })
 

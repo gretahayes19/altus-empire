@@ -6,7 +6,8 @@ import { Route } from "react-router-dom";
 import Modal from './modal/modal'
 
 import MainPageContainer from './main/main_page_container';
-import HomePage from "./home/home_page"
+import HomePage from "./home/home_page";
+import DispensaryContainer from "./dispensary/dispensary_container";
 
 const App = () => (
     <div>
@@ -16,6 +17,7 @@ const App = () => (
             <AuthRoute exact path="/" component={MainPageContainer} />
         </Switch>
         <ProtectedRoute path="/home" component={HomePage} />
+        <ProtectedRoute path="/dispensary" component={DispensaryContainer} />
     </div>
 );
 

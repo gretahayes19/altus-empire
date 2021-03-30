@@ -41,8 +41,6 @@ export class MapContainer extends Component {
             />)
         
 
-
-
         return (
           <div className="map-div">
             <Map
