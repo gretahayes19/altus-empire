@@ -37,7 +37,7 @@ export class MapContainer extends Component {
         const dispMarks = dispensaries.map((mark, index) => 
             <Marker 
                 key={index} 
-                icon={cannabisMarker}
+                // icon={cannabisMarker}
                 position={{ lat: mark.latitude, lng: mark.longitude }}
                 onClick={this.onMarkerClick} 
                 name={mark.dispensaryName}
