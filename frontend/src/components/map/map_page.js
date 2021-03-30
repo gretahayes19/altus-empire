@@ -23,10 +23,16 @@ class MapPage extends React.Component {
 
         return (
             <>
-            <div className="map-page">  
-                <SearchBar className="search-bar"/>
-                <GoogleApiWrapper dispensaries={dispensaries}/>
-                <DispensaryListContainer />
+            <div className="map-page">
+                <div className="search-bar-container">
+                    <SearchBar className="search-bar"/>
+                </div>
+                <div className="map-list">
+                    <GoogleApiWrapper dispensaries={dispensaries}/>
+                    <div className="dispensary-list-container">
+                        <DispensaryListContainer />
+                    </div>
+                </div>
             </div>
             </>
         )
