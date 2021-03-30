@@ -5,8 +5,6 @@ import {golden} from './mapstyle'
 import cannabisMarker from '../../assets/cannabis-solid.svg'
 
 
-
-
 export class MapContainer extends Component {
 
     state = {
