@@ -42,3 +42,18 @@
     border-bottom-right-radius: 6px;
     cursor: pointer;
 }
+
+.map-div {
+    position: relative;
+    width: 1000px;
+    height: 1000px;
+}
+
+.map-div img {
+    height: 50px;
+    width: 50px;
+}
+
+.marker-img {
+    z-index: 99;
+}

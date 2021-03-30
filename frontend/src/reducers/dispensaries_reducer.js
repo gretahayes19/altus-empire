@@ -1,7 +1,6 @@
 import { 
     RECEIVE_DISPENSARIES, 
-    CLEAR_DISPENSARIES,
-    // RECEIVE_REVIEW 
+    CLEAR_DISPENSARIES
 } from '../actions/dispensary_actions';
 
 export default function dispensariesReducer(state = [], action) {
@@ -10,8 +9,6 @@ export default function dispensariesReducer(state = [], action) {
             return action.dispensaries.data;
         case CLEAR_DISPENSARIES:
             return [];
-        // case RECEIVE_REVIEW:
-        //     return action.dispensaries.data
         default:
             return state;
     }
