@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const db = require('./config/keys').mongoURI;
 const bodyParser = require("body-parser");
-const passport = require("passport");t
+const passport = require("passport");
 
 const users = require('./routes/api/users')
 const dispensaries = require('./routes/api/dispensary')
