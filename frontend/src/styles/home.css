@@ -1,21 +1,31 @@
 .home-page {
-    background-color: aquamarine;
+    background-image: url('../assets/curved.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 64px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    height: 700px;
-    width: 700px;
+    height: 50em;
+    width: 100%;
+    position: fixed;    
 }
 
-.search-bar {
+.home-search-bar {
     width: 70%;
     margin: 40px auto;
     font-size:  24px;
     margin-bottom: 0;
     z-index: 1;
-    
 }
+
+
+.home-map{
+    width: 100%;
+    position: absolute;
+
+}
+
 
 .search-input {
     box-shadow: 0 0 0 15px rgba(255, 255, 255, .45);
@@ -48,8 +58,7 @@
     cursor: pointer;
 }
 
-.map-div {
-    position: relative;
-    width: 500px;
-    height: 300px;
+.google-wrapper {
+    width: 10px;
+    height: 10px;
 }

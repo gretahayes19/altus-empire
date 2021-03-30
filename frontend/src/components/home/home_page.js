@@ -1,6 +1,6 @@
 import React from "react";
 import MapPageContainer from '../map/map_page_container'
-import "./home.css";
+import "../../styles/home.css";
 import NavBarContainer from "../nav/navbar_container";
 
 class HomePage extends React.Component {
@@ -11,9 +11,6 @@ class HomePage extends React.Component {
   render() {
     return (
       <div className="home-page">
-        <header>
-          <NavBarContainer />
-        </header>
         <MapPageContainer />
       </div>
     );

@@ -1,4 +1,7 @@
-import { RECEIVE_DISPENSARIES, CLEAR_DISPENSARIES } from '../actions/dispensary_actions';
+import { 
+    RECEIVE_DISPENSARIES, 
+    CLEAR_DISPENSARIES
+} from '../actions/dispensary_actions';
 
 export default function dispensariesReducer(state = [], action) {
     switch (action.type) {

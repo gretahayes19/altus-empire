@@ -7,8 +7,8 @@ import Modal from './modal/modal'
 import './app.css'
 
 import MainPageContainer from './main/main_page_container';
-import MapPage from './map/map_page';
-import HomePage from "./home/home_page"
+import HomePage from "./home/home_page";
+import DispensaryContainer from "./dispensary/dispensary_container";
 
 const App = () => (
     <div>
@@ -18,6 +18,7 @@ const App = () => (
             <AuthRoute exact path="/" component={MainPageContainer} />
         </Switch>
         <ProtectedRoute path="/home" component={HomePage} />
+        <ProtectedRoute path={`/dispensary/`} component={DispensaryContainer} />
     </div>
 );
 

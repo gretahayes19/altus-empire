@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { withRouter } from 'react-router-dom';
 import DatePicker from "react-datepicker";
 
-import './form.css'
+import '../../styles/form.css'
 
 class SignupForm extends React.Component {
   constructor(props) {
@@ -72,7 +72,7 @@ class SignupForm extends React.Component {
 
   render() {
     return (
-      <div className="form-div">
+      <div className="form-div signup">
         <form onSubmit={this.handleSubmit}>
           <div className="form">
             <input
