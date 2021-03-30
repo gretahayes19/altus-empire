@@ -10,13 +10,12 @@ const path = require("path");
 
 const users = require("./routes/api/users");
 
-// if (process.env.NODE_ENV === "production") {
-//     app.use(express.static("frontend/build"));
-//     app.get("/", (req, res) => {
-//         res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
-//     });
-// }
-
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("frontend/build"));
+    app.get("/", (req, res) => {
+        res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
+    });
+}
 
 mongoose
     .connect(db, { userNewUrlParser: true, useUnifiedTopology: true })
@@ -28,6 +27,7 @@ app.use(bodyParser.json());
 
 app.use("/api/users", users);
 
+app.use(passport.initialize());
+require('./config/passport')(passport);
 
-app.get("/", (req, res) => res.send("Hello World"));
 app.listen(port, () => console.log(`Server is running on port ${port}`));
