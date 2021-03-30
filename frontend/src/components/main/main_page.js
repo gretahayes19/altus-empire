@@ -12,14 +12,19 @@ class MainPage extends React.Component {
     return (
       <div className="main-page">
         <div className="main-page-div">
-          <h1 className="main-page-logo">Altus Empire</h1>
-          <div className="main-page-top-buttons">
-            <button onClick={() => openModal("login")}>Already a member?</button>
-            <button onClick={() => {}}>Business Login</button>
+          <div className="main-page-logo">
+            <div className="main-page-logo-pic">
+            </div>
+          </div>
+          <div className="main-page-top-buttons-div">
+            <div className="main-page-top-buttons">
+              <button onClick={() => openModal("login")}>Already a member?</button>
+              <button onClick={() => {}}>Business Login</button>
+            </div>
           </div>
           <div className="main-page-bottom-buttons">
-            <button onClick={() => {}}>Under 21</button>
-            <button onClick={() => openModal("signup")}>21+ Older</button>
+              <button onClick={() => {}}>Under 21</button>
+              <button onClick={() => openModal("signup")}>21+ Older</button>
           </div>
         </div>
         <footer className="main-page-footer">
