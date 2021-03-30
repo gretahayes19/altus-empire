@@ -3,11 +3,10 @@ import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
 import "./map.css"
 import {golden} from './mapstyle'
+import cannabisMarker from '../../assets/cannabis-solid.svg'
 
-const mapStyles = {
-    width: '50%',
-    height: '50%'
-};
+
+
 
 export class MapContainer extends Component {
 
@@ -34,10 +33,17 @@ export class MapContainer extends Component {
     };
 
     render() {
-
-        const {dispensaries} = this.props
-        const dispMarks = dispensaries.map((mark, index) => <Marker key={index} position={{ lat: mark.lat, lng: mark.lng }} onClick={this.onMarkerClick} />)
         
+        const {dispensaries} = this.props
+        const dispMarks = dispensaries.map((mark, index) => 
+            <Marker 
+                key={index} 
+                icon={cannabisMarker}
+                position={{ lat: mark.lat, lng: mark.lng }} 
+                onClick={this.onMarkerClick} 
+            />)
+        
+
 
 
         return (
