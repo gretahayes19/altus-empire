@@ -6,9 +6,9 @@ class LoginForm extends React.Component {
     super(props);
 
     this.state = {
-      email: '',
-      password: '',
-      errors: {}
+      email: "",
+      password: "",
+      errors: {},
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -16,20 +16,23 @@ class LoginForm extends React.Component {
   }
 
   // Once the user has been authenticated, redirect to the Home page
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.currentUser === true) {
-      this.props.history.push('/home');
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.isAuthenticated !== this.props.isAuthenticated) {
+      this.props.history.push("/home");
     }
 
-    // Set or clear errors
-    this.setState({errors: nextProps.errors})
+    if (prevProps.errors !== this.props.errors) {
+      this.setState({ errors: this.props.errors });
+    }
   }
 
   // Handle field updates (called in the render method)
   update(field) {
-    return e => this.setState({
-      [field]: e.currentTarget.value
-    });
+    return (e) =>
+      this.setState({
+        [field]: e.currentTarget.value,
+      });
   }
 
   // Handle form submission
@@ -38,15 +41,15 @@ class LoginForm extends React.Component {
 
     let user = {
       email: this.state.email,
-      password: this.state.password
+      password: this.state.password,
     };
 
-    this.props.login(user).then(this.props.closeModal()); 
+    this.props.login(user);
   }
 
   // Render the session errors if there are any
   renderErrors() {
-    return(
+    return (
       <ul className="form-errors-ul">
         {Object.keys(this.state.errors).map((error, i) => (
           <li className="form-errors-li" key={`error-${i}`}>
@@ -58,39 +61,33 @@ class LoginForm extends React.Component {
   }
 
   render() {
-    
     return (
       <div className="form-div">
         <form className="form" onSubmit={this.handleSubmit}>
-              <input 
-                className="form-input"
-                type="text"
-                value={this.state.email}
-                onChange={this.update('email')}
-                placeholder="Email"
-              />
-              <input 
-                className="form-input"
-                type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                placeholder="Password"
-              />
-              <input 
-                className="form-submit"
-                type="submit" 
-                value="Submit" 
-              />
-          </form>
-          <div className="form-errors">
-            {this.renderErrors()}
-          </div>
+          <input
+            className="form-input"
+            type="text"
+            value={this.state.email}
+            onChange={this.update("email")}
+            placeholder="Email"
+          />
+          <input
+            className="form-input"
+            type="password"
+            value={this.state.password}
+            onChange={this.update("password")}
+            placeholder="Password"
+          />
+          <input className="form-submit" type="submit" value="Submit" />
+        </form>
+        <div className="form-errors">{this.renderErrors()}</div>
         <div className="form-otherForm">
           <span className="form-span">New User?</span>
-          <button 
+          <button
             className="form-submit otherForm"
-            onClick={() => this.props.openModal('signup')}>
-              Sign up
+            onClick={() => this.props.openModal("signup")}
+          >
+            Sign up
           </button>
         </div>
       </div>
