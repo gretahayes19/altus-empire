@@ -15,6 +15,7 @@ const mSTP = (state) => {
 const mDTP = (dispatch) => {
   return {
     signup: (user) => dispatch(signup(user)),
+    login: user => dispatch(login(user)),
     closeModal: () => dispatch(closeModal()),
     openModal: (modal) => dispatch(openModal(modal)),
     login: user => dispatch(login(user)),

@@ -9,12 +9,12 @@ class SignupForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: '',
-      username: '',
-      password: '',
-      password2: '',
-      dob: '',
-      errors: {}
+      email: "",
+      username: "",
+      password: "",
+      password2: "",
+      dob: "",
+      errors: {},
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -35,18 +35,20 @@ class SignupForm extends React.Component {
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.signedIn !== this.props.signedIn) {
       debugger;
+
       this.props.history.push("/home");
     }
 
     if (prevProps.errors !== this.props.errors) {
-      this.setState({errors: this.props.errors})
+      this.setState({ errors: this.props.errors });
     }
   }
 
   update(field) {
-    return e => this.setState({
-      [field]: e.currentTarget.value
-    });
+    return (e) =>
+      this.setState({
+        [field]: e.currentTarget.value,
+      });
   }
 
   componentDidMount() {
@@ -60,14 +62,15 @@ class SignupForm extends React.Component {
       username: this.state.username,
       password: this.state.password,
       password2: this.state.password2,
-      dob: this.state.dob
+      dob: this.state.dob,
     };
 
-    this.props.signup(user, this.props.history).then(); 
+    this.props
+      .signup(user, this.props.history)
   }
 
   renderErrors() {
-    return(
+    return (
       <ul>
         {Object.keys(this.state.errors).map((error, i) => (
           <li className="form-errors-li" key={`error-${i}`}>
@@ -114,21 +117,16 @@ class SignupForm extends React.Component {
             <label className="signup-dob-label">
               Please enter your date of birth
             </label>
-            <input 
+            <input
               className="form-input"
-              type="date" 
-              value={this.state.dob} 
-              onChange={this.update('dob')}
+              type="date"
+              value={this.state.dob}
+              onChange={this.update("dob")}
             />
-            <input 
-              className="form-submit"
-              type="submit" 
-              value="Submit" />
+            <input className="form-submit" type="submit" value="Submit" />
           </div>
         </form>
-        <div className="form-errors signup">
-          {this.renderErrors()}
-        </div>
+        <div className="form-errors signup">{this.renderErrors()}</div>
       </div>
     );
   }
