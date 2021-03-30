@@ -11,7 +11,6 @@ const app = express();
 const port = process.env.PORT || 5000;
 const path = require("path");
 
-const users = require("./routes/api/users");
 
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("frontend/build"));
