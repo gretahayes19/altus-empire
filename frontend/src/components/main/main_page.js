@@ -6,6 +6,10 @@ class MainPage extends React.Component {
     super(props);
   }
 
+  componentWillUnmount() {
+    this.props.closeModal();
+  }
+
   render() {
     const { openModal } = this.props;
 
