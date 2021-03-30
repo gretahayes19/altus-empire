@@ -29,6 +29,10 @@ const DispensarySchema = new Schema({
     website: {
         type: String,
         required: true
+    },
+    averageRating: {
+        type: Number,
+        default: 0
     }
 })
 
