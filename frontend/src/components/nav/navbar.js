@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-import './navbar.css'
+import { Link } from 'react-router-dom';
+import './navbar.css';
+import logo from "../../assets/Altus Empire_Wordmark.png";
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -18,7 +19,7 @@ class NavBar extends React.Component {
   getLinks() {
       if (this.props.loggedIn) {
         return (
-            <div>
+            <div className="nav-links">
                 <Link to={'/home'}>Profile</Link>
                 <button onClick={this.logoutUser}>Logout</button>
             </div>
@@ -32,7 +33,9 @@ class NavBar extends React.Component {
       return (
         <div className="navbar-div">
           <Link to="/">
-            <div className="navbar-div-logo"></div>
+            <div className="navbar-div-logo">
+              <img src={logo}/>
+            </div>
           </Link>
           {this.getLinks()}
         </div>

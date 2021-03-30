@@ -18,7 +18,6 @@ class SimpleMap extends Component {
         if (!this.props.dispensaries) return null;
 
         const { dispensaries } = this.props
-        debugger
         const dispMarks = dispensaries.map((mark, index) =>
             <div
                 key={index}
