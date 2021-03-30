@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-import './navbar.css'
+import { Link } from 'react-router-dom';
+import './navbar.css';
+import logo from "../../assets/Altus Empire_Wordmark.png";
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -18,32 +19,25 @@ class NavBar extends React.Component {
   getLinks() {
       if (this.props.loggedIn) {
         return (
-            <div>
+            <div className="nav-links">
                 <Link to={'/home'}>Profile</Link>
                 <button onClick={this.logoutUser}>Logout</button>
             </div>
         );
       } else {
-        return (
-          <div>
-            {/* Open modal pass in from props */}
-            {/* <button onClick={() => this.props.openModal("login")}>
-              Log in
-            </button>
-            <button onClick={() => this.props.openModal("signup")}>
-              Sign up
-            </button> */}
-          </div>
-        );
+        return null;
       }
   }
 
   render() {
       return (
         <div className="navbar-div">
+          <Link to="/">
             <div className="navbar-div-logo">
+              <img src={logo}/>
             </div>
-            { this.getLinks() }
+          </Link>
+          {this.getLinks()}
         </div>
       );
   }
