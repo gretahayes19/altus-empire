@@ -20,6 +20,7 @@ class MapPage extends React.Component {
         if (!this.props.dispensaries.length) return null;
         const { dispensaries } = this.props
 
+
         return (
             <>
             <div className="map-page">  
@@ -29,8 +30,6 @@ class MapPage extends React.Component {
             </div>
             </>
         )
-
-
     }
 }
 

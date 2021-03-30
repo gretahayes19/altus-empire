@@ -24,7 +24,6 @@ class SimpleMap extends Component {
         });
 
     render() {
-
         if (!this.props.dispensaries) return null;
 
         const { dispensaries } = this.props

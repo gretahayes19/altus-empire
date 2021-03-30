@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './navbar.css';
+import '../../styles/navbar.css';
 import logo from "../../assets/Altus Empire_Wordmark.png";
 
 class NavBar extends React.Component {
