@@ -50,7 +50,7 @@ class SignupForm extends React.Component {
       dob: this.state.dob
     };
 
-    this.props.signup(user, this.props.history); 
+    this.props.signup(user, this.props.history).then(); 
   }
 
   renderErrors() {
