@@ -1,6 +1,6 @@
 import React from "react";
 import MapPageContainer from '../map/map_page_container'
-import "./home.css";
+import "../../styles/home.css";
 
 class HomePage extends React.Component {
   constructor(props) {
