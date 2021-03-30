@@ -14,7 +14,7 @@ router.get('/all', (req, res) => {
         .catch(err => res.status(404).json(err))
 })
 
-router.put('/:id/photo', alowCrossDomain, [auth], async (req, res) => {
+router.post('/:id/photo', alowCrossDomain, [auth], async (req, res) => {
     try {
         const dispensary = await Dispensary.findById(req.params.id);
 
