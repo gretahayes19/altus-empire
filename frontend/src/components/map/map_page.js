@@ -1,7 +1,7 @@
 import React from 'react';
 import GoogleApiWrapper from './map';
 import SearchBar from '../search/searchbar';
-import "./map.css";
+import "../../styles/map.css";
 import DispensaryListContainer from "../dispensary_list/dispensary_list_container"
 
 class MapPage extends React.Component {

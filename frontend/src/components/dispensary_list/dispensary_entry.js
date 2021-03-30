@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../styles/dispensary_list.css';
 
 const DispensaryEntry = props => {
     const {dispensary} = props;
