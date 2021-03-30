@@ -1,8 +1,9 @@
-import React from 'react'
-import GoogleApiWrapper from './map'
-import SearchBar from '../search/searchbar'
-import SimpleMap from './map2'
-import "./map.css"
+import React from 'react';
+import GoogleApiWrapper from './map';
+import SearchBar from '../search/searchbar';
+import SimpleMap from './map2';
+import "./map.css";
+import DispensaryListContainer from "../dispensary_list/dispensary_list_container"
 
 class MapPage extends React.Component {
     constructor(props) {
@@ -37,6 +38,7 @@ class MapPage extends React.Component {
                 <SearchBar className="search-bar"/>
                 {/* <GoogleApiWrapper dispensaries={dispensaries}/> */}
                   {dispensaryIndex}
+                <DispensaryListContainer />
             </div>
                
             </>
