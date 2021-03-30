@@ -1,6 +1,20 @@
+body {
+    font-family: Constantia,
+    "Lucida Bright",
+    Lucidabright,
+    "Lucida Serif",
+    Lucida,
+    "DejaVu Serif",
+    "Bitstream Vera Serif",
+    "Liberation Serif",
+    Georgia,
+    serif;
+}
+
 .main-page {
     margin: 0;
     width: 100%;
+    height: 30em;
 }
 
 .main-page-div {
@@ -11,15 +25,62 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
+    background-image: url("../../assets/light_electric.jpg");
+    background-size: 100em;
+    background-repeat: no-repeat;
+}
+
+.main-page-logo {
+    grid-column: 2 / 4;
+    grid-row: 3;
+    justify-self: center;
+}
+
+.main-page-logo-pic {
+    width: 7em;
+    height: 4em;
+    background-image: url("../../assets/main_logo.png");
+    background-size: 7em;
+    background-repeat: no-repeat;
 }
 
 button {
-    padding: 0.5em;
+    padding: 0.6em;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: none;
+    box-shadow: 0px 0px 7px 4px rgba(22, 22, 22, 0.2);
+    border-radius: 3px;
+    font-family: Constantia,
+    "Lucida Bright",
+    Lucidabright,
+    "Lucida Serif",
+    Lucida,
+    "DejaVu Serif",
+    "Bitstream Vera Serif",
+    "Liberation Serif",
+    Georgia,
+    serif;
+    outline: none;
 }
 
-.main-page-top-buttons {
-    grid-column: 4 / 5;
-    grid-gap: 0.5em;
+button:hover {
+    box-shadow: 0px 0px 7px 4px rgba(92, 204, 224, 0.253);
+    background-color: black;
+    color: white;
+    opacity: 0.8;
+    transition: 0.2s;
+}
+
+.button:active {
+
+}
+
+.main-page-top-buttons-div {
+    margin-top: 2em;
+    grid-column: 1 / 5;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .main-page-bottom-buttons {

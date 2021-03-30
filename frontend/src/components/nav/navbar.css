@@ -1,0 +1,12 @@
+.navbar-div {
+    height: 4em;
+    width: 100%;
+}
+
+.navbar-div-logo {
+    height: 4em;
+    background-image: url('../../assets/Altus\ Empire_Wordmark.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+

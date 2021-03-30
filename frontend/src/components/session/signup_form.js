@@ -50,14 +50,14 @@ class SignupForm extends React.Component {
       dob: this.state.dob
     };
 
-    this.props.signup(user, this.props.history); 
+    this.props.signup(user, this.props.history).then(); 
   }
 
   renderErrors() {
     return(
       <ul>
         {Object.keys(this.state.errors).map((error, i) => (
-          <li key={`error-${i}`}>
+          <li className="form-errors-li" key={`error-${i}`}>
             {this.state.errors[error]}
           </li>
         ))}
@@ -67,43 +67,55 @@ class SignupForm extends React.Component {
 
   render() {
     return (
-      <div className="signup-form-container">
+      <div className="form-div">
         <form onSubmit={this.handleSubmit}>
-          <div className="signup-form">
+          <div className="form">
             <input
+              className="form-input"
               type="email"
               value={this.state.email}
               onChange={this.update("email")}
               placeholder="Email"
             />
             <input
+              className="form-input"
               type="text"
               value={this.state.username}
               onChange={this.update("username")}
               placeholder="Username"
             />
             <input
+              className="form-input"
               type="password"
               value={this.state.password}
               onChange={this.update("password")}
               placeholder="Password"
             />
             <input
+              className="form-input"
               type="password"
               value={this.state.password2}
               onChange={this.update("password2")}
               placeholder="Confirm Password"
             />
-            <label>Date of Birth</label>
+            <label className="signup-dob-label">
+              Please enter your date of birth
+            </label>
             <input 
+              className="form-input"
               type="date" 
               value={this.state.dob} 
               onChange={this.update('dob')}
             />
-            <input type="submit" value="Submit" />
-            {this.renderErrors()}
+            <input 
+              className="form-submit"
+              type="submit" 
+              value="Submit" />
           </div>
         </form>
+        <div className="form-errors signup">
+          {this.renderErrors()}
+        </div>
       </div>
     );
   }
