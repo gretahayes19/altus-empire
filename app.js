@@ -6,6 +6,7 @@ const passport = require("passport");
 
 const users = require('./routes/api/users')
 const dispensaries = require('./routes/api/dispensary')
+const ratings = require('./routes/api/rating')
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -29,6 +30,7 @@ app.use(bodyParser.json());
 
 app.use("/api/users", users);
 app.use("/api/map", dispensaries)
+app.use("/api/ratings", ratings)
 
 app.use(passport.initialize());
 require('./config/passport')(passport);
