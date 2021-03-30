@@ -10,11 +10,15 @@ class MapPage extends React.Component {
 
 
     render () {
+        const dispensaries = [{ lat: 40.7544, lng: -73.9739 }, { lat: 40.6784, lng: -73.9857 }, {
+            lat: 40.7484,
+            lng: -73.9857
+        }]
 
         return (
             <div className="map-page">  
                 <SearchBar className="search-bar"/>
-                <GoogleApiWrapper />
+                <GoogleApiWrapper dispensaries={dispensaries}/>
             </div>
         )
 
