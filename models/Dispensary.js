@@ -36,3 +36,4 @@ const DispensarySchema = new Schema({
 })
 
 module.exports = Dispensary = mongoose.model("dispensary", DispensarySchema)
+
