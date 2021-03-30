@@ -3,7 +3,7 @@ import MapPage from './map_page';
 import { fetchDispensaries } from '../../actions/dispensary_actions';
 
 const mSTP = state => ({
-    dispensaries: state.entities.dispensaries
+    dispensaries: state.entities.dispensaries.data
 });
 
 const mDTP = dispatch => ({

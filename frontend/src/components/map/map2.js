@@ -7,8 +7,8 @@ import cannabisMarker from '../../assets/cannabis-solid.svg'
 class SimpleMap extends Component {
     static defaultProps = {
         center: {
-            lat: 59.95,
-            lng: 30.33
+            lat: 40.7484,
+            lng: -73.9857
         },
         zoom: 11
     };
@@ -19,7 +19,7 @@ class SimpleMap extends Component {
 
         const { dispensaries } = this.props
         debugger
-        const dispMarks = dispensaries.data.map((mark, index) =>
+        const dispMarks = dispensaries.map((mark, index) =>
             <div
                 key={index}
                 lat={mark.latitude} 

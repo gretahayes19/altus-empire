@@ -13,6 +13,7 @@ class MapPage extends React.Component {
     }
 
     componentDidMount() {
+        console.log("hi");
         this.props.fetchDispensaries().then(() => this.setState({dispensaries: this.props.dispensaries}));
     }
 
@@ -22,7 +23,7 @@ class MapPage extends React.Component {
         const { dispensaries } = this.props
 
         let dispensaryIndex = '';
-        if (this.props.dispensaries.length > 0) {
+        if (dispensaries.length > 0) {
             dispensaryIndex = <SimpleMap dispensaries={dispensaries} />
         } 
         
