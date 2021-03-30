@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const db = require('./config/keys').mongoURI;
 const bodyParser = require("body-parser");
-const passport = require("passport");
+const passport = require("passport");t
 
 const users = require('./routes/api/users')
 const dispensaries = require('./routes/api/dispensary')
@@ -11,7 +11,6 @@ const app = express();
 const port = process.env.PORT || 5000;
 const path = require("path");
 
-const users = require("./routes/api/users");
 
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("frontend/build"));
