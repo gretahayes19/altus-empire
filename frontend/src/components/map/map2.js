@@ -2,7 +2,8 @@ import GoogleMapReact from 'google-map-react';
 import React, { Component } from 'react';
 import "./map.css"
 import { golden } from './mapstyle'
-import cannabisMarker from '../../assets/cannabis-solid.svg'
+import Marker from './marker'
+
 
 class SimpleMap extends Component {
     static defaultProps = {
@@ -13,6 +14,8 @@ class SimpleMap extends Component {
         zoom: 11
     };
 
+    
+
     render() {
 
         if (!this.props.dispensaries) return null;
@@ -20,29 +23,28 @@ class SimpleMap extends Component {
         const { dispensaries } = this.props
         debugger
         const dispMarks = dispensaries.map((mark, index) =>
-            <div
+            <Marker 
                 key={index}
                 lat={mark.latitude} 
                 lng={mark.longitude }
-                onClick={this.onMarkerClick}>
-                {cannabisMarker}
-            </div>)
+                onClick={this.onMarkerClick}/>
+            )
+          
+            
             
         return (
             // Important! Always set the container height explicitly
             <div className="map-div" >
                 <GoogleMapReact
                     bootstrapURLKeys={{ key: 'AIzaSyDIEumsEBQJ1SBu1boGzGQUtYvi7Q2YSE4'}}
+                    defaultOptions={{
+                        styles: golden,
+                    }}
+                    // styles={golden}
                     defaultCenter={this.props.center}
                     defaultZoom={this.props.zoom}
-                    styles={golden}
 
                 >
-                    {/* <AnyReactComponent
-                        lat={59.955413}
-                        lng={30.337844}
-                        text="My Marker"
-                    /> */}
                     {dispMarks}
                 </GoogleMapReact>
             </div>
