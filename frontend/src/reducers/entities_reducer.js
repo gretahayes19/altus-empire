@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import dispensariesReducer from './dispensaries_reducer'
 
 const entitiesReducer = combineReducers({
-    dispensariesReducer
+    dispensaries: dispensariesReducer
 });
 
 export default entitiesReducer;

@@ -13,7 +13,6 @@ const App = () => (
     <div>
         <Modal />
         <NavBarContainer />
-        <Route path="/map" component={MapPage} />
         <Switch>
             <AuthRoute exact path="/" component={MainPageContainer} />
         </Switch>
