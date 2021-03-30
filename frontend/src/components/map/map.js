@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
 import "./map.css"
+import {golden} from './mapstyle'
+import cannabisMarker from '../../assets/cannabis-solid.svg'
 
-const mapStyles = {
-    width: '50%',
-    height: '50%'
-};
+
+
 
 export class MapContainer extends Component {
 
@@ -32,11 +32,27 @@ export class MapContainer extends Component {
     };
 
     render() {
+        
+        const {dispensaries} = this.props
+        const dispMarks = dispensaries.map((mark, index) => 
+            <Marker 
+                key={index} 
+                icon={cannabisMarker}
+                position={{ lat: mark.lat, lng: mark.lng }} 
+                onClick={this.onMarkerClick} 
+            />)
+        
+
+
+
         return (
           <div className="map-div">
             <Map
                 google={this.props.google}
-                zoom={14}
+                zoom={11}
+                styles={golden}
+                mapTypeControl={false}
+                streetViewControl={false}
                 initialCenter={
                     {
                         lat: 40.7484,
@@ -44,10 +60,11 @@ export class MapContainer extends Component {
                     }
                 }
             >
-                <Marker
+                {/* <Marker
                     onClick={this.onMarkerClick}
                     name={'Atlus Empire Headquarters'}
-                />
+                /> */}
+                {dispMarks}
                 <InfoWindow
                     marker={this.state.activeMarker}
                     visible={this.state.showingInfoWindow}
