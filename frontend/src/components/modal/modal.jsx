@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import LoginFormContainer from '../session/login_form_container';
 import SignupFormContainer from '../session/signup_form_container';
 
-import './modal.css'
+import '../../styles/modal.css'
 
 function Modal({modal, closeModal}) {
     if (!modal) return null;

@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
 import "./map.css"
@@ -34,7 +33,7 @@ export class MapContainer extends Component {
 
     render() {
         return (
-         <div className="map-div">
+          <div className="map-div">
             <Map
                 google={this.props.google}
                 zoom={14}
@@ -54,13 +53,12 @@ export class MapContainer extends Component {
                     visible={this.state.showingInfoWindow}
                     onClose={this.onClose}
                 >
-                    <div>
-                        
+                    <div> 
                         <h4>{this.state.selectedPlace.name}</h4>
                     </div>
                 </InfoWindow>
             </Map>
-            </div>
+          </div>
         );
     }
 }

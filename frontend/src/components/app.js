@@ -6,14 +6,12 @@ import { Route } from "react-router-dom";
 import Modal from './modal/modal'
 
 import MainPageContainer from './main/main_page_container';
-import MapPage from './map/map_page';
 import HomePage from "./home/home_page"
 
 const App = () => (
     <div>
         <Modal />
         <NavBarContainer />
-        <Route path="/map" component={MapPage} />
         <Switch>
             <AuthRoute exact path="/" component={MainPageContainer} />
         </Switch>

@@ -41,7 +41,8 @@ class LoginForm extends React.Component {
       password: this.state.password
     };
 
-    this.props.login(user).then(this.props.closeModal()); 
+    this.props.login(user)
+      .then(this.props.closeModal());
   }
 
   // Render the session errors if there are any
@@ -85,14 +86,14 @@ class LoginForm extends React.Component {
           <div className="form-errors">
             {this.renderErrors()}
           </div>
-        <div className="form-otherForm">
-          <span className="form-span">New User?</span>
-          <button 
-            className="form-submit otherForm"
-            onClick={() => this.props.openModal('signup')}>
-              Sign up
-          </button>
-        </div>
+          <div className="form-otherForm">
+            <span className="form-span">New User?</span>
+            <button 
+              className="form-submit otherForm"
+              onClick={() => this.props.openModal('signup')}>
+               Sign up
+            </button>
+          </div>
       </div>
     );
   }

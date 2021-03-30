@@ -6,6 +6,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 3px;
+}
+
+.form-div.signup {
+    width: 20em;
 }
 
 .form {
@@ -34,7 +39,7 @@
     align-items: stretch;
     background-color: rgb(87, 52, 48);
     color: white;
-    border-radius: 5px;
+    border-radius: 3px;
     border: none;
     padding: 0.4em;
     cursor: pointer;

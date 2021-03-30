@@ -25,7 +25,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    background-image: url("../../assets/light_electric.jpg");
+    background-image: url("../assets/light_electric.jpg");
     background-size: 100em;
     background-repeat: no-repeat;
 }
@@ -39,7 +39,7 @@ body {
 .main-page-logo-pic {
     width: 7em;
     height: 4em;
-    background-image: url("../../assets/main_logo.png");
+    background-image: url("../assets/main_logo.png");
     background-size: 7em;
     background-repeat: no-repeat;
 }
