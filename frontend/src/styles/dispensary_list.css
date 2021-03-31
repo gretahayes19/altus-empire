@@ -3,4 +3,9 @@
     grid-row: 2;
 }
 
+.dispensary-list a {
+    text-decoration: none;
+    color: black;
+}
+
 .dispensary-entry-container {}
