@@ -2,6 +2,10 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const DispensarySchema = new Schema({
+    photoId: {
+        type: Schema.Types.ObjectId, 
+        ref: 'photo' 
+    },
     dispensaryName: {
         type: String,
         required: true

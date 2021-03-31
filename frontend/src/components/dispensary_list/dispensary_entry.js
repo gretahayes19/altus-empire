@@ -4,6 +4,10 @@ import {Link} from 'react-router-dom';
 
 class DispensaryEntry extends React.Component {
 
+  componentDidMount() {
+    // fetchPhotos
+  }
+
   render() {
     debugger;
     const { dispensary } = this.props;

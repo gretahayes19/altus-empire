@@ -56,5 +56,12 @@ router.post("/upload", upload.single('file'), function(req, res) {
     })
 })
 
+router.get('/all', (req, res) => {
+    res.json({
+        dispensaryId,
+        fileLink  
+    })
+})
+
 module.exports = router;
 
