@@ -23,7 +23,7 @@ router.post('/new', passport.authenticate('jwt', {session: false}), async functi
         review: req.body.review,
     })
 
-    const oldDispensary = await Dispensary.findOne({ _id: req.body.dispensaryId })
+    const oldDispensary = await Dispensary.findOne({ _id: req.body.dispensaryId }).catch(err => console.log(err))
     const oldRatings = await Rating.find({ dispensary: req.body.dispensaryId }, 'rating').exec();
     const newAvg = (parseFloat(oldDispensary.avgRating) * oldRatings.length + parseInt(req.body.rating)) / (oldRatings.length + 1);
     await Dispensary.updateOne({ _id: req.body.dispensaryId }, { avgRating: newAvg }).catch(err => console.log(err));
