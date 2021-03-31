@@ -32,6 +32,9 @@ const DispensarySchema = new Schema({
     },
     postphoto: {
         type: String
+    },
+    avgRating: {
+        type: mongoose.Types.Decimal128
     }
 })
 
