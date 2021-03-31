@@ -10,7 +10,7 @@ export default function reviewsReducer(state = [], action) {
         case RECEIVE_REVIEWS:
             return action.reviews.data;
         case RECEIVE_REVIEW:
-            newState.push(action.review);
+            newState.push(action.review.data);
             return newState;
         case CLEAR_REVIEWS:
             return [];

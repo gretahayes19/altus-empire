@@ -27,6 +27,8 @@ class ReviewForm extends React.Component {
             size: 30,
             value: 2.5,
             isHalf: false,
+            color: "#94D7C5",
+            activeColor: "#F6CB24",
             onChange: newValue => {
                 this.setState({ rating: newValue })
             }
