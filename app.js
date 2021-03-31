@@ -32,7 +32,7 @@ app.use(bodyParser.json());
 app.use("/api/users", users);
 app.use("/api/map", dispensaries)
 app.use("/api/ratings", ratings)
-app.use("/api/photos", photos)
+// app.use("/api/photos", photos)
 
 app.use(passport.initialize());
 require('./config/passport')(passport);
