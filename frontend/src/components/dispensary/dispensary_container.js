@@ -1,16 +1,29 @@
 import { connect } from 'react-redux';
 import Dispensary from './dispensary';
 import {fetchReviews} from '../../actions/rating_actions'
+import { fetchDispensaries } from '../../actions/dispensary_actions';
 
-const mSTP = (state, ownProps) => ({
+const formatArrToObj = arr => {
+    let obj = {};
+    arr.forEach(ele => obj[ele._id] = ele)
+    console.log(obj);
+    return obj;
+}
+
+const mSTP = (state, ownProps) => {
+    // debugger
+    return {
     loggedIn: state.session.isAuthenticated,
-    dispensaryId: ownProps.dispensaryId,
-    reviews: state.entities.reviews,
-    
-});
+    dispensary: formatArrToObj(state.entities.dispensaries)[ownProps.match.params.dispensaryId],
+    dispensaryId: ownProps.match.params.dispensaryId,
+    reviews: state.entities.reviews,   
+    }
+};
 
 const mDTP = dispatch => ({
-    fetchReviews: dispendaryId => dispatch(fetchReviews(dispendaryId))
+    fetchReviews: dispendaryId => dispatch(fetchReviews(dispendaryId)),
+    fetchDispensaries: () => dispatch(fetchDispensaries())
+
 })
 
-export default connect(mSTP)(Dispensary);
+export default connect(mSTP, mDTP)(Dispensary);
