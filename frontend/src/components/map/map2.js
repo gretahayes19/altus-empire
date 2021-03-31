@@ -1,6 +1,6 @@
 import GoogleMapReact from 'google-map-react';
 import React, { Component } from 'react';
-import "./map.css"
+import "../../styles/map.css";
 import { golden } from './mapstyle'
 import Marker from './marker'
 

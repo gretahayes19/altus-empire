@@ -1,5 +1,7 @@
 import React from 'react';
 import DispensaryEntry from './dispensary_entry';
+import '../../styles/dispensary_list.css';
+
 
 class DispensaryList extends React.Component {
     constructor(props) {

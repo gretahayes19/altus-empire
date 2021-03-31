@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
-import "./map.css"
+import "../../styles/map.css";
 import {golden} from './mapstyle'
 import cannabisMarker from '../../assets/cannabis-solid.svg'
 import { Link } from 'react-router-dom';

@@ -1,43 +1,31 @@
 .home-page {
-    background-image: url('../assets/curved.jpg');
+    /* background-image: url('../assets/curved.jpg'); */
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 64px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 50em;
+    height: 100%;
     width: 100%;
-    position: fixed;    
+    position: fixed;
 }
 
 .home-search-bar {
     width: 70%;
     margin: 40px auto;
-    font-size:  24px;
+    font-size: 24px;
     margin-bottom: 0;
-    z-index: 1;
+    z-index: 5;
 }
 
 
-.home-map{
+.home-map {
     width: 100%;
     position: absolute;
 
 }
 
-.map-list {
-    display: flex;
-}
-
-.search-bar-container {
-    margin-bottom: 10px;
-}
-
-.dispensary-list-container {
-    margin-left: 12px;
-    padding: 10px;
-}
 
 .search-input {
     box-shadow: 0 0 0 15px rgba(255, 255, 255, .45);
@@ -53,7 +41,7 @@
     color: black;
     text-align: left;
     border: none;
-}   
+}
 
 .search-input svg {
     color: black;
@@ -68,9 +56,4 @@
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
     cursor: pointer;
-}
-
-.google-wrapper {
-    width: 10px;
-    height: 10px;
 }

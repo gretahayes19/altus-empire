@@ -1,7 +1,7 @@
 import React from 'react';
 import GoogleApiWrapper from './map';
 import SearchBar from '../search/searchbar';
-import "./map.css";
+import "../../styles/map.css";
 import DispensaryListContainer from "../dispensary_list/dispensary_list_container"
 
 class MapPage extends React.Component {
@@ -29,9 +29,9 @@ class MapPage extends React.Component {
                 </div>
                 <div className="map-list">
                     <GoogleApiWrapper dispensaries={dispensaries}/>
-                    <div className="dispensary-list-container">
-                        <DispensaryListContainer />
-                    </div>
+                </div>
+                <div className="dispensary-list-container">
+                    <DispensaryListContainer />
                 </div>
             </div>
             </>
