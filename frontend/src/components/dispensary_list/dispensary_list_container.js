@@ -1,9 +1,12 @@
 import { connect } from 'react-redux';
 import DispensaryList from './dispensary_list';
 
-const mSTP = state => ({
-    dispensaries: Object.values(state.entities.dispensaries)
-});
+const mSTP = state => {
+    debugger;
+    return ({
+        dispensaries: Object.values(state.entities.dispensaries)
+    });
+};
 
 const mDTP = dispatch => ({
 

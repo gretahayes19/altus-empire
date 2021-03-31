@@ -4,12 +4,31 @@ import {Link} from 'react-router-dom';
 
 class DispensaryEntry extends React.Component {
 
+  componentDidMount() {
+    // fetchPhotos
+  }
+
   render() {
+    debugger;
     const { dispensary } = this.props;
     return (
       <Link to={`/dispensary/${dispensary._id}`}>
         <div className="dispensary-entry-container">
-          <div className="company-logo"></div>
+          <div className="company-logo">
+            {!dispensary.postphoto? (
+              <img
+                className="dispensary-postphoto"
+                // src={`https://altus-empire-seeds.s3.amazonaws.com/emptypostimage.png`}
+                alt=""
+              />
+            ) : (
+              <img
+                className="dispensary-postphoto"
+                // src={`https://altus-empire-seeds.s3.amazonaws.com/${postphoto}`}
+                alt=""
+              />
+            )}
+          </div>
           <div className="dispensary-name">
             <h3>{dispensary.dispensaryName}</h3>
           </div>
