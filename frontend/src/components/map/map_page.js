@@ -29,9 +29,9 @@ class MapPage extends React.Component {
                 </div>
                 <div className="map-list">
                     <GoogleApiWrapper dispensaries={dispensaries}/>
-                    <div className="dispensary-list-container">
-                        <DispensaryListContainer />
-                    </div>
+                </div>
+                <div className="dispensary-list-container">
+                    <DispensaryListContainer />
                 </div>
             </div>
             </>
