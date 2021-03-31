@@ -2,7 +2,9 @@
 
 .dispensary-list {
     grid-column: 3;
-    grid-row: 2;
+    grid-row: 1;
+    padding-bottom: 20em;
+    /* padding: 5em; */
 }
 
 .dispensary-list a {
@@ -10,4 +12,13 @@
     color: black;
 }
 
-.dispensary-entry-container {}
+.dispensary-entry-container {
+    margin: 1em;
+    border: 1px solid rgba(128, 128, 128, 0.329);
+    border-radius: 5px;
+    padding: 2em;
+}
+
+.dispensary-entry-container:hover {
+    box-shadow: 0 0 10px 1px rgba(53, 50, 50, 0.336);
+}

@@ -39,7 +39,7 @@
 
 .form-submit {
     align-items: stretch;
-    background-color: rgb(87, 52, 48);
+    background-color: var(--blue);
     color: white;
     border-radius: 3px;
     border: none;
