@@ -9,7 +9,7 @@ const validateRatingInput = require('../../validation/rating')
 
 router.get('/test', (req, res) => res.json({msg: "this is rating"}))
 
-router.post('/new', passport.authenticate('jwt', {session: false}), async function (req, res) {
+router.post('/', passport.authenticate('jwt', {session: false}), async function (req, res) {
     const {errors, isValid} = validateRatingInput(req.body)
 
     if (!isValid) {
@@ -23,8 +23,16 @@ router.post('/new', passport.authenticate('jwt', {session: false}), async functi
         review: req.body.review,
     })
 
-    const oldDispensary = await Dispensary.findOne({ _id: req.body.dispensaryId }).catch(err => console.log(err))
-    const oldRatings = await Rating.find({ dispensary: req.body.dispensaryId }, 'rating').exec();
+    const oldDispensary = await Dispensary.findOne({ _id: req.body.dispensaryId }).catch(err => console.log(err));
+    const oldRatings = await Rating.find({ dispensary: req.body.dispensaryId }, 'user rating').exec();
+
+    for (let i in oldRatings) {
+        console.log(`${oldRatings[i].user.toString()} and ${typeof req.user.id}`);
+        if (oldRatings[i].user.toString() === req.user.id) {
+            return res.status(400).json({review: 'Can not make duplicate review'});
+        }
+    }
+
     const newAvg = (parseFloat(oldDispensary.avgRating) * oldRatings.length + parseInt(req.body.rating)) / (oldRatings.length + 1);
     await Dispensary.updateOne({ _id: req.body.dispensaryId }, { avgRating: newAvg }).catch(err => console.log(err));
 
