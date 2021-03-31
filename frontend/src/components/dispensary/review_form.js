@@ -72,6 +72,7 @@ class ReviewForm extends React.Component {
           />
           <button className="write-review-button">Submit Review</button>
         </form>
+        <div className="review-errors">{this.renderErrors()}</div>
       </div>
     );
   }
