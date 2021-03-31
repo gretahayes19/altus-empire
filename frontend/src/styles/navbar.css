@@ -23,3 +23,47 @@
     width: 100px;
     padding: 10px;
 }
+
+.landing-navbar-container {
+    height: 64px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: white;
+}
+
+.landing-navbar {
+    padding-left: 36px;
+    padding-right: 36px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-nav {
+    display: flex;
+    align-items: center;
+}
+
+.left-nav>a:last-child {
+    margin-left: 12px;
+}
+
+.right-nav a:not(:last-child) {
+    margin-right: 12px;
+}
+
+.navbar a {
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+}
+
+.navbar a:hover {
+    color: teal;
+    cursor: pointer;
+}
