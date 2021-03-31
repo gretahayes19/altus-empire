@@ -20,10 +20,6 @@ seeder.connect(db, function() {
     })
 })
 
-
-
-const data = [
-
 const dispensaryData = [
 
     {
