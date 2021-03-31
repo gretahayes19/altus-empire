@@ -1,12 +1,10 @@
 h1 {
     font-family: 'Lobster', cursive;
     color: #94D7C5;
-    font-size: 60px;
+    font-size: 80px;
+    text-shadow: 4px 4px #C06038;
 }
 
-body {
-    background-color: #94D7C5;;
-}
 .disp-desciption{
     color: #704C2D;
     width: 500px;
@@ -88,6 +86,7 @@ body {
     margin-top: 25px;
     font-family: 'Lobster', cursive;
     font-size: 20px;
+
 }
 
 .review-form button:hover {
@@ -97,6 +96,10 @@ body {
     color: #704C2D;
     font-family: 'Lobster', cursive;
     font-size: 20px;
+    box-shadow: 0px 0px 7px 4px #704C2D(92, 204, 224, 0.253);
+
+    opacity: 1;
+
 }
 
 .review-form textarea::placeholder {
