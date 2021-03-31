@@ -7,12 +7,15 @@ const passport = require('passport');
 const validateDispensaryInput = require('../../validation/dispensary')
 require('../../config/passport.js')(passport)
 
+
 router.get('/all', (req, res) => {
     Dispensary
         .find({})
         .then((dispensaries) => res.json(dispensaries))
         .catch(err => res.status(404).json(err))
 })
+
+
 
 // router.post('/:id/photo', allowCrossDomain, [auth], async (req, res) => {
 //     try {

@@ -20,7 +20,12 @@ seeder.connect(db, function() {
     })
 })
 
+
+
+const data = [
+
 const dispensaryData = [
+
     {
         'model' : 'dispensary',
         'documents' : [
