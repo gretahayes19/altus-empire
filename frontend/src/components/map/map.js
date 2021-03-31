@@ -3,6 +3,8 @@ import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
 import "../../styles/map.css";
 import {golden} from './mapstyle'
 import cannabisMarker from '../../assets/cannabis-solid.svg'
+import { Link } from 'react-router-dom';
+
 
 export class MapContainer extends Component {
 
@@ -41,6 +43,7 @@ export class MapContainer extends Component {
                 position={{ lat: mark.latitude, lng: mark.longitude }}
                 onClick={this.onMarkerClick} 
                 name={mark.dispensaryName}
+                data={mark._id}
             />)
         
 
