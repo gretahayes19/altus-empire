@@ -38,36 +38,7 @@ class ReviewForm extends React.Component {
                     <form onSubmit={this.handleSubmit} className="review-form">
                         <p>Rating</p>
                          <ReactStars {...starOps} />
-{/* 
-                        <div className="rating-select" onChange={this.update("rating")}>
-                            <label className="review-star">★
-                            <input type="radio" name="rating" value="5" />
-                            </label>
 
-                            <label className="review-star">★
-                            <input type="radio" name="rating" value="4" />
-                            </label>
-
-                            <label className="review-star">★
-                            <input type="radio" name="rating" value="3" />
-                            </label>
-
-                            <label className="review-star">★
-                            <input type="radio" name="rating" value="2" />
-                            </label>
-
-                            <label className="review-star">★
-                            <input type="radio" name="rating" value="1" required />
-                            </label>
-                        </div> */}
-                        {/* <p>Date</p>
-                        <input
-                            type="date"
-                            className="text-input"
-                            placeholder="Date"
-                            value={this.state.date}
-                            onChange={this.update("date")}
-                            required /> */}
                         <p>Review</p>
                         <textarea
                             className="text-input review-text"
