@@ -24,8 +24,7 @@ class Dispensary extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    console.log(this.state)
-    if (prevProps.reviews !== this.state.reviews) {
+    if (prevProps.reviews.length !== this.props.reviews.length) {
       this.props.fetchReviews(this.props.match.params.dispensaryId).then(
         () => this.setState({ reviews: this.props.reviews})
       )

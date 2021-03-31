@@ -8,7 +8,8 @@ const mSTP = (state, ownProps) => {
         initialState: {
             rating: 5,
             review: "",
-            dispensaryId: ownProps.dispensary._id
+            dispensaryId: ownProps.dispensary._id,
+            errors: state.errors.input
         }
     }
 }
