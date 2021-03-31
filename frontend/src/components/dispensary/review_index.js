@@ -9,13 +9,17 @@ const ReviewIndex = ({ reviews }) => {
             isHalf: false,
             edit: false,
             color: "#94D7C5",
-            activeColor: "#F6CB24"
+            activeColor: "#F6CB24",
+            emptyIcon: <i class="fas fa-cannabis"></i>,
+            filledIcon: < i class= "fas fa-cannabis" ></i>
     };
+
 
     return (
         <ul className="review-index">
             {reviews.map((review, idx) => (
                 <li className="review-item" key={review._id}>
+                    <p>Date: {review.date.slice(5, 10).concat("-".concat(review.date.slice(2, 4)))}</p>
                     <p>{review.review}</p>
                     <ReactStars value={review.rating} {...starOps} />
 
