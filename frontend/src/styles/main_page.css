@@ -25,6 +25,7 @@ body {
     background-image: url("../assets/light_electric.jpg");
     background-size: 100em;
     background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .main-page-logo {
