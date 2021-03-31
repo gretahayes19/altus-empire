@@ -55,14 +55,13 @@
 }
 
 h1.search-results {
-    z-index: 100;
+    margin-left: 60%;
 }
 
 .map-list {
     margin-top: 13.5vh;
     grid-column: 1 / 4;
     grid-row: 2;
-    /* z-index: ; */
 }
 
 .map-div {

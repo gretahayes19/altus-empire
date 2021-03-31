@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const PhotoSchema = new Schema({
-    postId: {
+    dispensaryId: {
         type: Schema.Types.ObjectId,
         ref: 'dispensary'
     },
