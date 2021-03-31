@@ -16,3 +16,4 @@ const ReviewIndex = ({ reviews }) => {
 }
 
 export default ReviewIndex
+
