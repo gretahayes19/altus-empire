@@ -43,9 +43,7 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "multer": "^1.4.2",
-    "aos": "^2.3.4"
-    "react-rating-stars-component": "^2.2.0",
-
-
+    "aos": "^2.3.4",
+    "react-rating-stars-component": "^2.2.0"
   }
 }

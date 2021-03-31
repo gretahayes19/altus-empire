@@ -32,9 +32,9 @@ router.post('/new', passport.authenticate('jwt', {session: false}), async functi
     newRating.save().then(rating => res.json(rating))
 })
 
-router.get('/dispensary', (req, res) => {
+router.get('/dispensary/:dispensaryId', (req, res) => {
     Rating
-        .find({dispensary: req.body.dispensaryId})
+        .find({dispensary: req.params.dispensaryId})
         .then(ratings => res.json(ratings))
         .catch(err => res.status(400).json(err))
 })
