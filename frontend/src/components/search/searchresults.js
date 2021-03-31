@@ -6,8 +6,6 @@ import { Link } from "react-router-dom";
 
 class SearchResults extends React.Component {
 
-
-
     render() {
 
         const parent = this.props.parent === "sub" ? "sub-" : "";

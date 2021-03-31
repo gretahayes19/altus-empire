@@ -1,8 +1,7 @@
 import * as DispensaryAPIUtil from '../util/dispensary_api_util'
 
-export const RECEIVE_DISPENSARIES = "RECEIVE_DISPENSARIES"
-export const CLEAR_DISPENSARIES = "CLEAR_DISPENSARIES"
-// export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
+export const RECEIVE_DISPENSARIES = "RECEIVE_DISPENSARIES";
+export const CLEAR_DISPENSARIES = "CLEAR_DISPENSARIES";
 
 const receiveDispensaries = (dispensaries) => {
     return ({
@@ -17,14 +16,7 @@ const clearDispensaries = () => {
     })
 }
 
-// const receiveReview = () => {
-//     return ({
-//         type: RECEIVE_REVIEW
-//     })
-// }
-
 export const fetchDispensaries = () => (dispatch) => {
     return DispensaryAPIUtil.fetchDispensaries()
-    .then(dispensaries => dispatch(receiveDispensaries(dispensaries)))
+        .then(dispensaries => dispatch(receiveDispensaries(dispensaries)))
 }
-
