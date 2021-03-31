@@ -1,16 +1,21 @@
 h1 {
-    font-family: Helvetica Neue,
-    Helvetica,
-    Arial,
-    sans-serif;
-    color: black;
+    font-family: 'Lobster', cursive;
+    color: #94D7C5;
+    font-size: 60px;
+}
+
+.disp-desciption{
+    color: #704C2D;
+    width: 500px;
+    background-color: #F89621;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'Varela Round', sans-serif;
 }
 
 .text-input{
-    font-family: Helvetica Neue,
-    Helvetica,
-    Arial,
-    sans-serif;
+    font-family: 'Varela Round', sans-serif;
+
 }
 
 .dispensary-page-div {
@@ -26,7 +31,49 @@ h1 {
 }
 
 .review-container {
-    background-color: white;
-    width: 300px;
+    width: 500px;
     padding: 10px;
+    background-color: #C06038;
+    border-radius: 8px;
+
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    font-family: 'Varela Round', sans-serif;
+
+}
+.review-form p {
+    color: #F8E6BD;
+    font-family: 'Varela Round', sans-serif;
+
+}
+
+.review-index {
+    height: 300px;
+    overflow-y: auto;
+    width: 500px;
+    background-color: #F89621;
+    padding: 10px;
+    border-radius: 8px;
+    font-family: 'Varela Round', sans-serif;
+
+
+
+}
+
+.review-item {
+    margin: 0 24px;
+    font-size: 16px;
+    line-height: 1.44;
+    color: #704C2D;
+    font-weight: 375;
+    border-bottom: 1px solid #704C2D;
+    list-style: none;
+}
+
+.review-item p {
+    margin-bottom: 0;
 }

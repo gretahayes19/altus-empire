@@ -23,19 +23,28 @@ class Dispensary extends React.Component {
     
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
     console.log(this.state)
+    if (prevProps.reviews !== this.state.reviews) {
+      this.props.fetchReviews(this.props.match.params.dispensaryId).then(
+        () => this.setState({ reviews: this.props.reviews})
+      )
+    }
+
   }
 
   render() {
     // if (!this.state.reviews.length) return null;
     if (!this.state.dispensary) return null;
     const {reviews, dispensary } = this.state 
+    const sortedReviews = reviews.slice().reverse()
+
       return (
         <div className="dispensary-page-div">
               <h1>{dispensary.dispensaryName}</h1>
+              <p className="disp-desciption">{dispensary.description}</p>
               <ReviewFormContainer dispensary={dispensary} />
-             <ReviewIndex reviews={reviews} />
+             <ReviewIndex reviews={sortedReviews} />
           </div>
       )
   }
