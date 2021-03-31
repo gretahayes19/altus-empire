@@ -47,14 +47,14 @@ class ReviewForm extends React.Component {
                             <input type="radio" name="rating" value="1" required />
                             </label>
                         </div>
-                        <p>Date</p>
+                        {/* <p>Date</p>
                         <input
                             type="date"
                             className="text-input"
                             placeholder="Date"
                             value={this.state.date}
                             onChange={this.update("date")}
-                            required />
+                            required /> */}
                         <p>Review</p>
                         <textarea
                             className="text-input review-text"
