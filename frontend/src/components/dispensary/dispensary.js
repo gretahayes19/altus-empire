@@ -36,7 +36,7 @@ class Dispensary extends React.Component {
         <div className="dispensary-page-div">
               <h1>{dispensary.dispensaryName}</h1>
               <ReviewFormContainer dispensary={dispensary} />
-             {/* <ReviewIndex reviews={reviews} /> */}
+             <ReviewIndex reviews={reviews} />
           </div>
       )
   }
