@@ -12,30 +12,22 @@ const Photo = require('../../models/Photo')
 let storage = multer.memoryStorage()
 let upload = multer({ storage: storage })
 
-const AWS_FILE_URL_LINK = "https://s3-us-east-1.amazonaws.com/altus-empire-seeds/"
-const AWS_ACCESS_KEY_ID = "AKIA3KJF7TLUJCRCFEP4"
-const AWS_SECRET_ACCESS_KEY = "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"
-const AWS_BUCKET_NAME = "altus-empire-seeds"
-const AWS_REGION = "us-east-1"
+const keys = require('../../config/keys_prod');
 
 router.get('/test', (req, res) => res.json({msg: "photo route connected"}))
 
 router.post("/upload", upload.single('file'), function(req, res) {
-    // console.log(req.body.file)
     const file = req.file
-    console.log(req.file)
-    const awsFileURL = AWS_FILE_URL_LINK
+    const awsFileURL = keys.AWS_FILE_URL_LINK
 
     let s3bucket = new AWS.S3({
-        accessKeyId: AWS_ACCESS_KEY_ID,
-        secretAccessKey: AWS_SECRET_ACCESS_KEY,
-        region:  AWS_REGION,
+        accessKeyId: keys.AWS_ACCESS_KEY_ID,
+        secretAccessKey: keys.AWS_SECRET_ACCESS_KEY,
+        region:  keys.AWS_REGION,
     })
 
-    // console.log(s3bucket)
-
     let params = {
-        Bucket: AWS_BUCKET_NAME,
+        Bucket: keys.AWS_BUCKET_NAME,
         Key: file.originalname,
         Body: file.buffer,
         ContentType: file.mimetype,
