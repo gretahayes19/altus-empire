@@ -12,7 +12,7 @@ const Photo = require('../../models/Photo')
 let storage = multer.memoryStorage()
 let upload = multer({ storage: storage })
 
-const keys = require('../../config/keys_dev');
+const keys = require('../../config/keys_prod');
 
 router.get('/test', (req, res) => res.json({msg: "photo route connected"}))
 
