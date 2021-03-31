@@ -21,7 +21,6 @@ class ReviewForm extends React.Component {
         }
     }
 
-
     render() {
 
         const starOps = {

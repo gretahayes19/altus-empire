@@ -8,10 +8,7 @@ const mSTP = (state, ownProps) => {
         initialState: {
             rating: 5,
             review: "",
-            // date: "",
-            user: state.session.user._id,
             dispensaryId: ownProps.dispensary._id
-
         }
     }
 }
