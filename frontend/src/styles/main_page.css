@@ -5,6 +5,7 @@ body {
     Helvetica,
     Arial,
     sans-serif;
+    overflow: auto;
 }
 
 .main-page {
@@ -129,7 +130,7 @@ h1{
 	-webkit-animation: topToBottom 8s linear infinite 0s;
 	color: #00abe9;
 	opacity: 0;
-	overflow: hidden;
+	overflow: auto;
     position: absolute;
     text-decoration: none;
 }

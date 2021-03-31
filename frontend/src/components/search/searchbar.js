@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import SearchResults from './searchresults';
 
+import '../../styles/map.css'
+
 class SearchBar extends React.Component {
     constructor(props) {
         super(props)
@@ -37,8 +39,6 @@ class SearchBar extends React.Component {
         // } else this.props.fetchSearchResults(this.state.query);
     }
 
-
-
     render() {
 
         const { results } = this.props
@@ -49,11 +49,11 @@ class SearchBar extends React.Component {
                     <form onSubmit={this.handleSubmit} className="search-input">
                         <FontAwesomeIcon icon={faSearch} />
                         <input type="text" placeholder="Find a dispensary near you" onChange={this.update()} />
-                        <button>Search</button>
+                        <button className="map-search-button">Search</button>
                     </form>
                 </div>
                 {(this.state.query !== "") ? (
-                    <h1>search</h1>
+                    <h1 className="search-results">search</h1>
                     // <SearchResults results={results} query={this.state.query} fetchSearchResults={this.props.fetchSearchResults} />
                 ) : null}
             </>
