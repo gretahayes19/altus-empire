@@ -1,5 +1,5 @@
-import React from 'react'
-import '../../styles/dispensary.css';
+import React from "react";
+import "../../styles/dispensary.css";
 import ReactStars from "react-rating-stars-component";
 
 class ReviewForm extends React.Component {
@@ -20,7 +20,7 @@ class ReviewForm extends React.Component {
 
   componentDidUpdate(prevProps) {
     if (prevProps.initialState.errors !== this.props.initialState.errors) {
-        this.setState({ errors: this.props.initialState.errors });
+      this.setState({ errors: this.props.initialState.errors });
     }
   }
 
@@ -49,6 +49,8 @@ class ReviewForm extends React.Component {
       isHalf: false,
       color: "#94D7C5",
       activeColor: "#F6CB24",
+      emptyIcon: <i class="fas fa-cannabis"></i>,
+      filledIcon: <i class="fas fa-cannabis"></i>,
       onChange: (newValue) => {
         this.setState({ rating: newValue });
       },
@@ -70,10 +72,9 @@ class ReviewForm extends React.Component {
           />
           <button className="write-review-button">Submit Review</button>
         </form>
-        <div className="form-errors">{this.renderErrors()}</div>
       </div>
     );
   }
 }
 
-export default ReviewForm
+export default ReviewForm;
