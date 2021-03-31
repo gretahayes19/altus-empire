@@ -4,7 +4,7 @@ const passport = require('passport');
 require('../../config/passport.js')(passport)
 
 // AWS
-require('dotenv').config()
+// require('dotenv').config()
 const multer = require('multer')
 let AWS = require('aws-sdk')
 const Photo = require('../../models/Photo')
@@ -22,7 +22,7 @@ router.get('/test', (req, res) => res.json({msg: "photo route connected"}))
 
 router.post("/upload", upload.single('file'), function(req, res) {
     // console.log(req.body.file)
-    const file = req.body.file
+    const file = req.file
     console.log(req.file)
     const awsFileURL = AWS_FILE_URL_LINK
 
