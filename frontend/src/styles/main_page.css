@@ -1,20 +1,14 @@
 body {
-    font-family: Constantia,
-    "Lucida Bright",
-    Lucidabright,
-    "Lucida Serif",
-    Lucida,
-    "DejaVu Serif",
-    "Bitstream Vera Serif",
-    "Liberation Serif",
-    Georgia,
-    serif;
+    font-family: Helvetica Neue,
+    Helvetica,
+    Arial,
+    sans-serif;
 }
 
 .main-page {
     margin: 0;
     width: 100%;
-    height: 30em;
+    /* height: 30em; */
     margin-top: 64px;
 }
 
@@ -52,16 +46,10 @@ button {
     border: none;
     box-shadow: 0px 0px 7px 4px rgba(22, 22, 22, 0.2);
     border-radius: 3px;
-    font-family: Constantia,
-    "Lucida Bright",
-    Lucidabright,
-    "Lucida Serif",
-    Lucida,
-    "DejaVu Serif",
-    "Bitstream Vera Serif",
-    "Liberation Serif",
-    Georgia,
-    serif;
+    font-family: Helvetica Neue,
+    Helvetica,
+    Arial,
+    sans-serif;
     outline: none;
 }
 
