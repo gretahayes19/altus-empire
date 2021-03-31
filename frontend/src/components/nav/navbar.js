@@ -8,6 +8,8 @@ class NavBar extends React.Component {
     super(props);
     this.logoutUser = this.logoutUser.bind(this);
     this.getLinks = this.getLinks.bind(this);
+    this.getMainNav = this.getMainNav.bind(this);
+    this.getAuthNav = this.getAuthNav.bind(this);
   }
 
   logoutUser(e) {
@@ -25,21 +27,48 @@ class NavBar extends React.Component {
             </div>
         );
       } else {
-        return null;
+        return (
+          <div className="landing-nav-buttons">
+            <a onClick={() => this.props.openModal("login")}>LOGIN</a>
+            <a onClick={() => this.props.openModal("signup")}>GET STARTED</a>
+          </div>
+        );
       }
   }
 
-  render() {
-      return (
-        <div className="navbar-div">
-          <Link to="/">
-            <div className="navbar-div-logo">
-              <img src={logo}/>
-            </div>
-          </Link>
-          {this.getLinks()}
+  getAuthNav() {
+    
+  }
+
+  getMainNav() {
+    return (
+      <div className="navbar landing-navbar-container">
+        <div className="landing-navbar">
+          <div className="left-nav">
+            <a href="#"><span>ABOUT US</span></a>
+            <a href="#">OUR STORY</a>
+          </div>
+          <div className="center-nav">
+            <Link to="/">
+              <div className="navbar-div-logo">
+                <img src={logo} />
+              </div>
+            </Link>
+          </div>
+          <div className="right-nav">
+            {this.getLinks()}
+          </div>
         </div>
-      );
+      </div>
+    )
+  }
+
+  render() {
+      if (this.props.loggedIn) {
+        return null;
+      } else {
+        return this.getMainNav();
+      }
   }
 }
 
