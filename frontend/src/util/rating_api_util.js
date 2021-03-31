@@ -5,6 +5,5 @@ export const fetchReviews = (dispensaryId) => {
 };
 
 export const createReview = (review) => {
-    debugger
     return axios.post('/api/ratings/new', review)
 };  

@@ -4,7 +4,6 @@ import ReviewForm from './review_form';
 import { createReview } from '../../actions/rating_actions'
 
 const mSTP = (state, ownProps) => {
-    debugger
     return {
         initialState: {
             rating: 5,

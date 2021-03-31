@@ -30,7 +30,6 @@ class Dispensary extends React.Component {
   render() {
     // if (!this.state.reviews.length) return null;
     if (!this.state.dispensary) return null;
-    debugger;
     const {reviews, dispensary } = this.state 
       return (
         <div className="dispensary-page-div">
