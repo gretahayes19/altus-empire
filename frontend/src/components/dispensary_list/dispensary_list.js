@@ -21,7 +21,7 @@ class DispensaryList extends React.Component {
 
     render() {
         const {dispensaries} = this.state;
-        const items = dispensaries.map(dispensary => <DispensaryEntry dispensary={dispensary}/>)
+        const items = dispensaries.map(dispensary => <DispensaryEntry key={dispensary._id} dispensary={dispensary}/>)
         return (
             <div className="dispensary-list">
                 {items}

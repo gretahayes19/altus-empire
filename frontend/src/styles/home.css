@@ -1,3 +1,5 @@
+@import "variables";
+
 .home-page {
     /* background-image: url('../assets/curved.jpg'); */
     background-repeat: no-repeat;
@@ -26,9 +28,12 @@
 
 }
 
+.search-bar-container {
+    /* padding: 1vh; */
+    /* background-color: white; */
+}
 
 .search-input {
-    box-shadow: 0 0 0 15px rgba(255, 255, 255, .45);
     display: flex;
     justify-content: left;
     background-color: white;
@@ -41,19 +46,25 @@
     color: black;
     text-align: left;
     border: none;
+    outline: none;
 }
 
 .search-input svg {
     color: black;
-    padding: 20px;
+    padding: 5vh;
     cursor: text;
 }
 
 .search-input button {
-    background-color: brown;
-    padding: 20px 30px;
+    background-color: var(--blue);
+    height: min-content;
+    /* vertical-align: center; */
     border: none;
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
     cursor: pointer;
+}
+
+.map-search-button {
+    align-self: center;
+    border-radius: unset;
+    /* width: 10vw; */
 }

@@ -1,12 +1,16 @@
 import React from 'react';
 import ReviewIndex from './review_index'
+import ReviewFormContainer from './review_form_container'
+
+
+import '../../styles/dispensary.css';
 
 class Dispensary extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       reviews: [],
-      dispensary: {}
+      dispensary: null
     }
   }
 
@@ -25,13 +29,12 @@ class Dispensary extends React.Component {
 
   render() {
     // if (!this.state.reviews.length) return null;
-    if (!this.props.dispensary) return null;
-
+    if (!this.state.dispensary) return null;
     const {reviews, dispensary } = this.state 
       return (
-          <div>
+        <div className="dispensary-page-div">
               <h1>{dispensary.dispensaryName}</h1>
-              <h1>Hello</h1>
+              <ReviewFormContainer dispensary={dispensary} />
              <ReviewIndex reviews={reviews} />
           </div>
       )

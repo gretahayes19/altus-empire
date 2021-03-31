@@ -9,7 +9,7 @@ const validateRatingInput = require('../../validation/rating')
 
 router.get('/test', (req, res) => res.json({msg: "this is rating"}))
 
-router.post('/new', passport.authenticate('jwt', {session: false}), (req, res) => {
+router.post('/new', passport.authenticate('jwt', {session: false}), async function (req, res) {
     const {errors, isValid} = validateRatingInput(req.body)
 
     if (!isValid) {
@@ -23,9 +23,10 @@ router.post('/new', passport.authenticate('jwt', {session: false}), (req, res) =
         review: req.body.review,
     })
 
-    // const oldDispensary = Dispensary.findOne({
-    //     _id: req.body.dispensaryId
-    // })
+    const oldDispensary = await Dispensary.findOne({ _id: req.body.dispensaryId }).catch(err => console.log(err))
+    const oldRatings = await Rating.find({ dispensary: req.body.dispensaryId }, 'rating').exec();
+    const newAvg = (parseFloat(oldDispensary.avgRating) * oldRatings.length + parseInt(req.body.rating)) / (oldRatings.length + 1);
+    await Dispensary.updateOne({ _id: req.body.dispensaryId }, { avgRating: newAvg }).catch(err => console.log(err));
 
     // newDispensary.save()
     newRating.save().then(rating => res.json(rating))
