@@ -1,26 +1,31 @@
 import React from 'react';
 import '../../styles/dispensary_list.css';
+import {Link} from 'react-router-dom';
 
-const DispensaryEntry = props => {
-    const {dispensary} = props;
+class DispensaryEntry extends React.Component {
 
+  render() {
+    const { dispensary } = this.props;
     return (
-      <div className="dispensary-entry-container">
-        <div className="company-logo"></div>
-        <div className="dispensary-name">
-          <h3>{dispensary.dispensaryName}</h3>
-        </div>
-        <div className="dispensary-avg-rating"></div>
-        <div className="dispensary-contact">
-          <div className="dispensary-number">
-            <span>{dispensary.phone}</span>
+      <Link to={`/dispensary/${dispensary._id}`}>
+        <div className="dispensary-entry-container">
+          <div className="company-logo"></div>
+          <div className="dispensary-name">
+            <h3>{dispensary.dispensaryName}</h3>
           </div>
-          <div className="dispensary-address">
-            <span>{dispensary.address.split(",")[0]}</span>
+          <div className="dispensary-avg-rating"></div>
+          <div className="dispensary-contact">
+            <div className="dispensary-number">
+              <span>{dispensary.phone}</span>
+            </div>
+            <div className="dispensary-address">
+              <span>{dispensary.address.split(",")[0]}</span>
+            </div>
           </div>
         </div>
-      </div>
-    );
+      </Link>
+    )
+  }
 }
 
 export default DispensaryEntry;
