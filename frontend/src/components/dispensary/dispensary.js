@@ -1,5 +1,6 @@
 import React from 'react';
 import ReviewIndex from './review_index'
+import ReviewFormContainer from './review_form_container'
 
 class Dispensary extends React.Component {
   constructor(props) {
@@ -32,6 +33,7 @@ class Dispensary extends React.Component {
           <div>
               <h1>{dispensary.dispensaryName}</h1>
               <h1>Hello</h1>
+              <ReviewFormContainer dispensary={dispensary} />
              <ReviewIndex reviews={reviews} />
           </div>
       )
