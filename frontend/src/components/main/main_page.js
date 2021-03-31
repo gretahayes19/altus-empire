@@ -31,12 +31,12 @@ class MainPage extends React.Component {
               <button onClick={() => openModal("signup")}>21+ Older</button>
           </div>
           <div className="developer-profiles">
-            <h2 className="sentence">Start the journey with
+            <h2 className="sentence">Start your journey with
             <div className="slidingVertical">
-                <span>Greta</span>
-                <span>Hank</span>
-                <span>Christine</span>
-                <span>Kevin</span>
+                <a href="https://www.linkedin.com/in/greta-hayes-4a5b4559/" target="_blank">Greta</a>
+                <a href="https://www.linkedin.com/in/hank-chen-0846841b6/" target="_blank">Hank</a>
+                <a href="https://www.linkedin.com/in/christine-yang-4204a67b/" target="_blank">Christine</a>
+                <a href="https://www.linkedin.com/in/kevinxmao/" target="_blank">Kevin</a>
               </div>
             </h2>
           </div>

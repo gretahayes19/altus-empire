@@ -37,7 +37,12 @@ class NavBar extends React.Component {
   }
 
   getAuthNav() {
-    
+    return (
+      <div className="nav-links">
+        <Link to={'/home'}>Profile</Link>
+        <button onClick={this.logoutUser}>Logout</button>
+      </div>
+    )
   }
 
   getMainNav() {
@@ -65,7 +70,7 @@ class NavBar extends React.Component {
 
   render() {
       if (this.props.loggedIn) {
-        return null;
+        return this.getAuthNav();
       } else {
         return this.getMainNav();
       }
