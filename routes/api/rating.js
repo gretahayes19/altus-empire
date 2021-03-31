@@ -40,11 +40,22 @@ router.post('/', passport.authenticate('jwt', {session: false}), async function 
     newRating.save().then(rating => res.json(rating))
 })
 
-router.get('/dispensary/:dispensaryId', (req, res) => {
-    Rating
-        .find({dispensary: req.params.dispensaryId})
-        .then(ratings => res.json(ratings))
-        .catch(err => res.status(400).json(err))
+router.get('/dispensary/:dispensaryId', async function (req, res) {
+    const reviews = await Rating.find({
+      dispensary: req.params.dispensaryId,
+    }).catch((err) => res.status(400).json(err));
+
+    let data = [];
+
+    for (let i in reviews) {
+        let review = reviews[i].toJSON();
+        let userId = reviews[i].user;
+        let user = await User.findOne({_id: userId})
+        review.username = user.username;
+        data.push(review);
+    }
+
+    res.json(data);
 })
 
 module.exports = router
