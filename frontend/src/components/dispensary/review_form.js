@@ -1,4 +1,6 @@
 import React from 'react'
+import '../../styles/dispensary.css';
+import ReactStars from "react-rating-stars-component";
 
 class ReviewForm extends React.Component {
     constructor(props) {
@@ -21,11 +23,22 @@ class ReviewForm extends React.Component {
 
 
     render() {
+
+        const starOps = {
+            size: 30,
+            value: 2.5,
+            isHalf: false,
+            onChange: newValue => {
+                this.setState({ rating: newValue })
+            }
+        };
+        
         return (
-            <div>
-                <div>
+                <div className="review-container">
                     <form onSubmit={this.handleSubmit} className="review-form">
                         <p>Rating</p>
+                         <ReactStars {...starOps} />
+{/* 
                         <div className="rating-select" onChange={this.update("rating")}>
                             <label className="review-star">★
                             <input type="radio" name="rating" value="5" />
@@ -46,7 +59,7 @@ class ReviewForm extends React.Component {
                             <label className="review-star">★
                             <input type="radio" name="rating" value="1" required />
                             </label>
-                        </div>
+                        </div> */}
                         {/* <p>Date</p>
                         <input
                             type="date"
@@ -65,7 +78,6 @@ class ReviewForm extends React.Component {
                         <button className="write-review-button">Submit Review</button>
                     </form>
                 </div>
-            </div>
         )
     }
 }
