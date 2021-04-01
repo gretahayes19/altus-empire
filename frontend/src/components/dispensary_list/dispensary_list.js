@@ -11,39 +11,6 @@ class DispensaryList extends React.Component {
         this.state = {
             dispensaries: props.dispensaries
         }
-
-        this.deepDup = this.deepDup.bind(this)
-    }
-
-    deepDup(arr){
-        return arr.map(el => el instanceof Array ? this.deepDup(el) : el)
-    }
-
-    componentDidUpdate(prevProps) {
-        // this._isMounted = true;
-        debugger;
-        if ( ( prevProps.dispensaries !== this.props.dispensaries) 
-            && (JSON.stringify(prevProps.dispensaries) === JSON.stringify(this.props.dispensaries)) 
-            && (this.props.dispensaries.length !== 1) ) {
-            if (this.props.searchKeyword !== "") {
-                return this.props.fetchSearchByNameDispensary(this.props.searchKeyword)
-                    .then(() => {
-                        // if(this._isMounted) {
-                            const dispensaryClone = this.deepDup(this.props.dispensaries)
-                            this.setState({
-                                dispensaries: this.props.dispensaries
-                            })
-                        // }
-                    })
-            } else {
-                this.setState({
-                    dispensaries: this.props.dispensaries
-                }, this.props.fetchDispensaries);
-            }
-            // this.setState({
-            //     dispensaries: this.props.dispensaries
-            // })
-        }
     }
 
     componentWillUnmount() {

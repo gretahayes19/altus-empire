@@ -23,10 +23,8 @@ class SearchBar extends React.Component {
         console.log('Goddamn');
     }
 
-    update() {
-        return (e) => {
-            this.setState({ query: e.target.value }, this.handleSubmit);
-        }
+    update(e) {
+        this.setState({ query: e.target.value }, this.handleSubmit);
     }
 
     handleFocus() {
@@ -40,8 +38,8 @@ class SearchBar extends React.Component {
     handleSubmit(e) {
         console.log('update')
         if (this.state.query === "") {
-            this.props.clearSearchResults();
-        } else this.storeKeyWord(this.state.query)
+            this.props.fetchDispensaries();
+        } else this.props.fetchSearchByNameDispensary(this.state.query)
     }
 
     render() {
@@ -53,14 +51,10 @@ class SearchBar extends React.Component {
                 <div className="search-bar" onFocus={this.handleFocus} onBlur={this.handleBlur}>
                     <form onSubmit={this.handleSubmit} className="search-input">
                         <FontAwesomeIcon icon={faSearch} />
-                        <input type="text" placeholder="Find a dispensary near you" onChange={this.update()} />
-                        <button className="map-search-button">Search</button>
+                        <input type="text" placeholder="Find a dispensary near you" onChange={this.update} />
+                        <button className="map-search-button" onClick={this.handleSubmit}>Search</button>
                     </form>
                 </div>
-                {/* {(this.state.query !== "") ? (
-                    <h1 className="search-results">search</h1>
-                    // <SearchResults results={results} query={this.state.query} fetchSearchResults={this.props.fetchSearchResults} />
-                ) : null} */}
             </div>
         )
     }
