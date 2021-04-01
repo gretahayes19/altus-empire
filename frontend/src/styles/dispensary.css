@@ -138,6 +138,12 @@ h1 {
     list-style: none;
 }
 
+.review-item header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .review-item p {
     margin-bottom: 0;
 }

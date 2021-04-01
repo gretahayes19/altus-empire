@@ -49,8 +49,8 @@ class ReviewForm extends React.Component {
       isHalf: false,
       color: "#94D7C5",
       activeColor: "#F6CB24",
-      emptyIcon: <i class="fas fa-cannabis"></i>,
-      filledIcon: <i class="fas fa-cannabis"></i>,
+      emptyIcon: <i className="fas fa-cannabis"></i>,
+      filledIcon: <i className="fas fa-cannabis"></i>,
       onChange: (newValue) => {
         this.setState({ rating: newValue });
       },
