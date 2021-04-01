@@ -4,7 +4,7 @@ import '../../styles/dispensary_list.css';
 
 
 class DispensaryList extends React.Component {
-    // _isMounted = false;
+    _isMounted = false;
 
     constructor(props) {
         super(props);
