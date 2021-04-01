@@ -7,6 +7,13 @@
     /* padding: 5em; */
 }
 
+.dispensary-name {
+    font-family: 'Lobster', cursive;
+    color: #94D7C5;
+    font-size: 40px;
+    text-shadow: 2px 2px #C06038;
+}
+
 .dispensary-list a {
     text-decoration: none;
     color: black;
@@ -17,12 +24,14 @@
     border: 1px solid rgba(128, 128, 128, 0.329);
     border-radius: 5px;
     padding: 2em;
+    font-family: 'Varela Round', sans-serif;
+    color: #704C2D;
 }
+
 
 .dispensary-entry-container:hover {
     box-shadow: 0 0 10px 1px rgba(53, 50, 50, 0.336);
 }
-
 
 .dispensary-postphoto {
     height: 20vh;
