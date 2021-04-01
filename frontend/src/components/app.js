@@ -4,6 +4,7 @@ import { Switch } from 'react-router-dom';
 import NavBarContainer from './nav/navbar_container';
 import { Route } from "react-router-dom";
 import Modal from './modal/modal'
+import Footer from './footer/footer'
 import './app.css'
 
 import MainPageContainer from './main/main_page_container';
@@ -19,6 +20,7 @@ const App = () => (
         </Switch>
         <ProtectedRoute path="/home" component={HomePage} />
         <ProtectedRoute path="/dispensary/:dispensaryId" component={DispensaryContainer} />
+        <Route path="/" component={Footer}></Route>
     </div>
 );
 
