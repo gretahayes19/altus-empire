@@ -86,10 +86,10 @@ button:hover {
 }
 
 .main-page-bottom-buttons {
-     width: 25%;
-     padding: 40px;
+    width: 25%;
+    padding: 40px;
     display: flex;
-    justify-content: space-around;
+    gap: 40px;
 
 }
 

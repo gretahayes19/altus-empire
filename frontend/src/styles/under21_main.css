@@ -2,4 +2,88 @@
 
 .under-21-div {
     padding: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: "Lobster";
 }
+
+.under-21-info {
+    /* font-size: 20px; */
+}
+
+.under-21-div p {
+    padding-bottom: 10%;
+}
+
+.under-21-notice {
+    font-size: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    /* margin: 0 auto; */
+    animation:
+        typing 1.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+p.under-21-info-lr {
+    width: 100%;
+    overflow: hidden;
+}
+
+p.under-21-info-lr {
+    animation: 1s slide-right 1.5s forwards;
+    transform: translateX(-200%);
+}
+
+@keyframes slide-right {
+    to {
+        transform: translateX(0);
+    }
+}
+
+p.under-21-info-rl {
+    width: 100%;
+    overflow: hidden;
+}
+
+p.under-21-info-rl {
+    animation: 1s slide-left 3s forwards;
+    transform: translateX(200%);
+}
+
+@keyframes slide-left {
+    to {
+        transform: translateX(0);
+    }
+}
+
+p.under-21-info-squiggly {
+    width: 100%;
+    overflow: hidden;
+    transform: translateY(200%);
+}
+
+p.under-21-info-squiggly {
+    animation: 1s slide-everywhere 4s forwards;
+    transform: translateX(200%);
+    transform: rotate(180deg);
+    display: unset;
+}
+
+@keyframes slide-everywhere {
+    to {
+        transform: translateX(0);
+    }
+}
+
