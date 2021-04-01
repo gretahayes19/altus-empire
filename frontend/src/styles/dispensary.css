@@ -24,6 +24,9 @@ h1 {
 
 .dispensary-page-div {
     width: 100%;
+    margin-top: 64px;
+    padding-top: 24px;
+    padding-bottom: 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -136,6 +139,12 @@ h1 {
     font-weight: 375;
     border-bottom: 1px solid #704C2D;
     list-style: none;
+}
+
+.review-item header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .review-item p {

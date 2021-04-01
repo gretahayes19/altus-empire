@@ -1,7 +1,8 @@
 @import "variables";
 
 body {
-    font-family: Helvetica Neue,
+    font-family: 'Varela Round', sans-serif,
+    Helvetica Neue,
     Helvetica,
     Arial,
     sans-serif;
@@ -36,10 +37,10 @@ body {
 }
 
 .main-page-logo-pic {
-    width: 7em;
-    height: 4em;
-    background-image: url("../assets/main_logo.png");
-    background-size: 7em;
+    width: 28em;
+    height: 16em;
+    background-image: url("../assets/Altus_Empire_Wordmark.png");
+    background-size: 28em;
     background-repeat: no-repeat;
 }
 
