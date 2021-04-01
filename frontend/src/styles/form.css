@@ -1,18 +1,20 @@
 @import "variables";
 
 .form-div {
-    background-color: rgba(241, 249, 255, 0.295);
+    /* background-color: rgba(241, 249, 255, 0.295); */
     transition: 0.2;
     padding: 2em;
-    box-shadow: 0 0 4px 2px rgba(255, 255, 255, .45);
+    /* box-shadow: 0 0 4px 2px rgba(255, 255, 255, .45); */
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 3px;
+    width: 20em;
+    height: 418px;
 }
 
 .form-div.signup {
-    width: 20em;
+    /* width: 20em; */
 }
 
 .form {
@@ -83,7 +85,7 @@
 .signup-dob-label {
     color: white;
 }
-.signup-dob-label:hover {
+/* .signup-dob-label:hover {
     color: rgb(248, 200, 136);
     transition: 0.3;
-}
+} */
