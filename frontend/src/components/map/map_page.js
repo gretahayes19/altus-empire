@@ -24,7 +24,7 @@ class MapPage extends React.Component {
             <>
             <div className="map-page">
                 <div className="search-bar-container">
-                    <SearchBar clearSearchResults={this.props.clearSearchResults} storeKeyWord = {this.props.storeKeyWord}/>
+                        <SearchBar fetchDispensaries={this.props.fetchDispensaries} fetchSearchByNameDispensary={this.props.fetchSearchByNameDispensary}/>
                 </div>
                 <div className="map-list">
                     <div className="dispensary-list-container">
