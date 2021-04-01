@@ -5,16 +5,33 @@
     text-shadow: 4px 4px #C06038;
 }
 
-.disp-desciption{
+.disp-address{
     color: #704C2D;
     width: 500px;
-    background-color: #F89621;
+    text-align: center;
+    background-color: var(--blue);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-family: 'Lobster', sans-serif;
+    font-size: 18px;
+    border: 5px solid var(--brown);
+}
+.disp-desciption{
+    color: var(--beige);
+    width: 500px;
+    background-color: var(--brownred);
     padding: 20px 15px;
-    
+
     border-radius: 8px;
     font-family: 'Varela Round', sans-serif;
     font-size: 18px;
-    border: 5px solid #704C2D;
+    border: 5px solid var(--brown);
+}
+
+.dispensary-pagepic{
+    width: 550px;
+    border-radius: 8px;
+    border: 5px solid var(--blue)
 }
 
 .text-input{
@@ -24,18 +41,48 @@
 
 .dispensary-page-div {
     width: 100%;
+    height: 100%;
     margin-top: 64px;
     padding-top: 24px;
     padding-bottom: 24px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
     justify-content: space-around;
     /* height: 2000px; */
     background-image: url("../assets/dark_electric.jpg");
     background-size: 100em;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.dispensary-left {
+    /* width: 35%; */
+    margin-left: 200px;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 200px;
+}
+
+.dispensary-left > * {
+    margin: 5px 0;
+}
+.dispensary-right > * {
+    margin: 5px 0;
+}
+
+.dispensary-right {
+    /* width: 65%; */
+    margin-right: 200px;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 200px;
 }
 
 .review-container {
@@ -66,7 +113,9 @@
 }
 
 .review-form textarea {
-    width: 300px;
+    width: 400px;
+    max-width: 400px;
+    min-width: 400px;
     height: 100px;
     background-color: #F8E6BD;
     color: #704C2D;
@@ -82,24 +131,25 @@
 }
 
 .review-form button {
-    width: 200px;
-    height: 50px;
+    /* width: 200px; */
+    /* height: 50px; */
     background-color: #F8E6BD;
     color: #704C2D;
-    margin-top: 25px;
+    margin-top: 10px;
     font-family: 'Lobster', cursive;
     font-size: 20px;
 
 }
 
 .review-form button:hover {
-    width: 200px;
-    height: 50px;
+    /* width: 200px;
+    height: 50px; */
     background-color: #94D7C5;
+    border: 5px solid var(--brown);
     color: #704C2D;
     font-family: 'Lobster', cursive;
     font-size: 20px;
-    box-shadow: 0px 0px 7px 4px #704C2D(92, 204, 224, 0.253);
+    /* box-shadow: 0px 0px 7px 4px #704C2D(92, 204, 224, 0.253); */
 
     opacity: 1;
 
@@ -117,10 +167,10 @@
 
 
 .review-index {
-    height: 500px;
     overflow-y: auto;
+    height: 35%;
     width: 500px;
-    background-color: #F89621;
+    background-color: var(--beige);
     padding: 10px;
     border-radius: 8px;
     font-family: 'Varela Round', sans-serif;
@@ -137,8 +187,13 @@
     line-height: 1.44;
     color: #704C2D;
     font-weight: 375;
-    border-bottom: 1px solid #704C2D;
+    border-bottom: 3px solid #704C2D;
     list-style: none;
+}
+
+.review-item:last-child{
+    border-bottom: none;
+
 }
 
 .review-item header {
@@ -149,4 +204,14 @@
 
 .review-item p {
     margin-bottom: 0;
+}
+
+.review-username {
+    font-family: "Lobster";
+    font-size: 25px;
+}
+
+.review-date {
+    font-family: "Lobster";
+    font-size: 18px;
 }
