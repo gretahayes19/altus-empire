@@ -1,8 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import SearchResults from './searchresults';
-
 import '../../styles/map.css'
 
 class SearchBar extends React.Component {
@@ -21,7 +19,7 @@ class SearchBar extends React.Component {
 
     update() {
         return (e) => {
-            this.setState({ query: e.target.value }, this.handleSubmit)
+            this.setState({ query: e.target.value })
         }
     }
 
@@ -34,9 +32,8 @@ class SearchBar extends React.Component {
     }
 
     handleSubmit(e) {
-        // if (this.state.query === "") {
-        //     this.props.clearSearchResults();
-        // } else this.props.fetchSearchResults(this.state.query);
+        e.preventDefault()
+        this.props.storeKeyWord(this.state.query)
     }
 
     render() {
@@ -44,7 +41,7 @@ class SearchBar extends React.Component {
         const { results } = this.props
 
         return (
-            <>
+            <div className = "searchbar-main-div">
                 <div className="search-bar" onFocus={this.handleFocus} onBlur={this.handleBlur}>
                     <form onSubmit={this.handleSubmit} className="search-input">
                         <FontAwesomeIcon icon={faSearch} />
@@ -52,12 +49,11 @@ class SearchBar extends React.Component {
                         <button className="map-search-button">Search</button>
                     </form>
                 </div>
-                {(this.state.query !== "") ? (
+                {/* {(this.state.query !== "") ? (
                     <h1 className="search-results">search</h1>
                     // <SearchResults results={results} query={this.state.query} fetchSearchResults={this.props.fetchSearchResults} />
-                ) : null}
-            </>
-
+                ) : null} */}
+            </div>
         )
     }
 }

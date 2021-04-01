@@ -15,6 +15,19 @@ router.get('/all', (req, res) => {
         .catch(err => res.status(404).json(err))
 })
 
+router.get('/:keyword', async (req, res) => {
+    await Dispensary
+        .find(
+            {"dispensaryName" : {"$regex" : `${req.params.keyword}`, "$options": "i" } },
+                function(err, names) {
+                    const namesArray = []
+                    for (let i = 0; i < names.length; i++){
+                        namesArray.push(names[i])
+                    }
+                    res.json(namesArray)
+                }
+        )
+})
 
 
 // router.post('/:id/photo', allowCrossDomain, [auth], async (req, res) => {

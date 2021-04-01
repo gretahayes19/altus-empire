@@ -25,7 +25,7 @@ class MapPage extends React.Component {
             <>
             <div className="map-page">
                 <div className="search-bar-container">
-                    <SearchBar className="search-bar"/>
+                    <SearchBar storeKeyWord = {this.props.storeKeyWord}/>
                 </div>
                 <div className="map-list">
                     <GoogleApiWrapper dispensaries={dispensaries}/>

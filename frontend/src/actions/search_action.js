@@ -2,7 +2,7 @@ import * as SearchAPIUtil from '../util/search_api_util'
 
 export const RECEIVE_SEARCH_RESULTS = "RECEIVE_SEARCH_RESULTS"
 export const CLEAR_SEARCH_RESULTS = "CLEAR_SEARCH_RESULTS"
-
+export const STORE_SEARCH_KEYWORD = "STORE_SEARCH_KEYWORD"
 
 const receiveSearchResults = (results) => {
     return ({
@@ -13,6 +13,11 @@ const receiveSearchResults = (results) => {
 
 export const clearSearchResults = () => ({
     type: CLEAR_SEARCH_RESULTS
+})
+
+export const storeSearchKeyWord = keyword => ({
+    type: STORE_SEARCH_KEYWORD,
+    keyword
 })
 
 

@@ -20,3 +20,8 @@ export const fetchDispensaries = () => (dispatch) => {
     return DispensaryAPIUtil.fetchDispensaries()
         .then(dispensaries => dispatch(receiveDispensaries(dispensaries)))
 }
+
+export const fetchSearchByNameDispensary = (keyword) => (dispatch) => {
+    return DispensaryAPIUtil.fetchDispensaryByName(keyword)
+        .then(dispensaries => dispatch(receiveDispensaries(dispensaries)))
+}
