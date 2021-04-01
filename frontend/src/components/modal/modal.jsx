@@ -3,6 +3,7 @@ import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from '../session/login_form_container';
 import SignupFormContainer from '../session/signup_form_container';
+import Under21Container from '../main/under21_container';
 
 import '../../styles/modal.css'
 
@@ -16,6 +17,9 @@ function Modal({modal, closeModal}) {
         case "signup":
             component = <SignupFormContainer />;
             break;
+        case "under21":
+            component = <Under21Container />;
+            break;
         default:
             return null;
     }
@@ -24,9 +28,9 @@ function Modal({modal, closeModal}) {
             <div className="modal-form-div" onClick={e => e.stopPropagation()}>
                 {component}
             </div>
-            <div id="modal-background-animate"></div>
+            {/* <div id="modal-background-animate"></div>
             <div id="modal-midground-animate"></div>
-            <div id="modal-foreground-animate"></div>
+            <div id="modal-foreground-animate"></div> */}
         </div>
     )
 }
