@@ -120,7 +120,7 @@ class NavBar extends React.Component {
       <div className="nav-dropdown" onClick={this.handleBodyclick}>
         <a className="creator"><span>Christine</span></a>
         <a className="creator"><span>Greta</span></a>
-        <a className="creator"><span>Hanks</span></a>
+        <a className="creator"><span>Hank</span></a>
         <a className="creator"><span>Kevin</span></a>
       </div>
     )

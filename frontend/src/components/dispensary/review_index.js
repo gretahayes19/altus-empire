@@ -20,8 +20,8 @@ const ReviewIndex = ({ reviews }) => {
             {reviews.map((review, idx) => (
                 <li className="review-item" key={review._id}>
                     <header>
-                        <p>{review.username}</p>
-                        <p>Date: {review.date.slice(5, 10).concat("-".concat(review.date.slice(2, 4)))}</p>
+                        <p className="review-username">{review.username}</p>
+                        <p><span className="review-date">Date:</span> {review.date.slice(5, 10).concat("-".concat(review.date.slice(2, 4)))}</p>
                     </header>
                     <p>{review.review}</p>
                     <ReactStars value={review.rating} {...starOps} />
