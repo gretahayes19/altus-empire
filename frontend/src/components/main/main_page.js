@@ -19,8 +19,8 @@ class MainPage extends React.Component {
           <div className="main-page-top-buttons-div">
             <div className="main-page-top-buttons">
               {/* <div className="top-buttons"> */}
-              <button onClick={() => openModal("login")}>Already a member?</button>
-              <button onClick={() => { }} disabled>Business Login</button>
+              {/* <button onClick={() => openModal("login")}>Already a member?</button> */}
+              {/* <button onClick={() => { }} disabled>Business Login</button> */}
               {/* </div> */}
             </div>
           </div>

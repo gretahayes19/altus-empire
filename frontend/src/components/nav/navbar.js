@@ -63,7 +63,7 @@ class NavBar extends React.Component {
         return (
           <div className="landing-nav-buttons">
             <a onClick={() => this.props.openModal("login")}>login</a>
-            <a onClick={() => this.props.openModal("signup")}>get started</a>
+            {/* <a onClick={() => this.props.openModal("signup")}>get started</a> */}
           </div>
         );
       }

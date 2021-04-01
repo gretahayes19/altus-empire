@@ -63,10 +63,17 @@
 .left-nav {
     display: flex;
     align-items: center;
+    width: 400px;
 }
 
 .left-nav>a:last-child {
     margin-left: 12px;
+}
+
+.right-nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 400px;
 }
 
 .right-nav a:not(:last-child) {
