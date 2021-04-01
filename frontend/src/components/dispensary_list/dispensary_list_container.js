@@ -10,7 +10,8 @@ const mSTP = state => {
 };
 
 const mDTP = dispatch => ({
-    fetchSearchByNameDispensary: (keyword) => dispatch(fetchSearchByNameDispensary(keyword))
+    fetchSearchByNameDispensary: (keyword) => dispatch(fetchSearchByNameDispensary(keyword)),
+    // fetchPhoto: dispendaryId => dis
 })
 
 export default connect(mSTP, mDTP)(DispensaryList);

@@ -1,5 +1,5 @@
-import axios from "axios"
+// import axios from "axios"
 
-export const fetchPhotos = () => {
-    return axios.get('/api/photo/all')
-};
+// export const = () => {
+//     return('/api/photo/all')
+// };

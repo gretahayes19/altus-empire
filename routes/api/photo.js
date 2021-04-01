@@ -1,7 +1,7 @@
-// const express = require('express');
-// const router = express.Router();
-// const passport = require('passport');
-// require('../../config/passport.js')(passport)
+const express = require('express');
+const router = express.Router();
+const passport = require('passport');
+require('../../config/passport.js')(passport)
 
 // // AWS
 // // require('dotenv').config()
@@ -12,7 +12,9 @@
 // let storage = multer.memoryStorage()
 // let upload = multer({ storage: storage })
 
-// const keys = require('../../config/keys_dev');
+const keys = require('../../config/keys_dev');
+
+
 
 // router.get('/test', (req, res) => res.json({msg: "photo route connected"}))
 
@@ -26,13 +28,21 @@
 //         region:  keys.AWS_REGION,
 //     })
 
+
 //     let params = {
-//         Bucket: keys.AWS_BUCKET_NAME,
-//         Key: file.originalname,
-//         Body: file.buffer,
-//         ContentType: file.mimetype,
-//         ACL: "public-read",
-//     }
+    //         Bucket: keys.AWS_BUCKET_NAME,
+    //         Key: file.originalname,
+    //         Body: file.buffer,
+    //         ContentType: file.mimetype,
+    //         ACL: "public-read",
+    //     }
+
+    // let dispensary = Dispensary.findOne(_id: dispensary.id)
+    // if (!dispensary) {
+    //   dispensary.save     
+    // } else {
+    //   Dispensary.updateOne(_id: dispensary.id);
+    // }
 
 //     s3bucket.upload(params, function (err, data) {
 //         if (err) {
@@ -53,7 +63,9 @@
 //                     }
 //             })
 //         }
+
+
 //     })
 // })
 
-// module.exports = router;
+module.exports = router;
