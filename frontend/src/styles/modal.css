@@ -6,8 +6,8 @@
     bottom: 0;
     right: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 1;
+    background-image: url('../assets/curved.jpg');
+    z-index: 2;
 }
 
 .modal-form-div {
@@ -17,7 +17,7 @@
     transform: translate(-50%, -50%);
 }
 
-.modal-background-animate {
+/* .modal-background-animate {
     background: black repeat 5% 5%;
     position: absolute;
     top: 0;
@@ -59,4 +59,4 @@
     -webkit-animation-duration: 100s;
     -webkit-animation-timing-function: linear;
     -webkit-animation-iteration-count: infinite;
-}
+} */
