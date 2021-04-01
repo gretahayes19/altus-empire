@@ -63,7 +63,7 @@
 .form-errors {
     font-size: 12px;
     position: absolute;
-    padding-right: 35px;
+    font-family: sans-serif;
     top: 60%;
     transition: 0.3;
     color: rgba(70, 1, 1, 0.89);
@@ -75,6 +75,19 @@
 
 .form-errors-li {
     list-style-type: none;
+    padding: 2px;
+}
+
+.form-otherForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-span {
+    margin-bottom: 5px;
+    color: var(--brown);
+    font-family: 'Lobster';
+    text-align: center;
 }
 
 .form-submit.otherForm:hover {
@@ -83,9 +96,6 @@
 }
 
 .signup-dob-label {
-    color: white;
+    color: var(--brown);
+    font-family: 'Lobster';
 }
-/* .signup-dob-label:hover {
-    color: rgb(248, 200, 136);
-    transition: 0.3;
-} */
