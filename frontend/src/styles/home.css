@@ -34,18 +34,20 @@
     background-color: white;
     background-clip: padding-box;
     border-radius: 6px;
+    
 }
 
 .search-input input {
     width: 100%;
-    color: black;
+    color: #704C2D;
     text-align: left;
     border: none;
     outline: none;
+    font-family: 'Varela Round', sans-serif;
 }
 
 .search-input svg {
-    color: black;
+    color: #704C2D;
     padding: 5vh;
     cursor: text;
 }

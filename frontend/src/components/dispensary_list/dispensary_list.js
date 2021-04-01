@@ -4,7 +4,7 @@ import '../../styles/dispensary_list.css';
 
 
 class DispensaryList extends React.Component {
-    _isMounted = false;
+    // _isMounted = false;
 
     constructor(props) {
         super(props);
@@ -20,7 +20,7 @@ class DispensaryList extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        this._isMounted = true;
+        // this._isMounted = true;
         debugger;
         if ( ( prevProps.dispensaries !== this.props.dispensaries) 
             && (JSON.stringify(prevProps.dispensaries) === JSON.stringify(this.props.dispensaries)) 
@@ -28,21 +28,21 @@ class DispensaryList extends React.Component {
             if (this.props.searchKeyword !== "") {
                 return this.props.fetchSearchByNameDispensary(this.props.searchKeyword)
                     .then(() => {
-                        if(this._isMounted) {
+                        // if(this._isMounted) {
                             const dispensaryClone = this.deepDup(this.props.dispensaries)
                             this.setState({
                                 dispensaries: this.props.dispensaries
                             })
-                        }
+                        // }
                     })
             } else {
                 this.setState({
                     dispensaries: this.props.dispensaries
                 }, this.props.fetchDispensaries);
             }
-            this.setState({
-                dispensaries: this.props.dispensaries
-            })
+            // this.setState({
+            //     dispensaries: this.props.dispensaries
+            // })
         }
     }
 

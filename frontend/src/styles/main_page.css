@@ -51,10 +51,12 @@ button {
     border: none;
     box-shadow: 0px 0px 7px 4px rgba(22, 22, 22, 0.2);
     border-radius: 3px;
-    font-family: Helvetica Neue,
+    font-family: 'Lobster', cursive,
+    Helvetica Neue,
     Helvetica,
     Arial,
     sans-serif;
+    color: #704C2D;
     outline: none;
 }
 
