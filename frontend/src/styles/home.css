@@ -10,7 +10,7 @@
     align-items: center;
     height: 100%;
     width: 100%;
-    position: fixed;
+    position: absolute;
 }
 
 .home-search-bar {

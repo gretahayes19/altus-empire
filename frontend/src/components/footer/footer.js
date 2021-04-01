@@ -1,7 +1,4 @@
 import React from "react"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMountain, faHiking, faBars } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
 import '../../styles/footer.css'
 
 const Footer = () => {
@@ -18,10 +15,13 @@ const Footer = () => {
                             <a href="https://www.linkedin.com/in/kevinxmao/" target="_blank">Kevin</a>
                         </div>
                     </h2>
-                </div>
-                <div className="footer-logo">
+                    <div className="sentence">
+                        
+                        <a href="https://github.com/gretahayes19/altus-empire" target="_blank"><i class="fab fa-github"></i> Github</a>
 
+                    </div>
                 </div>
+
             </div>
         </footer>
     )
