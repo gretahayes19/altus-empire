@@ -104,7 +104,7 @@ class SignupForm extends React.Component {
               placeholder="Confirm Password"
             />
             <label className="signup-dob-label">
-              Please enter your date of birth
+              <p>Please enter your date of birth</p>
             </label>
             <input
               className="form-input"
