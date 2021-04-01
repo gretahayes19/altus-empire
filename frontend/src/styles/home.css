@@ -28,11 +28,6 @@
 
 }
 
-.search-bar-container {
-    /* padding: 1vh; */
-    /* background-color: white; */
-}
-
 .search-input {
     display: flex;
     justify-content: left;

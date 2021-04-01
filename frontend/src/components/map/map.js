@@ -32,8 +32,6 @@ export class MapContainer extends Component {
 
     render() {
         if (!this.props.dispensaries) return null;
-
-        
         
         const {dispensaries} = this.props
         const dispMarks = dispensaries.map((mark, index) => 
@@ -45,16 +43,23 @@ export class MapContainer extends Component {
                 name={mark.dispensaryName}
                 data={mark._id}
             />)
-        
 
+        const zoomControlOptions = {
+            position: this.props.google.maps.ControlPosition.LEFT_TOP
+        }
 
-
+        const bounds = new this.props.google.maps.LatLngBounds();
+        for (let i = 0; i < dispensaries.length; i++) {
+            bounds.extend({ lat: dispensaries[i].latitude, lng: dispensaries[i].longitude});
+        }
 
         return (
           <div className="map-div">
             <Map
                 google={this.props.google}
                 zoom={11}
+                zoomControl={true}
+                zoomControlOptions={zoomControlOptions}
                 styles={golden}
                 mapTypeControl={false}
                 streetViewControl={false}
@@ -64,6 +69,7 @@ export class MapContainer extends Component {
                         lng: -73.9857
                     }
                 }
+                bounds={bounds}
             >
                 {/* <Marker
                     onClick={this.onMarkerClick}
