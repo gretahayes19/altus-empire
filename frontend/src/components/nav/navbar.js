@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../styles/navbar.css';
-import logo from "../../assets/Altus Empire_Wordmark.png";
+import logo from "../../assets/Altus_Empire_Wordmark.png";
 
 class NavBar extends React.Component {
   constructor(props) {
