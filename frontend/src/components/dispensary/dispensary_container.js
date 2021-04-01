@@ -11,7 +11,6 @@ const formatArrToObj = arr => {
 }
 
 const mSTP = (state, ownProps) => {
-    // debugger
     return {
     loggedIn: state.session.isAuthenticated,
     dispensary: formatArrToObj(state.entities.dispensaries)[ownProps.match.params.dispensaryId],

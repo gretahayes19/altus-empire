@@ -9,7 +9,6 @@ class DispensaryEntry extends React.Component {
   }
 
   render() {
-    debugger;
     const { dispensary } = this.props;
     return (
       <Link to={`/dispensary/${dispensary._id}`}>
