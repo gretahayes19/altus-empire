@@ -12,7 +12,7 @@ require('../../config/passport.js')(passport)
 // let storage = multer.memoryStorage()
 // let upload = multer({ storage: storage })
 
-const keys = require('../../config/keys_dev');
+const keys = require('../../config/keys');
 
 
 

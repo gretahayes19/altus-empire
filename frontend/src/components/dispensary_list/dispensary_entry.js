@@ -40,7 +40,7 @@ class DispensaryEntry extends React.Component {
               <span>{dispensary.address.split(",")[0]}</span>
             </div>
           </div>
-        </div>
+        </div>x
       </Link>
     )
   }
