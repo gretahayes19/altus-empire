@@ -26,7 +26,7 @@
     padding: 10px;
 }
 
-.landing-navbar-container {
+.navbar {
     height: 64px;
     width: 100%;
     position: fixed;
@@ -37,6 +37,15 @@
 }
 
 .landing-navbar {
+    padding-left: 36px;
+    padding-right: 36px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.auth-navbar {
     padding-left: 36px;
     padding-right: 36px;
     display: flex;

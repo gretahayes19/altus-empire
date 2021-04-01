@@ -23,7 +23,7 @@ class NavBar extends React.Component {
         return (
             <div className="nav-links">
                 <Link to={'/home'}>Profile</Link>
-                <button onClick={this.logoutUser}>Logout</button>
+                <a onClick={this.logoutUser}>Logout</a>
             </div>
         );
       } else {
@@ -38,11 +38,20 @@ class NavBar extends React.Component {
 
   getAuthNav() {
     return (
-      <div className="nav-links">
-        <Link to={'/home'}>Profile</Link>
-        <button onClick={this.logoutUser}>Logout</button>
+      <div className="navbar auth-navbar-container">
+        <div className="auth-navbar">
+          <div className="left-nav">
+            <Link to="/">
+              <div className="navbar-div-logo">
+                <img src={logo} />
+              </div>
+            </Link>
+          </div>
+          <div className="center-nav"></div>
+          <div className="right-nav">{this.getLinks()}</div>
+        </div>
       </div>
-    )
+    );
   }
 
   getMainNav() {
