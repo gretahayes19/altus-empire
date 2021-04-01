@@ -37,6 +37,10 @@ const DispensarySchema = new Schema({
     postphoto: {
         type: String
     },
+    zipCode: {
+        type: Number,
+        require: true
+    },
     avgRating: {
         type: mongoose.Types.Decimal128
     }
