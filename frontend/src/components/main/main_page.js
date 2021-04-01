@@ -27,7 +27,7 @@ class MainPage extends React.Component {
             </div>
           </div>
           <div className="main-page-bottom-buttons">
-              <button onClick={() => {}}>Under 21</button>
+              <button onClick={() => openModal("under21")}>Under 21</button>
               <button onClick={() => openModal("signup")}>21+ Older</button>
           </div>
 
