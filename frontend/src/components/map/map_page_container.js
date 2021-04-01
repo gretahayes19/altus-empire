@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import MapPage from './map_page';
 import { fetchDispensaries } from '../../actions/dispensary_actions';
+import { storeSearchKeyWord } from "../../actions/search_action"
 
 const mSTP = state => ({
     dispensaries: state.entities.dispensaries
@@ -8,7 +9,7 @@ const mSTP = state => ({
 
 const mDTP = dispatch => ({
     fetchDispensaries: () => dispatch(fetchDispensaries()),
-
+    storeKeyWord: (keyword) => dispatch(storeSearchKeyWord(keyword))
 })
 
 export default connect(mSTP, mDTP)(MapPage);
