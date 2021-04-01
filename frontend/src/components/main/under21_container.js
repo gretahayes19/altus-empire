@@ -27,6 +27,11 @@ class Under21 extends React.Component {
                         Please read more about the legalization of cannabis here
                     </a>
                 </p>
+                <p>
+                    <a href="https://www1.nyc.gov/site/nypd/services/victim-services/how-to-report-a-crime.page">
+                        See something say something  <span style={{fontSize: '48px'}}>🚓</span>
+                    </a>
+                </p>
             </div>
         )
     }
