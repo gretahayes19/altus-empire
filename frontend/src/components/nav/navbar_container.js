@@ -4,7 +4,8 @@ import NavBar from './navbar';
 import { openModal } from '../../actions/modal_actions';
 
 const mSTP = state => ({
-  loggedIn: state.session.isAuthenticated
+  loggedIn: state.session.isAuthenticated,
+  user: state.session.user
 });
 
 const mDTP = dispatch => ({

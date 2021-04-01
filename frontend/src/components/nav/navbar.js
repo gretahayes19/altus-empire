@@ -1,15 +1,48 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../styles/navbar.css';
-import logo from "../../assets/Altus_Empire_Wordmark.png";
+import logo from "../../assets/main_logo.png";
 
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      dropdownVisible: false,
+    }
+
+
     this.logoutUser = this.logoutUser.bind(this);
     this.getLinks = this.getLinks.bind(this);
     this.getMainNav = this.getMainNav.bind(this);
     this.getAuthNav = this.getAuthNav.bind(this);
+    this.toggleDropdown = this.toggleDropdown.bind(this);
+    this.globalClickListener = this.globalClickListener.bind(this);
+  }
+
+  componentDidUpdate() {
+    window.removeEventListener('click', this.globalClickListener);
+  }
+
+  globalClickListener(nativeEvent) {
+    // console.log('global click');
+    this.setState({ dropdownVisible: false }, () => {
+      window.removeEventListener('click', this.globalClickListener)
+    })
+  }
+
+  toggleDropdown(syntheticEvent) {
+    // console.log('toggle dropdown');
+    syntheticEvent.stopPropagation();
+    this.setState(prevState => ({ dropdownVisible: !prevState.dropdownVisible }), () => {
+      if (this.state.dropdownVisible) {
+        window.addEventListener('click', this.globalClickListener)
+      }
+    })
+  }
+
+  handleBodyclick(syntheticEvent) {
+    syntheticEvent.stopPropagation();
   }
 
   logoutUser(e) {
@@ -22,15 +55,15 @@ class NavBar extends React.Component {
       if (this.props.loggedIn) {
         return (
             <div className="nav-links">
-                <Link to={'/home'}>Profile</Link>
-                <a onClick={this.logoutUser}>Logout</a>
+                <Link to={'/home'}>profile</Link>
+                <a onClick={this.logoutUser}>logout</a>
             </div>
         );
       } else {
         return (
           <div className="landing-nav-buttons">
-            <a onClick={() => this.props.openModal("login")}>LOGIN</a>
-            <a onClick={() => this.props.openModal("signup")}>GET STARTED</a>
+            <a onClick={() => this.props.openModal("login")}>login</a>
+            <a onClick={() => this.props.openModal("signup")}>get started</a>
           </div>
         );
       }
@@ -41,13 +74,17 @@ class NavBar extends React.Component {
       <div className="navbar auth-navbar-container">
         <div className="auth-navbar">
           <div className="left-nav">
+            <div className="user-greeting">
+              <span>hello there, {this.props.user.username}</span>
+            </div>
+          </div>
+          <div className="center-nav">
             <Link to="/">
               <div className="navbar-div-logo">
                 <img src={logo} />
               </div>
             </Link>
           </div>
-          <div className="center-nav"></div>
           <div className="right-nav">{this.getLinks()}</div>
         </div>
       </div>
@@ -59,8 +96,8 @@ class NavBar extends React.Component {
       <div className="navbar landing-navbar-container">
         <div className="landing-navbar">
           <div className="left-nav">
-            <a href="#"><span>ABOUT US</span></a>
-            <a href="#">OUR STORY</a>
+            <a onClick={this.toggleDropdown}><span>about us</span></a>
+            <a href="#">our story</a>
           </div>
           <div className="center-nav">
             <Link to="/">
@@ -73,6 +110,18 @@ class NavBar extends React.Component {
             {this.getLinks()}
           </div>
         </div>
+        {this.state.dropdownVisible && this.getDropDown()}
+      </div>
+    )
+  }
+
+  getDropDown() {
+    return (
+      <div className="nav-dropdown" onClick={this.handleBodyclick}>
+        <a className="creator"><span>Christine</span></a>
+        <a className="creator"><span>Greta</span></a>
+        <a className="creator"><span>Hanks</span></a>
+        <a className="creator"><span>Kevin</span></a>
       </div>
     )
   }
