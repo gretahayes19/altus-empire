@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { openModal, closeModal } from '../../actions/modal_actions';
+import "../../styles/under21_main.css";
 
 class Under21 extends React.Component {
 
