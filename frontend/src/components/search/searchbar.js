@@ -2,6 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import '../../styles/map.css'
+import e from 'cors';
 
 class SearchBar extends React.Component {
     constructor(props) {
@@ -15,8 +16,12 @@ class SearchBar extends React.Component {
         this.update = this.update.bind(this)
         this.handleFocus = this.handleFocus.bind(this)
         this.handleBlur = this.handleBlur.bind(this)
+        this.storeKeyWord = debounce(this.props.storeKeyWord, 200)
     }
 
+    componentDidUpdate() {
+        console.log('Goddamn');
+    }
 
     update(e) {
         this.setState({ query: e.target.value }, this.handleSubmit);
@@ -31,6 +36,7 @@ class SearchBar extends React.Component {
     }
 
     handleSubmit(e) {
+        console.log('update')
         if (this.state.query === "") {
             this.props.fetchDispensaries();
         } else this.props.fetchSearchByNameDispensary(this.state.query)
@@ -52,6 +58,20 @@ class SearchBar extends React.Component {
             </div>
         )
     }
+}
+
+const debounce = (fcn, wait) => {
+  let timeout;
+
+  return function debouncedFcn(...args) {
+    const later = () => {
+      timeout = null;
+      fcn(...args);
+    }
+
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait)
+  };
 }
 
 export default SearchBar

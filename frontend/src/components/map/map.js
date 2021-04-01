@@ -45,7 +45,7 @@ export class MapContainer extends Component {
             />)
 
         const zoomControlOptions = {
-            position: this.props.google.maps.ControlPosition.LEFT_TOP
+            position: this.props.google.maps.ControlPosition.RIGHT_CENTER
         }
 
         const bounds = new this.props.google.maps.LatLngBounds();

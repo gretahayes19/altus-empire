@@ -56,21 +56,23 @@ h1.search-results {
 }
 
 .map-list {
+    display: flex;
     margin-top: 13.5vh;
     /* grid-column: 1 / 4;
     grid-row: 2; */
-    display: grid;
+    /* display: grid; */
     /* grid-template-rows: repeat(15, 1fr); */
-    grid-template-rows: 1fr 24px;
-    grid-template-columns: repeat(6, 1fr);
+    /* grid-template-rows: 1fr 24px; */
+    /* grid-template-columns: repeat(6, 1fr); */
+    /* float: right; */
 }
 
 .map-div {
     /* position: relative; */
-    padding-bottom: 75%;
+    /* padding-bottom: 50%; */
     /* 4:3 ratio*/
-    height: 100vh;
-    overflow: auto;
+    /* height: 50vh; */
+    /* overflow: auto; */
 }
 
 .map-div img {
@@ -90,8 +92,11 @@ h1.search-results {
 }
 
 .dispensary-list-container {
-    grid-column: 1;
-    grid-row: 1;
+    /* grid-column: 1;
+    grid-row: 1; */
+    /* float: left; */
+    flex: 1 0 30%;
+    margin-right: 5px;
     background-color: white;
     padding: 2vw;
     height: 100vh;
@@ -100,12 +105,13 @@ h1.search-results {
     box-shadow: 0 0 4px 2px rgba(255, 255, 255, .45);
     position: fixed;
     padding-top: 5vh;
-    /* z-index: 4; */
+    z-index: 4;
 }
 
 .map-container {
-    grid-column: 2/8;
-    grid-row: 1;
+    /* grid-column: 2/8;
+    grid-row: 1; */
+    flex: 1 0 70%;
 }
 
 ::-webkit-scrollbar {

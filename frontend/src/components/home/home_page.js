@@ -12,6 +12,8 @@ class HomePage extends React.Component {
     return (
       <div className="home-page">
         <MapPageContainer />
+        
+
       </div>
     );
   }
