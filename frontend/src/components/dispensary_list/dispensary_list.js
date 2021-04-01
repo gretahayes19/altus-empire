@@ -32,6 +32,10 @@ class DispensaryList extends React.Component {
                             })
                         }
                     })
+            } else {
+                this.setState({
+                    dispensaries: this.props.dispensaries
+                }, this.props.fetchDispensaries);
             }
             this.setState({
                 dispensaries: this.props.dispensaries
@@ -44,8 +48,11 @@ class DispensaryList extends React.Component {
     }
 
     render() {
-        const {dispensaries} = this.state;
-        const items = dispensaries.map(dispensary => <DispensaryEntry key={dispensary._id} dispensary={dispensary}/>)
+        
+        const {dispensaries} = this.props;
+        const items = dispensaries.length ? 
+                    dispensaries.map(dispensary => <DispensaryEntry key={dispensary._id} dispensary={dispensary} />)
+                    : null;
         return (
             <div className="dispensary-list">
                 {items}
