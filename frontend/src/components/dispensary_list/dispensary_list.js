@@ -11,12 +11,6 @@ class DispensaryList extends React.Component {
         this.state = {
             dispensaries: props.dispensaries
         }
-
-        this.deepDup = this.deepDup.bind(this)
-    }
-
-    deepDup(arr){
-        return arr.map(el => el instanceof Array ? this.deepDup(el) : el)
     }
 
     componentWillUnmount() {
