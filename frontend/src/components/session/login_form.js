@@ -78,7 +78,9 @@ class LoginForm extends React.Component {
             onChange={this.update("password")}
             placeholder="Password"
           />
-          <input className="form-submit" type="submit" value="Submit" />
+          <button className="signup-button-login">Submit</button>
+
+          {/* <input className="form-submit" type="submit" value="Submit" /> */}
         </form>
         <div className="form-errors">{this.renderErrors()}</div>
         <div className="form-otherForm">

@@ -40,8 +40,18 @@
     font-weight: 700;
 }
 
+.form-input:focus{
+    border: 3px solid var(--blue);
+
+}
+
 .form-input[type="date"]{
     background-color: var(--yellow);
+}
+
+.form-input[type="date"]:focus{
+    background-color: var(--yellow);
+    color: var(--brown);
 }
 
 .form-input[type="password"]{
@@ -58,8 +68,39 @@
 
 .signup-dob-label p{
     font-family: "Lobster";
+    font-size: 18px;
     color: var(--brown);
 }
+
+.signup-button{
+    background-color: var(--blue);
+    font-size: 20px;
+    padding: 10px;
+    /* margin-top: 50px; */
+    width: 80%;
+    margin: 50px auto;
+}
+
+.signup-button:hover{
+    background-color: var(--yellow);
+    border: 5px solid var(--brown);
+    color: var(--brown);
+}
+
+.signup-button-login{
+    background-color: var(--blue);
+    font-size: 20px;
+    padding: 10px;
+    width: 80%;
+    margin: 10px auto;
+}
+
+.signup-button-login:hover{
+    background-color: var(--yellow);
+    border: 5px solid var(--brown);
+    color: var(--brown);
+}
+
 .form-input:focus {
     transition: 0.2s;
 }
