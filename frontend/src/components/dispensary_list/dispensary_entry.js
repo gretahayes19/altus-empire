@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../styles/dispensary_list.css';
 import {Link} from 'react-router-dom';
+import ReactStars from "react-rating-stars-component";
 
 class DispensaryEntry extends React.Component {
 
@@ -10,6 +11,16 @@ class DispensaryEntry extends React.Component {
 
   render() {
     const { dispensary } = this.props;
+    const starOps = {
+      size: 30,
+      isHalf: false,
+      edit: false,
+      color: "#94D7C5",
+      activeColor: "#F6CB24",
+      emptyIcon: <i className="fas fa-cannabis"></i>,
+      filledIcon: < i className="fas fa-cannabis" ></i>
+    };
+
     return (
       <Link to={`/dispensary/${dispensary._id}`}>
         <div className="dispensary-entry-container">
@@ -34,16 +45,30 @@ class DispensaryEntry extends React.Component {
           <div className="dispensary-avg-rating"></div>
           <div className="dispensary-contact">
             <div className="dispensary-number">
-              <span>{dispensary.phone}</span>
+              <span>{formatPhoneNumber(dispensary.phone)}</span>
             </div>
             <div className="dispensary-address">
               <span>{dispensary.address.split(",")[0]}</span>
             </div>
+            <div className="dispensary-average-rating">
+              <ReactStars value={dispensary.avgRating.$numberDecimal} {...starOps} />
+              <p>{parseFloat(dispensary.avgRating.$numberDecimal).toFixed(1)}</p>
+            </div>
+
           </div>
         </div>
       </Link>
     )
   }
+}
+
+function formatPhoneNumber(phoneNumberString) {
+  var cleaned = ('' + phoneNumberString).replace(/\D/g, '');
+  var match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
+  if (match) {
+    return '(' + match[1] + ') ' + match[2] + '-' + match[3];
+  }
+  return null;
 }
 
 export default DispensaryEntry;
