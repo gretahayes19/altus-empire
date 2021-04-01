@@ -6,7 +6,7 @@
     --beige: #F8E6BD;
     --brownred: #C06038;
 }
-
+/* 
 @-webkit-keyframes FLOATING-MODAL-BG {
     from {
         left: 0;
@@ -17,7 +17,7 @@
         left: -10000px;
         top: -2000px;
     }
-}
+} */
 /* 
 @-webkit-keyframes FLOATING-MODAL-BG {
     from {
