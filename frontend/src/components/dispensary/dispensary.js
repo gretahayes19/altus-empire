@@ -40,17 +40,25 @@ class Dispensary extends React.Component {
 
       return (
         <div className="dispensary-page-div">
-              <div className="dispensary-left"></div>
-              <div className="dispensary-right"></div>
-              <h1 className="dispensary-title">{dispensary.dispensaryName}</h1>
-              <img
-                className="dispensary-postphoto"
-                src={`https://altus-empire-seeds.s3.amazonaws.com/${dispensary.postphoto}`}
-                alt=""
-              />
-              <p className="disp-desciption">{dispensary.description}</p>
-              <ReviewFormContainer dispensary={dispensary} />
-             <ReviewIndex reviews={sortedReviews} />
+              <div className="dispensary-left">
+                  <h1 className="dispensary-title">{dispensary.dispensaryName}</h1>
+                 <p className="disp-address">{dispensary.address}</p>
+
+                  <img
+                    className="dispensary-pagepic"
+                    src={`https://altus-empire-seeds.s3.amazonaws.com/${dispensary.postphoto}`}
+                    alt=""
+                  />
+                  
+                      <p className="disp-desciption">{dispensary.description}</p>
+         
+
+              </div>
+              <div className="dispensary-right">
+                  <ReviewFormContainer dispensary={dispensary} />
+                  <ReviewIndex reviews={sortedReviews} />
+              </div>
+
           </div>
       )
   }
