@@ -41,16 +41,6 @@ class MainPage extends React.Component {
             </h2>
           </div>
         </div>
-        <footer className="main-page-footer">
-          <div>
-
-          </div>
-          <div className="main-page-copyright">
-            <p>Privacy Policy</p>
-            <p>Sitemap</p>
-            <p>Copyright &copy; 2021 AE</p>
-          </div>
-        </footer>
       </div>
     );
   }

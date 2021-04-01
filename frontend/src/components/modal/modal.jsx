@@ -20,10 +20,13 @@ function Modal({modal, closeModal}) {
             return null;
     }
     return (
-        <div className="modal-screen" onClick={closeModal}>
-            <div className="modal-child" onClick={e => e.stopPropagation()}>
+        <div className="modal-background-div" onClick={closeModal}>
+            <div className="modal-form-div" onClick={e => e.stopPropagation()}>
                 {component}
             </div>
+            <div id="modal-background-animate"></div>
+            <div id="modal-midground-animate"></div>
+            <div id="modal-foreground-animate"></div>
         </div>
     )
 }

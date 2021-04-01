@@ -1,6 +1,6 @@
 @import "variables";
 
-.modal-screen {
+.modal-background-div {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -10,9 +10,53 @@
     z-index: 1;
 }
 
-.modal-child {
+.modal-form-div {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.modal-background-animate {
+    background: black repeat 5% 5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+
+    -webkit-animation-name: FLOATING-MODAL-BG;
+    -webkit-animation-duration: 200s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.modal-midground-animate {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 200;
+
+    -webkit-animation-name: FLOATING-MODAL-BG;
+    -webkit-animation-duration: 150s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.modal-foreground-animate {
+    background: repeat 35% 35%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 300;
+
+    -webkit-animation-name: FLOATING-MODAL-BG;
+    -webkit-animation-duration: 100s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
 }

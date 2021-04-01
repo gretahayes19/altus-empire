@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 class DispensaryEntry extends React.Component {
 
   componentDidMount() {
-    // fetchPhotos
+    // this.fetchPhoto(this.props.dispensary._id)
   }
 
   render() {
@@ -23,7 +23,7 @@ class DispensaryEntry extends React.Component {
             ) : (
               <img
                 className="dispensary-postphoto"
-                // src={`https://altus-empire-seeds.s3.amazonaws.com/${postphoto}`}
+                src={`https://altus-empire-seeds.s3.amazonaws.com/${dispensary.postphoto}`}
                 alt=""
               />
             )}
