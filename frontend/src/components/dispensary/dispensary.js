@@ -40,6 +40,8 @@ class Dispensary extends React.Component {
 
       return (
         <div className="dispensary-page-div">
+              <div className="dispensary-left"></div>
+              <div className="dispensary-right"></div>
               <h1 className="dispensary-title">{dispensary.dispensaryName}</h1>
               <img
                 className="dispensary-postphoto"
