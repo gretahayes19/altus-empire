@@ -17,15 +17,14 @@ class MapPage extends React.Component {
     }
 
     render () {
-        if (!this.props.dispensaries.length) return null;
+        // if (!this.props.dispensaries.length) return null;
         const { dispensaries } = this.props
-
 
         return (
             <>
             <div className="map-page">
                 <div className="search-bar-container">
-                    <SearchBar storeKeyWord = {this.props.storeKeyWord}/>
+                    <SearchBar clearSearchResults={this.props.clearSearchResults} storeKeyWord = {this.props.storeKeyWord}/>
                 </div>
                 <div className="map-list">
                     <GoogleApiWrapper dispensaries={dispensaries}/>

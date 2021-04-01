@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import DispensaryList from './dispensary_list'
-import {fetchSearchByNameDispensary} from '../../actions/dispensary_actions'
+import {fetchDispensaries, fetchSearchByNameDispensary} from '../../actions/dispensary_actions'
 
 const mSTP = state => {
     return ({
@@ -10,7 +10,8 @@ const mSTP = state => {
 };
 
 const mDTP = dispatch => ({
-    fetchSearchByNameDispensary: (keyword) => dispatch(fetchSearchByNameDispensary(keyword))
+    fetchSearchByNameDispensary: (keyword) => dispatch(fetchSearchByNameDispensary(keyword)),
+    fetchDispensaries: () => dispatch(fetchDispensaries())
 })
 
 export default connect(mSTP, mDTP)(DispensaryList);
