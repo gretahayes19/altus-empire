@@ -40,6 +40,15 @@
     
 }
 
+.police-car {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    text-decoration: none;
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
