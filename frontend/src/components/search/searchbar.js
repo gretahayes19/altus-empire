@@ -17,9 +17,10 @@ class SearchBar extends React.Component {
         this.handleBlur = this.handleBlur.bind(this)
     }
 
+
     update() {
         return (e) => {
-            this.setState({ query: e.target.value })
+            this.setState({ query: e.target.value }, this.handleSubmit);
         }
     }
 
@@ -32,7 +33,6 @@ class SearchBar extends React.Component {
     }
 
     handleSubmit(e) {
-        e.preventDefault()
         this.props.storeKeyWord(this.state.query)
     }
 
