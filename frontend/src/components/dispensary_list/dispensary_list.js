@@ -52,7 +52,9 @@ class DispensaryList extends React.Component {
         const {dispensaries} = this.props;
         const items = dispensaries.length ? 
                     dispensaries.map(dispensary => <DispensaryEntry key={dispensary._id} dispensary={dispensary} />)
-                    : null;
+            : <div className="dispensary-entry-container">
+                No Results
+                </div>;
         return (
             <div className="dispensary-list">
                 {items}
