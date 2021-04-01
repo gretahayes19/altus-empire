@@ -104,7 +104,7 @@ class SignupForm extends React.Component {
               placeholder="Confirm Password"
             />
             <label className="signup-dob-label">
-              Please enter your date of birth
+              <p>Please enter your date of birth</p>
             </label>
             <input
               className="form-input"
@@ -112,7 +112,8 @@ class SignupForm extends React.Component {
               value={this.state.dob}
               onChange={this.update("dob")}
             />
-            <input className="form-submit" type="submit" value="Submit" />
+            <button className="signup-button">Submit</button>
+            {/* <input className="form-submit" type="submit" value="Submit" /> */}
           </div>
         </form>
         <div className="form-errors signup">{this.renderErrors()}</div>
