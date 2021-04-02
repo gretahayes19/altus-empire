@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
 import "../../styles/map.css";
 import {golden} from './mapstyle'
-import cannabisMarker from '../../assets/cannabis-solid.svg'
+import cannabisMarker from '../../assets/weed.svg'
 import { Link } from 'react-router-dom';
 
 
@@ -42,6 +42,7 @@ export class MapContainer extends Component {
                 onClick={this.onMarkerClick} 
                 name={mark.dispensaryName}
                 data={mark._id}
+                icon={{ url: cannabisMarker, fillColor: "#704C2D", size: new this.props.google.maps.Size(35, 45), scaledSize: new this.props.google.maps.Size(35, 45)}}
             />)
 
         const zoomControlOptions = {
