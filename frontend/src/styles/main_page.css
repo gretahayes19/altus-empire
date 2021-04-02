@@ -86,9 +86,9 @@ button:hover {
 }
 
 .main-page-bottom-buttons {
-    width: 25%;
     padding: 40px;
     display: flex;
+    justify-content: space-between;
     gap: 40px;
 
 }
