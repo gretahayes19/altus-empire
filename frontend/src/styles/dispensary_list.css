@@ -9,9 +9,11 @@
 
 .dispensary-name {
     font-family: 'Lobster', cursive;
-    color: #94D7C5;
+    max-width: 300px;
+    color: var(--blue);
     font-size: 40px;
-    text-shadow: 2px 2px #C06038;
+    text-shadow: 2px 2px var(--brown);
+    margin-top: 5px;
 }
 
 .dispensary-list a {
@@ -21,11 +23,15 @@
 
 .dispensary-entry-container {
     margin: 1em;
-    border: 1px solid rgba(128, 128, 128, 0.329);
-    border-radius: 5px;
+    border: 5px solid var(--brown);
+    border-radius: 10px;
+    font-size: 22px;
     padding: 2em;
-    font-family: 'Varela Round', sans-serif;
-    color: #704C2D;
+    font-family: 'Lobster', sans-serif;
+    color: var(--beige);
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--brownred);
 }
 
 
@@ -34,6 +40,31 @@
 }
 
 .dispensary-postphoto {
-    height: 20vh;
-    width: 40vh;
+    height: 15vh;
+    max-width: 300px;
+    border: 5px solid var(--beige);
+    border-radius: 5px;
 }
+
+.dispensary-avg-rating {
+     margin-top: 10px;
+     display: flex;
+     align-items: center;
+ }
+
+ .dispensary-avg-rating > span {
+     display: block;
+     margin-left: 10px;
+ }
+
+ .dispensary-contact {
+     padding: 10px;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-end;
+     text-align: right;
+ }
+
+ .dispensary-contact > div:not(:last-child) {
+     margin-bottom: 10px;
+ } 

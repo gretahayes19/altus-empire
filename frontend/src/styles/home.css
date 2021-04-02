@@ -31,13 +31,13 @@
 }
 
 .map-container {
-    margin-top: 10px;
+    margin-top: 35px;
     overflow: hidden;
     width: 75%;
     border: 5px solid var(--brown);
     margin-right: 10px;
     height: 63vh;
-
+    border-radius: 6px;
 }
 
 .map-container div:first-child {
@@ -59,12 +59,13 @@
     width: 25%;
     height: 100vh;
     overflow-y: scroll;
+    margin-top: -93px;
 }
 
 .search-bar {
     height: 100px;
     position: fixed;
-    top: 69px;
+    top: 85px;
     width: 100%;
     z-index: 1000;
 }
@@ -74,14 +75,15 @@
     justify-content: space-between;
     background-color: var(--beige);
     border: 5px solid var(--brown);
-    border-top: none;
+    /* border-top: none; */
     /* background-clip: padding-box; */
-    border-bottom-right-radius: 6px;
-    border-bottom-left-radius: 6px;
+    /* border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px; */
+    border-radius: 6px;
     padding: 0;
     height: 75%;
     margin-right: 150px;
-    margin-left: 150px;
+    margin-left: 24.8vw;
 
     /* display: flex;
     justify-content: space-between; */
