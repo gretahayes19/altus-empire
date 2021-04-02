@@ -8,6 +8,7 @@
     justify-content: space-around;
     font-family: "Lobster";
     font-size: 30px;
+    color: var(--brown)
     /* width: 200vw; */
 }
 
@@ -22,6 +23,7 @@
 
 .under-21-notice {
     font-size: 60px;
+    color: var(--brownred);
     /* overflow: hidden; */
     /* white-space: nowrap; */
     /* margin: 0 auto; */
@@ -39,9 +41,18 @@
 }
 
 .under-21-links a {
-   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+   font-family: Valera round;
     width: min-content;
-    
+    text-decoration: none;
+    color: var(--brown);
+    padding: 10px;
+    border-radius: 5px;
+    border: 5px solid var(--brown);
+    background-color: var(--blue);  
+}
+
+.under-21-links a:hover {
+    box-shadow: 0 0 10px 1px rgba(53, 50, 50, 0.336);
 }
 
 #policecar {
@@ -96,6 +107,12 @@
         left: 65%;
         top: 75%;
         transform: rotate(360deg)
+    }
+
+    90% {
+        left: 40%;
+        top: 80%;
+        transform: rotate(0deg)
     }
 
     100% {
