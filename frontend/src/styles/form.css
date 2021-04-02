@@ -80,7 +80,7 @@
     padding: 8px;
     /* margin-top: 50px; */
     width: 95%;
-    margin: 70px auto;
+    margin: 48px auto;
 }
 
 .signup-button:hover{
@@ -152,6 +152,18 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.form-otherForm-login {
+    margin-top: 0px;
+    width: 250px;
+    margin: auto;
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     font-size: 20px;
     cursor: pointer;
 }
