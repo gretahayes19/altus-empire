@@ -6,20 +6,8 @@ import "../../styles/under21_main.css";
 class Under21 extends React.Component {
     constructor(props) {
         super(props)
-
-        this.animate = this.animate.bind(this)
     }
 
-    animate(e) {    
-        
-
-        const DURATION = 600;
-        const BOUNCE_DURATION = 400;
-        const constrain = this.policecar
-        const X_SHIFT = 300;
-
-        const 
-    }
 
     render() {
         return (
@@ -49,7 +37,6 @@ class Under21 extends React.Component {
                     </p>
                 </div>
                 <div id="policecar js-constrain" 
-                    ref = {(policecar) => this.policecar = policecar} 
                     className = "contrain" 
                     style={{fontSize:"100px"}}>🚓</div>
             </div>
