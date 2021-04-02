@@ -5,38 +5,38 @@ import "../../styles/under21_main.css";
 
 class Under21 extends React.Component {
 
-    handleKey(e) {
-        debugger;
-        e.stopPropagation();
-        console.log(e.target)
-        let policecar = e.target;
-        let move = 10; 
+    // handleKey(e) {
+    //     debugger;
+    //     e.stopPropagation();
+    //     console.log(e.target)
+    //     let policecar = e.target;
+    //     let move = 10; 
 
-        switch (e.key) {
-            case 'ArrowUp':
-                policecar.style.top = `${parseInt(policecar.style.top) - move}px`;
-                break;
-            case 'ArrowDown':
-                policecar.style.top = `${parseInt(policecar.style.top) + move}px`;
-                break;
-            case 'ArrowLeft':
-                policecar.style.left = `${parseInt(policecar.style.left) - move}px`;
-                break;
-            case 'ArrowRight':
-                policecar.style.left = `${parseInt(policecar.style.left) + move}px`;
-                break;
-        }
-    };
+    //     switch (e.key) {
+    //         case 'ArrowUp':
+    //             policecar.style.top = `${parseInt(policecar.style.top) - move}px`;
+    //             break;
+    //         case 'ArrowDown':
+    //             policecar.style.top = `${parseInt(policecar.style.top) + move}px`;
+    //             break;
+    //         case 'ArrowLeft':
+    //             policecar.style.left = `${parseInt(policecar.style.left) - move}px`;
+    //             break;
+    //         case 'ArrowRight':
+    //             policecar.style.left = `${parseInt(policecar.style.left) + move}px`;
+    //             break;
+    //     }
+    // };
 
     render() {
         return (
             <div className="under-21-div">
                 <p className="under-21-notice">Sorry! You are not of age to sign up.</p>
-                <p className="under-21-info-lr">
+                <p className="under-21-info">
                     If you or someone you may know is experiencing pain,
                     Cannabidiol(CBD) oil may be a possible alternative.
                 </p>
-                <div className="under-21-info-rl">
+                <div className="under-21-info">
                     <ul className="under-21-ul">CBD oil has been known to help treat:
                         <li className="under-21-li">Anxiety</li>
                         <li className="under-21-li">Epilepsy</li>
@@ -53,7 +53,7 @@ class Under21 extends React.Component {
                         See something say something 
                     </a>
                 </p>
-                <div id="policecar" onKeyDown={this.handleKey()} style={{fontSize:"48px"}}>🚓</div>
+                <div id="policecar" style={{fontSize:"100px"}}>🚓</div>
             </div>
         )
     }

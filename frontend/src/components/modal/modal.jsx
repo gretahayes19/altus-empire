@@ -6,6 +6,7 @@ import SignupFormContainer from '../session/signup_form_container';
 import Under21Container from '../main/under21_container';
 
 import '../../styles/modal.css'
+import '../../styles/under21_main.css'
 
 function Modal({modal, closeModal}) {
     if (!modal) return null;
@@ -23,16 +24,25 @@ function Modal({modal, closeModal}) {
         default:
             return null;
     }
-    return (
-        <div className="modal-background-div" onClick={closeModal}>
-            <div className="modal-form-div" onClick={e => e.stopPropagation()}>
-                {component}
+
+    // if (modal === "under21") {
+    //     <div className="modal-background-div" onClick={closeModal}>
+    //             <div className="modal-form-div" onClick={e => e.stopPropagation()}>
+    //                 {component}
+    //             </div>
+    //     </div>
+    // } else {
+        return (
+            <div className="modal-background-div" onClick={closeModal}>
+                <div className="modal-form-div" onClick={e => e.stopPropagation()}>
+                    {component}
+                </div>
+                {/* <div id="modal-background-animate"></div>
+                <div id="modal-midground-animate"></div>
+                <div id="modal-foreground-animate"></div> */}
             </div>
-            {/* <div id="modal-background-animate"></div>
-            <div id="modal-midground-animate"></div>
-            <div id="modal-foreground-animate"></div> */}
-        </div>
-    )
+        )
+    // }
 }
 
 const mSTP = state => ({
