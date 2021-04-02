@@ -124,3 +124,21 @@
     /* border-left: 5px solid var(--brown);
     border-right: 5px solid var(--brown) */
 }
+
+.gm-style .gm-style-iw-c {
+  /* background-color: var(--brownred);  */
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-window > a{
+    text-decoration: none;
+    font-family: 'Lobster', cursive;
+    max-width: 300px;
+    color: var(--blue);
+    font-size: 30px;
+    text-shadow: 2px 2px var(--brown);
+    margin-top: 5px;
+}

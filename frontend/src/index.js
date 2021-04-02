@@ -35,31 +35,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // FUN STUFF
 
-  let policecar = document.querySelector('.policecar');
-  let move = 10; 
+  // let policecar = document.getElementById('#policecar');
+  // let move = 10; 
 
-  // window.addEventListener('load', () => {
-  //   policecar.style.position = 'absolute';
-  //   policecar.style.left = 0;
-  //   policecar.style.top = 0;
-  //   policecar.style.zindex = 1000;
+  // // window.addEventListener('load', () => {
+  // //   policecar.style.position = 'absolute';
+  // //   policecar.style.left = 0;
+  // //   policecar.style.top = 0;
+  // //   policecar.style.zindex = 1000;
+  // // });
+
+  // policecar.addEventListener('keyDown', (e) => {
+  //   switch (e.key) {
+  //     case 'ArrowUp':
+  //       policecar.style.top = `${parseInt(policecar.style.top) - move}px`;
+  //       break;
+  //     case 'ArrowDown':
+  //       policecar.style.top = `${parseInt(policecar.style.top) + move}px`;
+  //       break;
+  //     case 'ArrowLeft':
+  //       policecar.style.left = `${parseInt(policecar.style.left) - move}px`;
+  //       break;
+  //     case 'ArrowRight':
+  //       policecar.style.left = `${parseInt(policecar.style.left) + move}px`;
+  //       break;
+  //   }
   // });
-
-  window.addEventListener('keyDown', (e) => {
-    switch (e.key) {
-      case 'ArrowUp':
-        policecar.style.top = `${parseInt(policecar.style.top) - move}px`;
-        break;
-      case 'ArrowDown':
-        policecar.style.top = `${parseInt(policecar.style.top) + move}px`;
-        break;
-      case 'ArrowLeft':
-        policecar.style.left = `${parseInt(policecar.style.left) - move}px`;
-        break;
-      case 'ArrowRight':
-        policecar.style.left = `${parseInt(policecar.style.left) + move}px`;
-        break;
-    }
-  });
 
 });

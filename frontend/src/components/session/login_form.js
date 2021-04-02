@@ -48,16 +48,24 @@ class LoginForm extends React.Component {
   }
 
   // Render the session errors if there are any
-  renderErrors() {
+  // renderErrors() {
+  //   return (
+  //     <ul className="form-errors-ul">
+  //       {Object.keys(this.state.errors).map((error, i) => (
+  //         <li className="form-errors-li" key={`error-${i}`}>
+  //           {this.state.errors[error]}
+  //         </li>
+  //       ))}
+  //     </ul>
+  //   );
+  // }
+
+  renderErrors(key) {
     return (
-      <ul className="form-errors-ul">
-        {Object.keys(this.state.errors).map((error, i) => (
-          <li className="form-errors-li" key={`error-${i}`}>
-            {this.state.errors[error]}
-          </li>
-        ))}
-      </ul>
-    );
+      <div className="form-errors">
+          <span>{this.state.errors[key]}</span>
+      </div>
+    )
   }
 
   render() {
@@ -65,24 +73,23 @@ class LoginForm extends React.Component {
       <div className="form-div">
         <form className="form" onSubmit={this.handleSubmit}>
           <input
-            className="form-input"
+            className={this.state.errors['email'] ? "form-input error" : "form-input"}
             type="text"
             value={this.state.email}
             onChange={this.update("email")}
             placeholder="Email"
           />
+          {this.renderErrors('email')}
           <input
-            className="form-input"
+            className={this.state.errors['password'] ? "form-input error" : "form-input"}
             type="password"
             value={this.state.password}
             onChange={this.update("password")}
             placeholder="Password"
           />
+          {this.renderErrors('password')}
           <button className="signup-button-login">Submit</button>
-
-          {/* <input className="form-submit" type="submit" value="Submit" /> */}
         </form>
-        <div className="form-errors">{this.renderErrors()}</div>
         <div className="form-otherForm">
           <span className="form-span">New User?</span>
           <span className="signup-span"

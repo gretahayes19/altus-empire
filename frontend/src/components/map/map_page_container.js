@@ -1,7 +1,8 @@
 import { connect } from 'react-redux';
 import MapPage from './map_page';
 import { fetchDispensaries, fetchSearchByNameDispensary } from '../../actions/dispensary_actions';
-import { clearSearchResults, storeSearchKeyWord } from "../../actions/search_action"
+import { clearSearchResults, storeSearchKeyWord } from "../../actions/search_action";
+import { withRouter } from 'react-router';
 
 const mSTP = state => ({
     dispensaries: state.entities.dispensaries
@@ -14,4 +15,4 @@ const mDTP = dispatch => ({
     clearSearchResults: () => dispatch(clearSearchResults())
 })
 
-export default connect(mSTP, mDTP)(MapPage);
+export default withRouter(connect(mSTP, mDTP)(MapPage));
