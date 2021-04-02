@@ -1,15 +1,19 @@
 @import "variables";
 
+
 .under-21-div {
     padding: 10%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     font-family: "Lobster";
+    font-size: 30px;
+    /* width: 200vw; */
 }
 
 .under-21-info {
-    /* font-size: 20px; */
+    /* background-color: aliceblue; */
+    padding: 2em;
 }
 
 .under-21-div p {
@@ -17,21 +21,21 @@
 }
 
 .under-21-notice {
-    font-size: 20px;
-    overflow: hidden;
-    white-space: nowrap;
+    font-size: 60px;
+    /* overflow: hidden; */
+    /* white-space: nowrap; */
     /* margin: 0 auto; */
-    animation:
+    /* animation:
         typing 1.5s steps(40, end),
-        blink-caret .75s step-end infinite;
+        blink-caret .75s step-end infinite; */
 }
 
 .under-21-div {
-    animation: fadeIn ease 10s;
-    -webkit-animation: fadeIn ease 10s;
-    -moz-animation: fadeIn ease 10s;
-    -o-animation: fadeIn ease 10s;
-    -ms-animation: fadeIn ease 10s;
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;
 }
 
 .under-21-links a {
@@ -40,15 +44,15 @@
     
 }
 
-.policecar {
+#policecar {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 100px;
+    left: 15px; 
     width: 50px;
     height: 50px;
     text-decoration: none;
-    border-radius: 50%;
-    /* font-size: 48px; */
+    -webkit-animation: police 5s infinite;
+    animation: police 5s;
 }
 
 @keyframes fadeIn {
@@ -61,42 +65,42 @@
     }
 }
 
-@-moz-keyframes fadeIn {
+@keyframes police {
     0% {
-        opacity: 0;
+        left: 0px;
+        top: 0px;
+    }
+
+    10% {
+        left: 70%;
+        top: 10%;
+    }
+
+    30% {
+        left: 74%;
+        top: 30%;
+    }
+
+    40% {
+        left: 75%;
+        top: 40%;
+    }
+
+    50% {
+        left: 75%;
+        top: 60%;
+        transform: rotate(360deg)
+    }
+
+    75% {
+        left: 65%;
+        top: 75%;
+        transform: rotate(360deg)
     }
 
     100% {
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-o-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-ms-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
+        left: 40%;
+        top: 80%;
+        transform: rotate(0deg)
     }
 }

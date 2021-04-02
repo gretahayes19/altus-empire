@@ -46,6 +46,15 @@ class LoginForm extends React.Component {
     this.props.login(user); 
   }
 
+  demoLogin() {
+    const demoUser = {
+      email: "demo@app.com",
+      password: "password"
+    }
+
+    this.props.login(demoUser);
+  }
+
   // Render the session errors if there are any
   renderErrors() {
     return(
@@ -81,6 +90,7 @@ class LoginForm extends React.Component {
             {this.renderErrors()}
           </div>
         </form>
+        <button onClick={() => this.demoLogin()}>Demo Login</button>
         <div><span>New User?</span></div>
         <button onClick={() => this.props.openModal('signup')}>Sign up</button>
       </div>
