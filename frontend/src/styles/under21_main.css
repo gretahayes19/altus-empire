@@ -104,3 +104,19 @@
         transform: rotate(0deg)
     }
 }
+
+
+
+/* -------- */
+
+.contrain {
+    overflow:       hidden;
+    position:       absolute;
+    width:          140px;
+    height:         100px;
+    left:           50%;
+    top:            50%;
+    margin-left:    -70px;
+    margin-top:     -50px;
+    z-index:        1;
+}

@@ -4,29 +4,22 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 import "../../styles/under21_main.css";
 
 class Under21 extends React.Component {
+    constructor(props) {
+        super(props)
 
-    // handleKey(e) {
-    //     debugger;
-    //     e.stopPropagation();
-    //     console.log(e.target)
-    //     let policecar = e.target;
-    //     let move = 10; 
+        this.animate = this.animate.bind(this)
+    }
 
-    //     switch (e.key) {
-    //         case 'ArrowUp':
-    //             policecar.style.top = `${parseInt(policecar.style.top) - move}px`;
-    //             break;
-    //         case 'ArrowDown':
-    //             policecar.style.top = `${parseInt(policecar.style.top) + move}px`;
-    //             break;
-    //         case 'ArrowLeft':
-    //             policecar.style.left = `${parseInt(policecar.style.left) - move}px`;
-    //             break;
-    //         case 'ArrowRight':
-    //             policecar.style.left = `${parseInt(policecar.style.left) + move}px`;
-    //             break;
-    //     }
-    // };
+    animate(e) {    
+        
+
+        const DURATION = 600;
+        const BOUNCE_DURATION = 400;
+        const constrain = this.policecar
+        const X_SHIFT = 300;
+
+        const 
+    }
 
     render() {
         return (
@@ -55,7 +48,10 @@ class Under21 extends React.Component {
                         </a>
                     </p>
                 </div>
-                <div id="policecar" style={{fontSize:"100px"}}>🚓</div>
+                <div id="policecar js-constrain" 
+                    ref = {(policecar) => this.policecar = policecar} 
+                    className = "contrain" 
+                    style={{fontSize:"100px"}}>🚓</div>
             </div>
         )
     }
@@ -71,3 +67,27 @@ const mDTP = dispatch => ({
 })
 
 export default connect(mSTP, mDTP)(Under21);
+
+
+    // handleKey(e) {
+    //     debugger;
+    //     e.stopPropagation();
+    //     console.log(e.target)
+    //     let policecar = e.target;
+    //     let move = 10; 
+
+    //     switch (e.key) {
+    //         case 'ArrowUp':
+    //             policecar.style.top = `${parseInt(policecar.style.top) - move}px`;
+    //             break;
+    //         case 'ArrowDown':
+    //             policecar.style.top = `${parseInt(policecar.style.top) + move}px`;
+    //             break;
+    //         case 'ArrowLeft':
+    //             policecar.style.left = `${parseInt(policecar.style.left) - move}px`;
+    //             break;
+    //         case 'ArrowRight':
+    //             policecar.style.left = `${parseInt(policecar.style.left) + move}px`;
+    //             break;
+    //     }
+    // };
