@@ -25,14 +25,12 @@ class NavBar extends React.Component {
   }
 
   globalClickListener(nativeEvent) {
-    // console.log('global click');
     this.setState({ dropdownVisible: false }, () => {
       window.removeEventListener('click', this.globalClickListener)
     })
   }
 
   toggleDropdown(syntheticEvent) {
-    // console.log('toggle dropdown');
     syntheticEvent.stopPropagation();
     this.setState(prevState => ({ dropdownVisible: !prevState.dropdownVisible }), () => {
       if (this.state.dropdownVisible) {

@@ -58,7 +58,6 @@ export default connect(mSTP, mDTP)(Under21);
 
 
     // handleKey(e) {
-    //     debugger;
     //     e.stopPropagation();
     //     console.log(e.target)
     //     let policecar = e.target;

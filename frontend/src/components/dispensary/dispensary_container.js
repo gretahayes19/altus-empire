@@ -6,7 +6,6 @@ import { fetchDispensaries } from '../../actions/dispensary_actions';
 const formatArrToObj = arr => {
     let obj = {};
     arr.forEach(ele => obj[ele._id] = ele)
-    console.log(obj);
     return obj;
 }
 
