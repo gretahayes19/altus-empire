@@ -96,8 +96,7 @@ class NavBar extends React.Component {
       <div className="navbar landing-navbar-container">
         <div className="landing-navbar">
           <div className="left-nav">
-            <a onClick={this.toggleDropdown}><span>about us</span></a>
-            <a href="#">our story</a>
+            <a onClick={this.toggleDropdown}><span>our story</span></a>
           </div>
           <div className="center-nav">
             <Link to="/">
