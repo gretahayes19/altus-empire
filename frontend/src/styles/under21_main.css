@@ -51,9 +51,27 @@
     width: 50px;
     height: 50px;
     text-decoration: none;
-    -webkit-animation: police 5s infinite;
-    animation: police 5s;
+    /* -webkit-animation: police 5s infinite;
+    animation: police 5s; */
 }
+
+#policecar {
+    offset-path: path('M 9 -62 H 1228 V 1057 H 9 Z');
+    animation: move 6000ms infinite ease-in-out;
+    /* width: 40px;
+    height: 40px; */
+}
+
+@keyframes move {
+    0% {
+        offset-distance: 0%;
+    }
+
+    100% {
+        offset-distance: 100%;
+    }
+}
+
 
 @keyframes fadeIn {
     0% {
@@ -65,7 +83,7 @@
     }
 }
 
-@keyframes police {
+/* @keyframes police {
     0% {
         left: 0px;
         top: 0px;
@@ -103,4 +121,4 @@
         top: 80%;
         transform: rotate(0deg)
     }
-}
+} */
