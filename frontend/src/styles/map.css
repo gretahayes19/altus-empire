@@ -1,29 +1,20 @@
 @import "variables";
 
-.map-page {
-    /* display: grid;
-    grid-template-columns: repeat(3, 1fr); */
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
 
-.search-bar-container {
+/* .search-bar-container {
     z-index: 3;
     width: 100%;
     position: absolute;
-}
+} */
 
-.search-bar {
+/* .search-bar {
     width: 100%;
     font-size: 24px;
     margin-bottom: 0;
     z-index: 3;
-}
+} */
 
-.search-input {
+/* .search-input {
     display: flex;
     justify-content: left;
     background-color: white;
@@ -49,23 +40,23 @@
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
     cursor: pointer;
-}
+} */
 
-h1.search-results {
+/* h1.search-results {
     margin-left: 60%;
-}
+} */
 
-.map-list {
+/* .map-list {
     display: flex;
     margin-top: 13.5vh;
-    /* grid-column: 1 / 4;
+    grid-column: 1 / 4;
     grid-row: 2; */
     /* display: grid; */
     /* grid-template-rows: repeat(15, 1fr); */
     /* grid-template-rows: 1fr 24px; */
     /* grid-template-columns: repeat(6, 1fr); */
-    /* float: right; */
-}
+    /* float: right;
+} */
 
 .map-div {
     /* position: relative; */
@@ -74,7 +65,7 @@ h1.search-results {
     /* height: 50vh; */
     /* overflow: auto; */
 }
-
+/* 
 .map-div img {
     box-sizing: border-box;
     display: block;
@@ -85,34 +76,29 @@ h1.search-results {
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
-}
+} */
 
-.marker-img {
+/* .marker-img {
     z-index: 4;
-}
+} */
 
-.dispensary-list-container {
-    /* grid-column: 1;
-    grid-row: 1; */
-    /* float: left; */
+/* .dispensary-list-container {
+    grid-column: 1;
+    grid-row: 1; 
+    float: left;
     flex: 1 0 30%;
     margin-right: 5px;
     background-color: white;
     padding: 2vw;
     height: 100vh;
     overflow-y: scroll;
-    /* margin-top: 13.5vh; */
+    margin-top: 13.5vh;
     box-shadow: 0 0 4px 2px rgba(255, 255, 255, .45);
     position: fixed;
     padding-top: 5vh;
     z-index: 4;
-}
+} */
 
-.map-container {
-    /* grid-column: 2/8;
-    grid-row: 1; */
-    flex: 1 0 70%;
-}
 
 ::-webkit-scrollbar {
     display: none;

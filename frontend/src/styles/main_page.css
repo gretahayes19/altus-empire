@@ -86,15 +86,12 @@ button:hover {
 }
 
 .main-page-bottom-buttons {
-     width: 25%;
-     padding: 40px;
+    padding: 40px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 40px;
 
 }
-
-
-
 
 h1{
 	color: #fff;

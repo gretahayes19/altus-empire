@@ -22,10 +22,8 @@ class MapPage extends React.Component {
 
         return (
             <>
-            <div className="map-page">
-                <div className="search-bar-container">
-                        <SearchBar fetchDispensaries={this.props.fetchDispensaries} fetchSearchByNameDispensary={this.props.fetchSearchByNameDispensary}/>
-                </div>
+            <div className="home-page">
+                <SearchBar fetchDispensaries={this.props.fetchDispensaries} fetchSearchByNameDispensary={this.props.fetchSearchByNameDispensary}/>
                 <div className="map-list">
                     <div className="dispensary-list-container">
                         <DispensaryListContainer />

@@ -24,15 +24,85 @@
     flex-direction: column;
     align-items: stretch;
     gap: 1em;
+    width: 200px;
 }
 
 .form-input {
-    padding: 0.5em;
+    /* padding: 0.5em; */
     text-align: center;
     outline: none;
-    border: none;
-    border-radius: 2px;
-    font-size: 14px;
+    background-color: var(--orange);
+    color: var(--beige);
+    opacity: 1;
+    border-radius: 8px;
+    border: 3px solid #704C2D;
+    padding: 6px;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 700;
+}
+
+.form-input:focus{
+    border: 3px solid var(--blue);
+
+}
+
+.form-input[type="date"]{
+    background-color: var(--yellow);
+
+}
+
+
+.form-input[type="date"]:focus{
+    background-color: var(--yellow);
+    color: var(--brown);
+}
+
+.form-input[type="password"]{
+    background-color: var(--orange);
+}
+
+.form-input[type="email"]{
+    background-color: var(--brown);
+}
+
+.form-input[type="text"]{
+    background-color: var(--brownred);
+}
+
+.signup-dob-label p{
+    font-family: "Lobster";
+    font-size: 18px;
+    color: var(--brown);
+    width: 300px;
+}
+
+.signup-button{
+    background-color: var(--blue);
+    font-size: 20px;
+    padding: 8px;
+    /* margin-top: 50px; */
+    width: 95%;
+    margin: 48px auto;
+}
+
+.signup-button:hover{
+    background-color: var(--yellow);
+    border: 5px solid var(--brown);
+    color: var(--brown);
+}
+
+.signup-button-login{
+    background-color: var(--yellow);
+    font-size: 20px;
+    padding: 8px;
+    width: 100%;
+    margin: auto;
+}
+
+.signup-button-login:hover{
+    background-color: var(--blue);
+    border: 5px solid var(--brown);
+    color: var(--brown);
 }
 
 .form-input:focus {
@@ -79,9 +149,27 @@
 }
 
 .form-otherForm {
+    margin-top: 150px;
+    width: 150px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 20px;
+    cursor: pointer;
 }
+
+.form-otherForm-login {
+    margin-top: 0px;
+    width: 250px;
+    margin: auto;
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 20px;
+    cursor: pointer;
+}
+
 
 .form-span {
     margin-bottom: 5px;
@@ -90,10 +178,15 @@
     text-align: center;
 }
 
-.form-submit.otherForm:hover {
+.signup-span{
+    font-family: 'Lobster';
+    color: var(--blue)
+}
+
+/* .form-submit.otherForm:hover {
     background-color: rgba(33, 159, 197, 0.644);
     box-shadow: none;
-}
+} */
 
 .signup-dob-label {
     color: var(--brown);

@@ -1,0 +1,102 @@
+@import "variables";
+
+.under-21-div {
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: "Lobster";
+}
+
+.under-21-info {
+    /* font-size: 20px; */
+}
+
+.under-21-div p {
+    padding-bottom: 10%;
+}
+
+.under-21-notice {
+    font-size: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    /* margin: 0 auto; */
+    animation:
+        typing 1.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+.under-21-div {
+    animation: fadeIn ease 10s;
+    -webkit-animation: fadeIn ease 10s;
+    -moz-animation: fadeIn ease 10s;
+    -o-animation: fadeIn ease 10s;
+    -ms-animation: fadeIn ease 10s;
+}
+
+.under-21-links a {
+   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    width: min-content;
+    
+}
+
+.policecar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    border-radius: 50%;
+    /* font-size: 48px; */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

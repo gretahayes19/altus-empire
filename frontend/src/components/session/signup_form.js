@@ -73,7 +73,13 @@ class SignupForm extends React.Component {
   render() {
     return (
       <div className="form-div signup">
+        <div className="form-otherForm-login">
+          <span className="form-span">Already have an account?</span>
+          <span className="signup-span"
+            onClick={() => this.props.openModal("login")}>Log in</span>
+        </div>
         <form onSubmit={this.handleSubmit}>
+
           <div className="form">
             <input
               className="form-input"
@@ -104,7 +110,7 @@ class SignupForm extends React.Component {
               placeholder="Confirm Password"
             />
             <label className="signup-dob-label">
-              Please enter your date of birth
+              <p>Please enter your date of birth</p>
             </label>
             <input
               className="form-input"
@@ -112,7 +118,10 @@ class SignupForm extends React.Component {
               value={this.state.dob}
               onChange={this.update("dob")}
             />
-            <input className="form-submit" type="submit" value="Submit" />
+
+            <button className="signup-button">Submit</button>
+            {/* <input className="form-submit" type="submit" value="Submit" /> */}
+
           </div>
         </form>
         <div className="form-errors signup">{this.renderErrors()}</div>

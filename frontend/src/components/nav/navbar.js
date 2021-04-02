@@ -55,7 +55,7 @@ class NavBar extends React.Component {
       if (this.props.loggedIn) {
         return (
             <div className="nav-links">
-                <Link to={'/home'}>profile</Link>
+                {/* <Link to={'/home'}>profile</Link> */}
                 <a onClick={this.logoutUser}>logout</a>
             </div>
         );
@@ -96,8 +96,7 @@ class NavBar extends React.Component {
       <div className="navbar landing-navbar-container">
         <div className="landing-navbar">
           <div className="left-nav">
-            <a onClick={this.toggleDropdown}><span>about us</span></a>
-            <a href="#">our story</a>
+            <a onClick={this.toggleDropdown}><span>our story</span></a>
           </div>
           <div className="center-nav">
             <Link to="/">

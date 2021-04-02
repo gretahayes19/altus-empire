@@ -78,17 +78,15 @@ class LoginForm extends React.Component {
             onChange={this.update("password")}
             placeholder="Password"
           />
-          <input className="form-submit" type="submit" value="Submit" />
+          <button className="signup-button-login">Submit</button>
+
+          {/* <input className="form-submit" type="submit" value="Submit" /> */}
         </form>
         <div className="form-errors">{this.renderErrors()}</div>
         <div className="form-otherForm">
           <span className="form-span">New User?</span>
-          <button
-            className="form-submit otherForm"
-            onClick={() => this.props.openModal("signup")}
-          >
-            Sign up
-          </button>
+          <span className="signup-span"
+            onClick={() => this.props.openModal("signup")}>Sign up</span>
         </div>
       </div>
     );
