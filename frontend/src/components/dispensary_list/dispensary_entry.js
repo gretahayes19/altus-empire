@@ -24,38 +24,42 @@ class DispensaryEntry extends React.Component {
     return (
       <Link to={`/dispensary/${dispensary._id}`}>
         <div className="dispensary-entry-container">
-          <div className="company-logo">
-            {!dispensary.postphoto? (
-              <img
-                className="dispensary-postphoto"
-                // src={`https://altus-empire-seeds.s3.amazonaws.com/emptypostimage.png`}
-                alt=""
-              />
-            ) : (
-              <img
-                className="dispensary-postphoto"
-                src={`https://altus-empire-seeds.s3.amazonaws.com/${dispensary.postphoto}`}
-                alt=""
-              />
-            )}
+          <div className="dispensary-general-info">
+            <div className="company-logo">
+              {!dispensary.postphoto ? (
+                <img
+                  className="dispensary-postphoto"
+                  // src={`https://altus-empire-seeds.s3.amazonaws.com/emptypostimage.png`}
+                  alt=""
+                />
+              ) : (
+                  <img
+                    className="dispensary-postphoto"
+                    src={`https://altus-empire-seeds.s3.amazonaws.com/${dispensary.postphoto}`}
+                    alt=""
+                  />
+                )}
+            </div>
+            <div className="dispensary-name">
+              <h3>{dispensary.dispensaryName}</h3>
+            </div>
+            <div className="dispensary-avg-rating">
+              <ReactStars value={Math.round(dispensary.avgRating.$numberDecimal)} {...starOps} />
+              <span>{parseFloat(dispensary.avgRating.$numberDecimal).toFixed(1)}</span>
+            </div>
           </div>
-          <div className="dispensary-name">
-            <h3>{dispensary.dispensaryName}</h3>
-          </div>
-          <div className="dispensary-avg-rating"></div>
-          <div className="dispensary-contact">
-            <div className="dispensary-number">
-              <span>{formatPhoneNumber(dispensary.phone)}</span>
-            </div>
-            <div className="dispensary-address">
-              <span>{dispensary.address.split(",")[0]}</span>
-            </div>
-            <div className="dispensary-average-rating">
-              <ReactStars value={dispensary.avgRating.$numberDecimal} {...starOps} />
-              <p>{parseFloat(dispensary.avgRating.$numberDecimal).toFixed(1)}</p>
-            </div>
 
-          </div>
+          <div className="dispensary-contact">
+              <div className="dispensary-number">
+                <span>{formatPhoneNumber(dispensary.phone)}</span>
+              </div>
+              <div className="dispensary-address">
+                <span>{dispensary.address.split(",")[0]}</span>
+              </div>
+              <div className="dispensary-borough">
+                <span>{dispensary.address.split(",")[1]}</span>
+              </div>
+            </div>
         </div>
       </Link>
     )
