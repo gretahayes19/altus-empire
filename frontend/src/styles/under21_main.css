@@ -21,16 +21,6 @@
     padding-bottom: 10%;
 }
 
-.under-21-notice {
-    font-size: 60px;
-    color: var(--brownred);
-    /* overflow: hidden; */
-    /* white-space: nowrap; */
-    /* margin: 0 auto; */
-    /* animation:
-        typing 1.5s steps(40, end),
-        blink-caret .75s step-end infinite; */
-}
 
 .under-21-div {
     animation: fadeIn ease 2s;
@@ -41,7 +31,7 @@
 }
 
 .under-21-links a {
-   font-family: Valera round;
+    font-family: Valera round;
     width: min-content;
     text-decoration: none;
     color: var(--brown);
@@ -64,16 +54,34 @@
     text-decoration: none;
     /* -webkit-animation: police 5s infinite;
     animation: police 5s; */
-    animation: move;
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
+#policecar {
+    offset-path: path('M 13 -55 H 1045 V 199 H 13 V 379 H 1045 V 726 H 13 V 839 H 1049 V 839');
+    animation: move 10000ms alternate infinite ease-in-out;
+    /* width: 40px;
+    height: 40px; */
+}
+
+.under-21-notice {
+    font-family: Valera round;
+    font-size: 30px;
+    color: var(--brownred);
+    overflow: hidden;
+    white-space: nowrap;
+    margin-left: 20%;
+    margin-top: 10%;
+    animation: typing 2s steps(30, end);
+}
+
+@keyframes typing {
+    from {
+        visibility: hidden;
+        width: 0
     }
 
-    100% {
-        opacity: 1;
+    to {
+        width: 100%
     }
 }
 
@@ -81,7 +89,27 @@
     0% {
         offset-distance: 0%;
     }
+    
+    100% {
+        offset-distance: 100%;
+    }
+}
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+
+/* @keyframes police {
+    0% {
+        offset-distance: 0%;
+    }
+    
     100% {
         offset-distance: 100%;
     }
@@ -125,9 +153,4 @@
         top: 80%;
         transform: rotate(0deg)
     }
-
-    100% {
-        left: 0px;
-        top: 0px;
-    } */
-}
+} */

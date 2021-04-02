@@ -69,12 +69,11 @@ class LoginForm extends React.Component {
   }
 
   render() {
-    const inputClass = Object.keys(this.state.errors).length ? "form-input error" : "form-input";
     return (
       <div className="form-div">
         <form className="form" onSubmit={this.handleSubmit}>
           <input
-            className={inputClass}
+            className={this.state.errors['email'] ? "form-input error" : "form-input"}
             type="text"
             value={this.state.email}
             onChange={this.update("email")}
@@ -82,7 +81,7 @@ class LoginForm extends React.Component {
           />
           {this.renderErrors('email')}
           <input
-            className={inputClass}
+            className={this.state.errors['password'] ? "form-input error" : "form-input"}
             type="password"
             value={this.state.password}
             onChange={this.update("password")}
@@ -90,10 +89,7 @@ class LoginForm extends React.Component {
           />
           {this.renderErrors('password')}
           <button className="signup-button-login">Submit</button>
-
-          {/* <input className="form-submit" type="submit" value="Submit" /> */}
         </form>
-        {/* <div className="form-errors">{this.renderErrors()}</div> */}
         <div className="form-otherForm">
           <span className="form-span">New User?</span>
           <span className="signup-span"

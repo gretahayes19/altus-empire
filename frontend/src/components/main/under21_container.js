@@ -31,8 +31,9 @@ class Under21 extends React.Component {
     render() {
         return (
             <div className="under-21-main-div">
+                <p className="under-21-notice">Sorry! You are not of age to sign up.</p>
                 <div className="under-21-div">
-                    <p className="under-21-notice">Sorry! You are not of age to sign up.</p>
+                    
                     {/* <p className="under-21-info"> */}
                         If you or someone you may know is experiencing pain,
                         Cannabidiol(CBD) oil may be a possible alternative.
