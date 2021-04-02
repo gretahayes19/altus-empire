@@ -58,19 +58,29 @@ class SignupForm extends React.Component {
       .signup(user, this.props.history)
   }
 
-  renderErrors() {
+  // renderErrors() {
+  //   return (
+  //     <ul>
+  //       {Object.keys(this.state.errors).map((error, i) => (
+  //         <li className="form-errors-li" key={`error-${i}`}>
+  //           {this.state.errors[error]}
+  //         </li>
+  //       ))}
+  //     </ul>
+  //   );
+  // }
+
+  renderErrors(key) {
     return (
-      <ul>
-        {Object.keys(this.state.errors).map((error, i) => (
-          <li className="form-errors-li" key={`error-${i}`}>
-            {this.state.errors[error]}
-          </li>
-        ))}
-      </ul>
-    );
+      <div className="form-errors">
+        <span>{this.state.errors[key]}</span>
+      </div>
+    )
   }
 
   render() {
+    const inputClass = Object.keys(this.state.errors).length ? "form-input error" : "form-input";
+
     return (
       <div className="form-div signup">
         <div className="form-otherForm-login">
@@ -82,49 +92,54 @@ class SignupForm extends React.Component {
 
           <div className="form">
             <input
-              className="form-input"
+              className={inputClass}
               type="email"
               value={this.state.email}
               onChange={this.update("email")}
               placeholder="Email"
             />
+            {this.renderErrors('email')}
             <input
-              className="form-input"
+              className={inputClass}
               type="text"
               value={this.state.username}
               onChange={this.update("username")}
               placeholder="Username"
             />
+            {this.renderErrors('username')}
             <input
-              className="form-input"
+              className={inputClass}
               type="password"
               value={this.state.password}
               onChange={this.update("password")}
               placeholder="Password"
             />
+            {this.renderErrors('password')}
             <input
-              className="form-input"
+              className={inputClass}
               type="password"
               value={this.state.password2}
               onChange={this.update("password2")}
               placeholder="Confirm Password"
             />
+            {this.renderErrors('password2')}
             <label className="signup-dob-label">
               <p>Please enter your date of birth</p>
             </label>
             <input
-              className="form-input"
+              className={inputClass}
               type="date"
               value={this.state.dob}
               onChange={this.update("dob")}
             />
+            {this.renderErrors('dob')}
 
             <button className="signup-button">Submit</button>
             {/* <input className="form-submit" type="submit" value="Submit" /> */}
 
           </div>
         </form>
-        <div className="form-errors signup">{this.renderErrors()}</div>
+        {/* <div className="form-errors signup">{this.renderErrors()}</div> */}
       </div>
     );
   }
