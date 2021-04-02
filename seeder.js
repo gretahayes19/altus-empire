@@ -4,7 +4,8 @@ const db = require('./config/keys').mongoURI;
 seeder.connect(db, function() {
     seeder.loadModels([
         'models/Dispensary.js',
-        'models/Rating.js'
+        'models/Rating.js',
+        'models/User.js'
     ])
 
     seeder.clearModels(['dispensary'], function() {
@@ -13,12 +14,30 @@ seeder.connect(db, function() {
         })
     })
 
-    // seeder.clearModels(['rating'], function() {
-    //     seeder.populateModels(ratingData, function() {
-    //         seeder.disconnect()
-    //     })
-    // })
+    seeder.populateModels(userData, function() {
+        seeder.disconnect()
+    })
+
+    seeder.clearModels(['rating'], function() {
+        seeder.populateModels(ratingData, function() {
+            seeder.disconnect()
+        })
+    })
 })
+
+const userData = [
+    {
+        'model' : 'user',
+        'documents' : [
+            {
+                username: "demouser",
+                email: 'demo@app.com',
+                dob: "Sun Feb 15 1987 19:00:00 GMT-0500 (Eastern Standard Time)",
+                password: 'password'
+            }
+        ]
+    }
+]
 
 const dispensaryData = [
     {
