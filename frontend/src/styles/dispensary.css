@@ -21,7 +21,7 @@
     width: 500px;
     background-color: var(--brownred);
     padding: 20px 15px;
-    line-height: 20px;
+    line-height: 24px;
     border-radius: 8px;
     font-family: 'Varela Round', sans-serif;
     font-size: 18px;
@@ -214,4 +214,10 @@
 .review-date {
     font-family: "Lobster";
     font-size: 18px;
+}
+
+.review-errors {
+    font-size: 24px;
+    font-family: 'Lobster';
+    text-align: center;
 }
