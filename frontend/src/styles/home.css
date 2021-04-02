@@ -11,8 +11,8 @@
     height: 100%;
     width: 100%;
     position: absolute; */
-    position: absolute;
-    top: 69px;
+    position: fixed;
+    /* top: 69px; */
     width: 100%;
     height: 100vh;
     display: flex;
@@ -25,6 +25,7 @@
     flex-direction: row;
     align-items: flex-start;
     height: 100vh;
+    margin-top: 155px;
 }
 
 .map-container {
@@ -60,6 +61,10 @@
 
 .search-bar {
     height: 100px;
+    position: fixed;
+    top: 69px;
+    width: 100%;
+    z-index: 1000;
 }
 
 .search-input {
