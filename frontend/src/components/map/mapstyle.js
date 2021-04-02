@@ -1,5 +1,6 @@
 
-export const golden = [{
+export const golden = [
+    {
         "featureType": "administrative",
         "elementType": "geometry.fill",
         "stylers": [
@@ -52,10 +53,25 @@ export const golden = [{
         "elementType": "geometry.fill",
         "stylers": [
             {
-                "color": "#b4934a"
+                "lightness": "85"
             },
             {
-                "lightness": "85"
+                "saturation": "100"
+            },
+            {
+                "hue": "#ff0000"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.man_made",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#f89621"
+            },
+            {
+                "lightness": "83"
             }
         ]
     },
@@ -87,6 +103,27 @@ export const golden = [{
         ]
     },
     {
+        "featureType": "poi.park",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "lightness": "-14"
+            },
+            {
+                "gamma": "1.90"
+            },
+            {
+                "saturation": "48"
+            },
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#c6f0e5"
+            }
+        ]
+    },
+    {
         "featureType": "road",
         "elementType": "all",
         "stylers": [
@@ -103,7 +140,7 @@ export const golden = [{
         "elementType": "geometry.fill",
         "stylers": [
             {
-                "color": "#b4934a"
+                "color": "#4ab47c"
             },
             {
                 "lightness": "60"
@@ -115,7 +152,7 @@ export const golden = [{
         "elementType": "labels.text.fill",
         "stylers": [
             {
-                "color": "#b4934a"
+                "color": "#742a3d"
             }
         ]
     },
@@ -175,10 +212,16 @@ export const golden = [{
         "elementType": "geometry.fill",
         "stylers": [
             {
-                "color": "#b4934a"
+                "lightness": "57"
             },
             {
-                "lightness": "60"
+                "color": "#704c2d"
+            },
+            {
+                "gamma": "3.01"
+            },
+            {
+                "saturation": "17"
             }
         ]
     },
@@ -205,10 +248,16 @@ export const golden = [{
         "elementType": "geometry.fill",
         "stylers": [
             {
-                "color": "#b4934a"
+                "color": "#c06038"
             },
             {
-                "lightness": "60"
+                "lightness": "47"
+            },
+            {
+                "saturation": "53"
+            },
+            {
+                "gamma": "0.95"
             }
         ]
     },
@@ -238,7 +287,7 @@ export const golden = [{
         "elementType": "all",
         "stylers": [
             {
-                "color": "#b48620"
+                "color": "#db1818"
             },
             {
                 "visibility": "on"
@@ -250,16 +299,16 @@ export const golden = [{
         "elementType": "geometry.fill",
         "stylers": [
             {
-                "lightness": "100"
+                "lightness": "67"
             },
             {
-                "saturation": "80"
+                "saturation": "29"
             },
             {
-                "color": "#b4934a"
+                "color": "#f89621"
             },
             {
-                "gamma": "1.70"
+                "gamma": "1.89"
             }
         ]
     },
@@ -271,4 +320,5 @@ export const golden = [{
                 "color": "#b4934a"
             }
         ]
-    }]
+    }
+]
