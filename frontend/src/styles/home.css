@@ -17,7 +17,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: var(--orange);
+    /* background-color: var(--orange); */
     background: url("../assets/light_electric.jpg");
     background-size: 100%;
 }
