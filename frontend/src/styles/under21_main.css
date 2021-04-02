@@ -27,11 +27,11 @@
 }
 
 .under-21-div {
-    animation: fadeIn ease 20s;
-    -webkit-animation: fadeIn ease 20s;
-    -moz-animation: fadeIn ease 20s;
-    -o-animation: fadeIn ease 20s;
-    -ms-animation: fadeIn ease 20s;
+    animation: fadeIn ease 10s;
+    -webkit-animation: fadeIn ease 10s;
+    -moz-animation: fadeIn ease 10s;
+    -o-animation: fadeIn ease 10s;
+    -ms-animation: fadeIn ease 10s;
 }
 
 .under-21-links a {
@@ -40,13 +40,15 @@
     
 }
 
-.police-car {
+.policecar {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     text-decoration: none;
+    border-radius: 50%;
+    /* font-size: 48px; */
 }
 
 @keyframes fadeIn {

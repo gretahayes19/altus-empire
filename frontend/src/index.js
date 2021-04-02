@@ -32,4 +32,35 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
   window.fetchDispensaryByName = fetchDispensaryByName
+
+  // FUN STUFF
+
+  let policecar = document.querySelector('#policecar');
+  let move = 10; 
+
+  // window.addEventListener('load', () => {
+  //   policecar.style.position = 'absolute';
+  //   policecar.style.left = 0;
+  //   policecar.style.top = 0;
+  //   policecar.style.zindex = 1000;
+  // });
+
+  window.addEventListener('keyDown', (e) => {
+    debugger;
+    switch (e.key) {
+      case 'ArrowUp':
+        policecar.style.top = `${parseInt(policecar.style.top) - move}px`;
+        break;
+      case 'ArrowDown':
+        policecar.style.top = `${parseInt(policecar.style.top) + move}px`;
+        break;
+      case 'ArrowLeft':
+        policecar.style.left = `${parseInt(policecar.style.left) - move}px`;
+        break;
+      case 'ArrowRight':
+        policecar.style.left = `${parseInt(policecar.style.left) + move}px`;
+        break;
+    }
+  });
+
 });

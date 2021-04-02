@@ -27,9 +27,10 @@ class Under21 extends React.Component {
                 </p>
                 <p className="under-21-links">
                     <a href="https://www1.nyc.gov/site/nypd/services/victim-services/how-to-report-a-crime.page">
-                        See something say something  <div className="police-car" style={{fontSize: '48px'}}>🚓</div>
+                        See something say something 
                     </a>
                 </p>
+                {/* <div className="policecar" style={}>🚓</div> */}
             </div>
         )
     }
