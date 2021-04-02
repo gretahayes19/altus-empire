@@ -8,21 +8,8 @@
     justify-content: space-around;
     font-family: "Lobster";
     font-size: 30px;
-    color: var(--brown)
-    /* width: 200vw; */
-}
-
-.under-21-info {
-    /* background-color: aliceblue; */
-    padding: 2em;
-}
-
-.under-21-div p {
-    padding-bottom: 10%;
-}
-
-
-.under-21-div {
+    color: var(--brown);
+    text-shadow: 2px 2px var(--beige);
     animation: fadeIn ease 2s;
     -webkit-animation: fadeIn ease 2s;
     -moz-animation: fadeIn ease 2s;
@@ -30,8 +17,17 @@
     -ms-animation: fadeIn ease 2s;
 }
 
+.under-21-info {
+    padding: 2em;
+}
+
+.under-21-div p {
+    padding-bottom: 10%;
+}
+
 .under-21-links a {
-    font-family: Valera round;
+    font-family: 'Varela Round',
+    sans-serif;
     width: min-content;
     text-decoration: none;
     color: var(--brown);
@@ -68,7 +64,8 @@
 }
 
 .under-21-notice {
-    font-family: Valera round;
+    font-family: 'Varela Round',
+    sans-serif;
     font-size: 30px;
     color: var(--brownred);
     overflow: hidden;
