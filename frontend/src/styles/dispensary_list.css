@@ -3,7 +3,7 @@
 .dispensary-list {
     grid-column: 3;
     grid-row: 1;
-    padding-bottom: 20em;
+    /* padding-bottom: 20em; */
     /* padding: 5em; */
 }
 
