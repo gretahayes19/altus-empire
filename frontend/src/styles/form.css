@@ -10,7 +10,7 @@
     align-items: center;
     border-radius: 3px;
     width: 20em;
-    height: 418px;
+    height: 440px;
 }
 
 .form-div.signup {
@@ -44,6 +44,10 @@
 .form-input:focus{
     border: 3px solid var(--blue);
 
+}
+
+.form-input.error {
+    border-color: red;
 }
 
 .form-input[type="date"]{
@@ -82,7 +86,7 @@
     padding: 8px;
     /* margin-top: 50px; */
     width: 95%;
-    margin: 48px auto;
+    margin: 12px auto;
 }
 
 .signup-button:hover{
@@ -131,12 +135,13 @@
 }
 
 .form-errors {
-    font-size: 12px;
-    position: absolute;
-    font-family: sans-serif;
-    top: 60%;
+    font-size: 14px;
+    /* position: absolute; */
+    margin-top: -15px;
+    font-family: 'Lobster';
+    /* top: 60%; */
     transition: 0.3;
-    color: rgba(70, 1, 1, 0.89);
+    color: red;
 }
 
 .form-errors.signup {

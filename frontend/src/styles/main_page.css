@@ -35,13 +35,11 @@ body {
     margin-bottom: 150px;
 }
 
-
-
 .main-page-logo-pic {
     margin-top: 40px;
     width: 56em;
     height: 25em;
-    background-image: url("../assets/Altus_Empire_Wordmark.png");
+    background-image: url("../assets/Altus_Empire_Wordmark_Shadow.png");
     background-size: 100%;
     background-repeat: no-repeat;
 }
