@@ -35,6 +35,7 @@
     overflow: hidden;
     width: 75%;
     border: 5px solid var(--brown);
+    border-radius: 8px;
     margin-right: 10px;
     height: 63vh;
 
