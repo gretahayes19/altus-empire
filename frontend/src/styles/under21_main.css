@@ -1,14 +1,13 @@
 @import "variables";
 
 
-
 .under-21-div {
     padding: 10%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     font-family: "Lobster";
-    font-size: 25px;
+    font-size: 30px;
     /* width: 200vw; */
 }
 
@@ -22,13 +21,13 @@
 }
 
 .under-21-notice {
-    font-size: 20px;
-    overflow: hidden;
-    white-space: nowrap;
+    font-size: 60px;
+    /* overflow: hidden; */
+    /* white-space: nowrap; */
     /* margin: 0 auto; */
-    animation:
+    /* animation:
         typing 1.5s steps(40, end),
-        blink-caret .75s step-end infinite;
+        blink-caret .75s step-end infinite; */
 }
 
 .under-21-div {
@@ -45,7 +44,7 @@
     
 }
 
-.policecar {
+#policecar {
     position: absolute;
     top: 0;
     left: 0;
@@ -64,42 +63,3 @@
     }
 }
 
-@-moz-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-o-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-ms-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}

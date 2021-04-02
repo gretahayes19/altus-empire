@@ -12,9 +12,14 @@
     z-index: 2;
 }
 
+/* .modal-background-div.under-21 {
+    background-size: contain;
+    background-repeat: no-repeat;
+} */
+
 .modal-form-div {
     background-image: url("../assets/Altus\ Empire_Wallpaper-02.jpg");
-    background-size: 900px;
+    background-size: cover;
     background-position: -41px 0;
     position: absolute;
     top: 50%;
@@ -23,6 +28,11 @@
     border-radius: 5px;
     border: 5px solid var(--brown);
 }
+/* 
+.modal-form-div.under-21 {
+    background-size: contain;
+    background-repeat: no-repeat;
+} */
 
 /* .modal-background-animate {
     background: black repeat 5% 5%;

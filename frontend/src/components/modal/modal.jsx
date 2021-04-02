@@ -33,8 +33,8 @@ function Modal({modal, closeModal}) {
     //     </div>
     // } else {
         return (
-            <div className="modal-background-div" onClick={closeModal}>
-                <div className="modal-form-div" onClick={e => e.stopPropagation()}>
+            <div className={`modal-background-div ${modal}`} onClick={closeModal}>
+                <div className={`modal-form-div ${modal}`} onClick={e => e.stopPropagation()}>
                     {component}
                 </div>
                 {/* <div id="modal-background-animate"></div>
