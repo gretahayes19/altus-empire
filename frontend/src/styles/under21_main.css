@@ -48,17 +48,21 @@
 #policecar {
     position: absolute;
     top: 100px;
-    left: 15px; 
+    left: 50px;
+    /* left: 15px; 
     width: 50px;
-    height: 50px;
+    height: 50px; */
     text-decoration: none;
+    /* -webkit-animation: police 5s infinite; */
+    /* animation: police 5s; */
     /* -webkit-animation: police 5s infinite;
     animation: police 5s; */
 }
 
 #policecar {
-    offset-path: path('M 13 -55 H 1045 V 199 H 13 V 379 H 1045 V 726 H 13 V 839 H 1049 V 839');
-    animation: move 10000ms alternate infinite ease-in-out;
+    offset-path: path('M 329 4 H 1090 V 280 H 50 V 756 H 1090');
+    animation: move 6000ms alternate infinite ease-in-out;
+    /* animation-timing-function: cubic-bezier(0,0,0.58,1); */
     /* width: 40px;
     height: 40px; */
 }
@@ -71,7 +75,7 @@
     white-space: nowrap;
     margin-left: 20%;
     margin-top: 10%;
-    animation: typing 2s steps(30, end);
+    animation: typing 4s steps(30, end);
 }
 
 @keyframes typing {
@@ -105,6 +109,20 @@
     }
 }
 
+#policecar {
+    /* offset-path: path('M 9 -62 H 1228 V 1057 H 9 Z');
+    animation: move 6000ms infinite ease-in-out; */
+    /* width: 40px;
+    height: 40px; */
+}
+
+@keyframes move {
+    0% {
+        offset-distance: 0%;
+    }
+    100% {
+        offset-distance: 100%;
+    }
 /* @keyframes police {
     0% {
         offset-distance: 0%;
@@ -152,5 +170,5 @@
         left: 40%;
         top: 80%;
         transform: rotate(0deg)
-    }
-} */
+    } */
+}
