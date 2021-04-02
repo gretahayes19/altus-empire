@@ -7,15 +7,8 @@
     right: 0;
     left: 0;
     background-color: rgba(148, 215, 197, 0.644);
-    /* background-image: url('../assets/curved.jpg');
-    background-size: cover; */
     z-index: 2;
 }
-
-/* .modal-background-div.under-21 {
-    background-size: contain;
-    background-repeat: no-repeat;
-} */
 
 .modal-form-div {
     background-image: url("../assets/Altus\ Empire_Wallpaper-02.jpg");
@@ -28,62 +21,8 @@
     border-radius: 5px;
     border: 5px solid var(--brown);
 }
-/* 
-.modal-form-div.under-21 {
-    background-size: contain;
-    background-repeat: no-repeat;
-} */
 
-/* .modal-background-animate {
-    background: black repeat 5% 5%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 100;
-
-    -webkit-animation-name: FLOATING-MODAL-BG;
-    -webkit-animation-duration: 200s;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
+.modal-form-div.under21 {
+    height: 60vh;
+    overflow-y: scroll;
 }
-
-.modal-midground-animate {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 200;
-
-    -webkit-animation-name: FLOATING-MODAL-BG;
-    -webkit-animation-duration: 150s;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-}
-
-.modal-foreground-animate {
-    background: repeat 35% 35%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 300;
-
-    -webkit-animation-name: FLOATING-MODAL-BG;
-    -webkit-animation-duration: 100s;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-} */
-
-/* .policecar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100px;
-    height: 100px;
-    text-decoration: none;
-    border-radius: 50%
-} */

@@ -15,6 +15,7 @@
     -moz-animation: fadeIn ease 2s;
     -o-animation: fadeIn ease 2s;
     -ms-animation: fadeIn ease 2s;
+    line-height: 34px;
 }
 
 .under-21-info {
@@ -73,6 +74,7 @@
     margin-left: 20%;
     margin-top: 10%;
     animation: typing 4s steps(30, end);
+    text-shadow: 2px 2px var(--beige);
 }
 
 @keyframes typing {
