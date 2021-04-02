@@ -58,18 +58,6 @@ class SignupForm extends React.Component {
       .signup(user, this.props.history)
   }
 
-  // renderErrors() {
-  //   return (
-  //     <ul>
-  //       {Object.keys(this.state.errors).map((error, i) => (
-  //         <li className="form-errors-li" key={`error-${i}`}>
-  //           {this.state.errors[error]}
-  //         </li>
-  //       ))}
-  //     </ul>
-  //   );
-  // }
-
   renderErrors(key) {
     return (
       <div className="form-errors">
@@ -79,8 +67,6 @@ class SignupForm extends React.Component {
   }
 
   render() {
-    const inputClass = Object.keys(this.state.errors).length ? "form-input error" : "form-input";
-
     return (
       <div className="form-div signup">
         <div className="form-otherForm-login">
@@ -92,7 +78,7 @@ class SignupForm extends React.Component {
 
           <div className="form">
             <input
-              className={inputClass}
+              className={this.state.errors['email'] ? "form-input error" : "form-input"}
               type="email"
               value={this.state.email}
               onChange={this.update("email")}
@@ -100,7 +86,7 @@ class SignupForm extends React.Component {
             />
             {this.renderErrors('email')}
             <input
-              className={inputClass}
+              className={this.state.errors['username'] ? "form-input error" : "form-input"}
               type="text"
               value={this.state.username}
               onChange={this.update("username")}
@@ -108,7 +94,7 @@ class SignupForm extends React.Component {
             />
             {this.renderErrors('username')}
             <input
-              className={inputClass}
+              className={this.state.errors['password'] ? "form-input error" : "form-input"}
               type="password"
               value={this.state.password}
               onChange={this.update("password")}
@@ -116,7 +102,7 @@ class SignupForm extends React.Component {
             />
             {this.renderErrors('password')}
             <input
-              className={inputClass}
+              className={this.state.errors['password2'] ? "form-input error" : "form-input"}
               type="password"
               value={this.state.password2}
               onChange={this.update("password2")}
@@ -127,7 +113,7 @@ class SignupForm extends React.Component {
               <p>Please enter your date of birth</p>
             </label>
             <input
-              className={inputClass}
+              className={this.state.errors['dob'] ? "form-input error" : "form-input"}
               type="date"
               value={this.state.dob}
               onChange={this.update("dob")}
