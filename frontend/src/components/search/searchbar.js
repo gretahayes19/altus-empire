@@ -47,7 +47,6 @@ class SearchBar extends React.Component {
         const { results } = this.props
 
         return (
-            <div className = "searchbar-main-div">
                 <div className="search-bar" onFocus={this.handleFocus} onBlur={this.handleBlur}>
                     <form onSubmit={this.handleSubmit} className="search-input">
                         <FontAwesomeIcon icon={faSearch} />
@@ -55,7 +54,6 @@ class SearchBar extends React.Component {
                         <button className="map-search-button" onClick={this.handleSubmit}>Search</button>
                     </form>
                 </div>
-            </div>
         )
     }
 }

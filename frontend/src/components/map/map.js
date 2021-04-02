@@ -54,7 +54,7 @@ export class MapContainer extends Component {
         }
 
         return (
-          <div className="map-div">
+          <>
             <Map
                 google={this.props.google}
                 zoom={11}
@@ -63,6 +63,10 @@ export class MapContainer extends Component {
                 styles={golden}
                 mapTypeControl={false}
                 streetViewControl={false}
+                // style={{
+                //     width: '60%',
+                //     height: '100%'
+                // }}
                 initialCenter={
                     {
                         lat: 40.7484,
@@ -86,7 +90,7 @@ export class MapContainer extends Component {
                     </div>
                 </InfoWindow>
             </Map>
-          </div>
+          </>
         );
     }
 }
