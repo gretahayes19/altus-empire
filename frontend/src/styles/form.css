@@ -47,7 +47,9 @@
 
 .form-input[type="date"]{
     background-color: var(--yellow);
+
 }
+
 
 .form-input[type="date"]:focus{
     background-color: var(--yellow);
