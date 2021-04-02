@@ -27,7 +27,6 @@ router.post('/', passport.authenticate('jwt', {session: false}), async function 
     const oldRatings = await Rating.find({ dispensary: req.body.dispensaryId }, 'user rating').exec();
 
     for (let i in oldRatings) {
-        console.log(`${oldRatings[i].user.toString()} and ${typeof req.user.id}`);
         if (oldRatings[i].user.toString() === req.user.id) {
             return res.status(400).json({review: 'Can not make duplicate review'});
         }

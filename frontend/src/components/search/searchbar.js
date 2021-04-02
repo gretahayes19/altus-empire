@@ -19,10 +19,6 @@ class SearchBar extends React.Component {
         this.storeKeyWord = debounce(this.props.storeKeyWord, 200)
     }
 
-    componentDidUpdate() {
-        console.log('Goddamn');
-    }
-
     update(e) {
         this.setState({ query: e.target.value }, this.handleSubmit);
     }
@@ -36,7 +32,6 @@ class SearchBar extends React.Component {
     }
 
     handleSubmit(e) {
-        console.log('update')
         if (this.state.query === "") {
             this.props.fetchDispensaries();
         } else this.props.fetchSearchByNameDispensary(this.state.query)
