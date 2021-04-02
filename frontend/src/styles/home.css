@@ -33,11 +33,11 @@
 .map-container {
     margin-top: 35px;
     overflow: hidden;
-    width: 75%;
+    width: 70%;
     border: 5px solid var(--brown);
     border-radius: 8px;
     margin-right: 10px;
-    height: 60vh;
+    height: 56vh;
     border-radius: 6px;
 }
 
@@ -57,7 +57,7 @@
 } */
 
 .dispensary-list-container {
-    width: 25%;
+    width: 30%;
     height: 100vh;
     overflow-y: scroll;
     margin-top: -93px;
@@ -84,7 +84,7 @@
     padding: 0;
     height: 75%;
     margin-right: 150px;
-    margin-left: 24.8vw;
+    margin-left: 29.5vw;
 
     /* display: flex;
     justify-content: space-between; */
@@ -123,4 +123,22 @@
     color: beige;
     /* border-left: 5px solid var(--brown);
     border-right: 5px solid var(--brown) */
+}
+
+.gm-style .gm-style-iw-c {
+  /* background-color: var(--brownred);  */
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-window > a{
+    text-decoration: none;
+    font-family: 'Lobster', cursive;
+    max-width: 300px;
+    color: var(--blue);
+    font-size: 30px;
+    text-shadow: 2px 2px var(--brown);
+    margin-top: 5px;
 }
