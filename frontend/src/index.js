@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // FUN STUFF
 
-  let policecar = document.querySelector('#policecar');
+  let policecar = document.querySelector('.policecar');
   let move = 10; 
 
   // window.addEventListener('load', () => {
@@ -46,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // });
 
   window.addEventListener('keyDown', (e) => {
-    debugger;
     switch (e.key) {
       case 'ArrowUp':
         policecar.style.top = `${parseInt(policecar.style.top) - move}px`;

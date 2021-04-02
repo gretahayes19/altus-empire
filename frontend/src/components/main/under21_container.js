@@ -30,7 +30,7 @@ class Under21 extends React.Component {
                         See something say something 
                     </a>
                 </p>
-                {/* <div className="policecar" style={}>🚓</div> */}
+                <div className="policecar">🚓</div>
             </div>
         )
     }
