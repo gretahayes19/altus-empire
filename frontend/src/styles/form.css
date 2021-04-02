@@ -73,6 +73,7 @@
     font-family: "Lobster";
     font-size: 18px;
     color: var(--brown);
+    width: 300px;
 }
 
 .signup-button{
