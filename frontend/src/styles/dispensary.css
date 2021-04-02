@@ -21,7 +21,7 @@
     width: 500px;
     background-color: var(--brownred);
     padding: 20px 15px;
-    line-height: 20px;
+    line-height: 25px;
     border-radius: 8px;
     font-family: 'Varela Round', sans-serif;
     font-size: 18px;
@@ -29,7 +29,8 @@
 }
 
 .dispensary-pagepic{
-    width: 550px;
+    /* width: 550px; */
+    max-height: 40vh;
     border-radius: 8px;
     border: 5px solid var(--blue)
 }
@@ -45,6 +46,7 @@
     margin-top: 64px;
     padding-top: 24px;
     padding-bottom: 24px;
+    margin-bottom: 150px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -77,7 +79,7 @@
 .dispensary-right {
     /* width: 65%; */
     margin-right: 200px;
-    height: 70vh;
+    /* height: 70vh; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -168,7 +170,7 @@
 
 .review-index {
     overflow-y: auto;
-    height: 35%;
+    height: 40vh;
     width: 500px;
     background-color: var(--beige);
     padding: 10px;
