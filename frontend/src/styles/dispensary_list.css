@@ -21,12 +21,13 @@
     color: black;
 }
 
+
 .dispensary-entry-container {
     margin: 1em;
     border: 5px solid var(--brown);
     border-radius: 10px;
     font-size: 22px;
-    padding: 2em;
+    padding: 25px;
     font-family: 'Lobster', sans-serif;
     color: var(--beige);
     display: flex;
@@ -34,6 +35,13 @@
     background-color: var(--brownred);
 }
 
+.dispensary-general-info {
+    width: 60%;
+}
+
+.dispensary-contact {
+    /* width: 50%; */
+}
 
 .dispensary-entry-container:hover {
     box-shadow: 0 0 10px 1px rgba(53, 50, 50, 0.336);
@@ -41,7 +49,8 @@
 
 .dispensary-postphoto {
     height: 15vh;
-    max-width: 300px;
+    overflow-x: hidden;
+    max-width: 100%;
     border: 5px solid var(--beige);
     border-radius: 5px;
 }
