@@ -3,8 +3,7 @@ import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
 import "../../styles/map.css";
 import {golden} from './mapstyle'
 import cannabisMarker from '../../assets/weed.svg'
-import { Link } from 'react-router-dom';
-
+import { Link, withRouter } from 'react-router-dom';
 
 export class MapContainer extends Component {
 
@@ -41,6 +40,7 @@ export class MapContainer extends Component {
                 position={{ lat: mark.latitude, lng: mark.longitude }}
                 onClick={this.onMarkerClick} 
                 name={mark.dispensaryName}
+                id={mark._id}
                 data={mark._id}
                 icon={{ url: cannabisMarker, fillColor: "#704C2D", size: new this.props.google.maps.Size(60, 90), scaledSize: new this.props.google.maps.Size(60, 90)}}
             />)
@@ -85,9 +85,10 @@ export class MapContainer extends Component {
                     marker={this.state.activeMarker}
                     visible={this.state.showingInfoWindow}
                     onClose={this.onClose}
+                    style={{ width: '200px', height: '100px'}}
                 >
-                    <div> 
-                        <h4>{this.state.selectedPlace.name}</h4>
+                    <div className="info-window">
+                        <a href={`/#/dispensary/${this.state.selectedPlace.id}`}><h4>{this.state.selectedPlace.name}</h4></a>
                     </div>
                 </InfoWindow>
             </Map>
