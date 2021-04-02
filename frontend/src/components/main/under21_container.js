@@ -36,7 +36,7 @@ class Under21 extends React.Component {
                         </a>
                     </p>
                 </div>
-                <div id="policecar js-constrain" 
+                <div id="policecar" 
                     className = "contrain" 
                     style={{fontSize:"100px"}}>🚓</div>
             </div>

@@ -47,12 +47,13 @@
 #policecar {
     position: absolute;
     top: 100px;
-    left: 15px; 
+    left: 50px;
+    /* left: 15px; 
     width: 50px;
-    height: 50px;
+    height: 50px; */
     text-decoration: none;
-    -webkit-animation: police 5s infinite;
-    animation: police 5s;
+    /* -webkit-animation: police 5s infinite; */
+    /* animation: police 5s; */
 }
 
 @keyframes fadeIn {
@@ -65,8 +66,21 @@
     }
 }
 
-@keyframes police {
+#policecar {
+    offset-path: path('M 9 -62 H 1228 V 1057 H 9 Z');
+    animation: move 6000ms infinite ease-in-out;
+    /* width: 40px;
+    height: 40px; */
+}
+
+@keyframes move {
     0% {
+        offset-distance: 0%;
+    }
+    100% {
+        offset-distance: 100%;
+    }
+    /* 0% {
         left: 0px;
         top: 0px;
     }
@@ -102,21 +116,5 @@
         left: 40%;
         top: 80%;
         transform: rotate(0deg)
-    }
+    } */
 }
-
-
-
-/* -------- */
-/* 
-.contrain {
-    overflow:       hidden;
-    position:       absolute;
-    width:          140px;
-    height:         100px;
-    left:           50%;
-    top:            50%;
-    margin-left:    -70px;
-    margin-top:     -50px;
-    z-index:        1;
-} */
