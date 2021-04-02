@@ -5,6 +5,29 @@ import "../../styles/under21_main.css";
 
 class Under21 extends React.Component {
 
+    handleKey(e) {
+        debugger;
+        e.stopPropagation();
+        console.log(e.target)
+        let policecar = e.target;
+        let move = 10; 
+
+        switch (e.key) {
+            case 'ArrowUp':
+                policecar.style.top = `${parseInt(policecar.style.top) - move}px`;
+                break;
+            case 'ArrowDown':
+                policecar.style.top = `${parseInt(policecar.style.top) + move}px`;
+                break;
+            case 'ArrowLeft':
+                policecar.style.left = `${parseInt(policecar.style.left) - move}px`;
+                break;
+            case 'ArrowRight':
+                policecar.style.left = `${parseInt(policecar.style.left) + move}px`;
+                break;
+        }
+    };
+
     render() {
         return (
             <div className="under-21-div">
@@ -13,13 +36,13 @@ class Under21 extends React.Component {
                     If you or someone you may know is experiencing pain,
                     Cannabidiol(CBD) oil may be a possible alternative.
                 </p>
-                <p className="under-21-info-rl">
+                <div className="under-21-info-rl">
                     <ul className="under-21-ul">CBD oil has been known to help treat:
                         <li className="under-21-li">Anxiety</li>
                         <li className="under-21-li">Epilepsy</li>
                         <li className="under-21-li">Chronic Pain</li>
                     </ul>
-                </p>
+                </div>
                 <p className="under-21-links">
                     <a href="https://www.google.com/search?q=legalization+of+cannabis&oq=legalization+of+cannabis&aqs=chrome..69i57.4613j1j4&sourceid=chrome&ie=UTF-8">
                         Please read more about the legalization of cannabis here
@@ -30,7 +53,7 @@ class Under21 extends React.Component {
                         See something say something 
                     </a>
                 </p>
-                <div className="policecar">🚓</div>
+                <div id="policecar" onKeyDown={this.handleKey()} style={{fontSize:"48px"}}>🚓</div>
             </div>
         )
     }

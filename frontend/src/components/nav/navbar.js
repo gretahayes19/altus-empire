@@ -121,6 +121,11 @@ class NavBar extends React.Component {
         <a className="creator"><span>Greta</span></a>
         <a className="creator"><span>Hank</span></a>
         <a className="creator"><span>Kevin</span></a>
+
+        <h1>Front End Lead</h1>
+        <h1>Team Lead</h1>
+        <h1>Flex Lead</h1>
+        <h1>Backend Lead</h1>
       </div>
     )
   }
