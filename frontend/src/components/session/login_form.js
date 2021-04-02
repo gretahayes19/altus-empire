@@ -60,6 +60,15 @@ class LoginForm extends React.Component {
   //   );
   // }
 
+  demoLogin() {
+    const demoUser = {
+      email: "demo@app.com",
+      password: "password"
+    }
+
+    this.props.login(demoUser);
+  }
+
   renderErrors(key) {
     return (
       <div className="form-errors">
@@ -90,6 +99,7 @@ class LoginForm extends React.Component {
           {this.renderErrors('password')}
           <button className="signup-button-login">Submit</button>
         </form>
+        <button onClick={() => this.demoLogin()}>Demo Login</button>
         <div className="form-otherForm">
           <span className="form-span">New User?</span>
           <span className="signup-span"
