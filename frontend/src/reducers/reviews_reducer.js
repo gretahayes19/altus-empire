@@ -6,6 +6,7 @@ import {
 } from '../actions/rating_actions';
 
 export default function reviewsReducer(state = [], action) {
+    // debugger;
     let newState = state.slice();
     switch (action.type) {
         case RECEIVE_REVIEWS:
