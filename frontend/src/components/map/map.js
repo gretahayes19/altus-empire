@@ -42,7 +42,7 @@ export class MapContainer extends Component {
                 name={mark.dispensaryName}
                 id={mark._id}
                 data={mark._id}
-                icon={{ url: cannabisMarker, fillColor: "#704C2D", size: new this.props.google.maps.Size(35, 45), scaledSize: new this.props.google.maps.Size(35, 46)}}
+                icon={{ url: cannabisMarker, fillColor: "#704C2D", size: new this.props.google.maps.Size(60, 90), scaledSize: new this.props.google.maps.Size(60, 90)}}
             />)
 
         const zoomControlOptions = {

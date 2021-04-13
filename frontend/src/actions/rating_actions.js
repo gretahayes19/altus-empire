@@ -2,6 +2,7 @@ import * as RatingAPIUtil from '../util/rating_api_util'
 
 export const RECEIVE_REVIEWS = "RECEIVE_REVIEWS"
 export const RECEIVE_REVIEW = "RECEIVE_REVIEW"
+export const REMOVE_REVIEW = "REMOVE_REVIEW"
 export const CLEAR_REVIEWS = "CLEAR_REVIEWS"
 export const RECEIVE_INPUT_ERRORS = "RECEIVE_INPUT_ERRORS"
 
@@ -31,6 +32,13 @@ const receiveReview = (review) => {
     })
 }
 
+const removeReview = (reviewId) => {
+    return ({
+        type: REMOVE_REVIEW,
+        reviewId
+    })
+}
+
 
 export const fetchReviews = (dispensaryId) => (dispatch) => {
     return RatingAPIUtil.fetchReviews(dispensaryId)
@@ -42,4 +50,12 @@ export const createReview = review => dispatch => {
         review => dispatch(receiveReview(review))).catch(
             err => dispatch(receiveErrors(err.response.data))
         )
+}
+
+export const deleteReview = reviewId => dispatch => {
+    return RatingAPIUtil.deleteReview(reviewId).then(
+        () => dispatch(removeReview(reviewId)).catch(
+            err => dispatch(receiveErrors(err.response.data))
+        )
+    )
 }

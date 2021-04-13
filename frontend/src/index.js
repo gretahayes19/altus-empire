@@ -9,8 +9,6 @@ import { setAuthToken } from './util/session_api_util';
 import { logout } from './actions/session_actions';
 import {fetchDispensaryByName} from './util/dispensary_api_util'
 
-window.
-
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (localStorage.jwtToken) {

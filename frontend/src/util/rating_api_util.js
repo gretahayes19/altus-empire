@@ -7,3 +7,7 @@ export const fetchReviews = (dispensaryId) => {
 export const createReview = (review) => {
     return axios.post('/api/ratings', review)
 };  
+
+export const deleteReview = (reviewId) => {
+    return axios.delete(`/api/ratings/${reviewId}`)
+}

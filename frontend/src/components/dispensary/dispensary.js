@@ -56,7 +56,7 @@ class Dispensary extends React.Component {
               </div>
               <div className="dispensary-right">
                   <ReviewFormContainer dispensary={dispensary} />
-                  <ReviewIndex reviews={sortedReviews} />
+                  <ReviewIndex reviews={sortedReviews} userId={this.props.user} deleteReview={this.props.deleteReview}/>
               </div>
 
           </div>
