@@ -2,7 +2,7 @@ import React from 'react'
 
 import ReactStars from "react-rating-stars-component";
 
-const ReviewIndex = ({ reviews }) => {
+const ReviewIndex = ({ reviews, userId, deleteReview }) => {
 
     const starOps = {
             size: 30,
@@ -14,7 +14,6 @@ const ReviewIndex = ({ reviews }) => {
             filledIcon: < i className= "fas fa-cannabis" ></i>
     };
 
-
     return (
         <ul className="review-index">
             {reviews.map((review, idx) => (
@@ -24,6 +23,7 @@ const ReviewIndex = ({ reviews }) => {
                         <p><span className="review-date">Date:</span> {review.date.slice(5, 10).concat("-".concat(review.date.slice(2, 4)))}</p>
                     </header>
                     <p>{review.review}</p>
+                    {review.user === userId && <button onSubmit={() => deleteReview(review._id)}>delete</button>}
                     <ReactStars value={review.rating} {...starOps} />
 
 
