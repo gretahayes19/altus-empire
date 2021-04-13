@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../styles/navbar.css';
 import logo from "../../assets/main_logo.png";
+import ourstory from "../../assets/ae.jpg";
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -115,15 +116,21 @@ class NavBar extends React.Component {
   getDropDown() {
     return (
       <div className="nav-dropdown" onClick={this.handleBodyclick}>
-        <a className="creator"><span>Christine</span></a>
-        <a className="creator"><span>Greta</span></a>
-        <a className="creator"><span>Hank</span></a>
-        <a className="creator"><span>Kevin</span></a>
+      {/* <div onClick={this.handleBodyclick}> */}
+        <div className="creator-div">
+          <a className="creator" target="_blank" href="https://github.com/yangc95"><span>Christine - Front End Lead</span></a>
+          <a className="creator" target="_blank" href="https://github.com/gretahayes19"><span>Greta - Team Lead</span></a>
+          <a className="creator" target="_blank" href="https://github.com/hankc97"><span>Hank - Backend Lead</span></a>
+          <a className="creator" target="_blank" href="https://github.com/kevinxmao"><span>Kevin - Flex Lead</span></a>
+        </div>
+        <img className="ourstory_dropdown" src={ourstory} alt=""/>
 {/* 
         <h1>Front End Lead</h1>
         <h1>Team Lead</h1>
         <h1>Flex Lead</h1>
         <h1>Backend Lead</h1> */}
+
+        
       </div>
     )
   }
