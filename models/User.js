@@ -18,6 +18,10 @@ const UserSchema = new Schema({
         type: String,
         required: true
     },
+    // business: {
+    // type: Boolean,
+    // required: true     
+    // },
     date: {
         type: Date,
         default: Date.now
