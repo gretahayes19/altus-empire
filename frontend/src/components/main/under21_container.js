@@ -55,26 +55,3 @@ const mDTP = dispatch => ({
 })
 
 export default connect(mSTP, mDTP)(Under21);
-
-
-    // handleKey(e) {
-    //     e.stopPropagation();
-    //     console.log(e.target)
-    //     let policecar = e.target;
-    //     let move = 10; 
-
-    //     switch (e.key) {
-    //         case 'ArrowUp':
-    //             policecar.style.top = `${parseInt(policecar.style.top) - move}px`;
-    //             break;
-    //         case 'ArrowDown':
-    //             policecar.style.top = `${parseInt(policecar.style.top) + move}px`;
-    //             break;
-    //         case 'ArrowLeft':
-    //             policecar.style.left = `${parseInt(policecar.style.left) - move}px`;
-    //             break;
-    //         case 'ArrowRight':
-    //             policecar.style.left = `${parseInt(policecar.style.left) + move}px`;
-    //             break;
-    //     }
-    // };
