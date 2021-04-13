@@ -6,8 +6,10 @@ Welcome to the altus-empire wiki!
 Altus Empire is a web app that allows a user (21+) to search and locate cannabis dispensaries in NYC. In addition, users can leave reviews on the website for other users to see, or remove their reviews.
 
 ## Authors
-Greta Hayes (Team Lead)
+![ae1](https://user-images.githubusercontent.com/72277593/114606414-3a630880-9c69-11eb-86be-83f0d7788fac.jpg)
+Left to right:
 Christine Yang (Frontend Developer)
+Greta Hayes (Team Lead)
 Hank Chen (Backend Developer)
 Kevin Mao (Flex Developer)
 
