@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import Dispensary from './dispensary';
 import {fetchReviews, deleteReview} from '../../actions/rating_actions'
 import { fetchDispensaries } from '../../actions/dispensary_actions';
+import { openModal } from '../../actions/modal_actions';
 
 const formatArrToObj = arr => {
     let obj = {};
@@ -22,7 +23,8 @@ const mSTP = (state, ownProps) => {
 const mDTP = dispatch => ({
     fetchReviews: dispendaryId => dispatch(fetchReviews(dispendaryId)),
     fetchDispensaries: () => dispatch(fetchDispensaries()),
-    deleteReview: reviewId => dispatch(deleteReview(reviewId))
+    deleteReview: reviewId => dispatch(deleteReview(reviewId)),
+    openModal: modal => dispatch(openModal(modal))
 })
 
 export default connect(mSTP, mDTP)(Dispensary);

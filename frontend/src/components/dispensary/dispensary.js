@@ -2,7 +2,6 @@ import React from 'react';
 import ReviewIndex from './review_index'
 import ReviewFormContainer from './review_form_container'
 
-
 import '../../styles/dispensary.css';
 
 class Dispensary extends React.Component {
@@ -20,7 +19,6 @@ class Dispensary extends React.Component {
         () => this.setState({reviews: this.props.reviews, dispensary: this.props.dispensary})
       )
     );
-    
   }
 
   componentDidUpdate(prevProps) {
@@ -29,38 +27,35 @@ class Dispensary extends React.Component {
         () => this.setState({ reviews: this.props.reviews})
       )
     }
-
   }
 
+
   render() {
-    // if (!this.state.reviews.length) return null;
     if (!this.state.dispensary) return null;
     const {reviews, dispensary } = this.state 
     const sortedReviews = reviews.slice().reverse()
 
-      return (
-        <div className="dispensary-page-div">
-              <div className="dispensary-left">
-                  <h1 className="dispensary-title">{dispensary.dispensaryName}</h1>
-                 <p className="disp-address">{dispensary.address}</p>
+    return (
+      <div className="dispensary-page-div">
+            <div className="dispensary-left">
+                <h1 className="dispensary-title">{dispensary.dispensaryName}</h1>
+                <p className="disp-address">{dispensary.address}</p>
 
-                  <img
-                    className="dispensary-pagepic"
-                    src={`https://altus-empire-seeds.s3.amazonaws.com/${dispensary.postphoto}`}
-                    alt=""
-                  />
-                  
-                      <p className="disp-desciption">{dispensary.description}</p>
-         
+                <img
+                  className="dispensary-pagepic"
+                  src={`https://altus-empire-seeds.s3.amazonaws.com/${dispensary.postphoto}`}
+                  alt=""
+                />
+                
+                <p className="disp-desciption">{dispensary.description}</p>
+            </div>
+            <div className="dispensary-right">
+                <ReviewFormContainer dispensary={dispensary} />
+                <ReviewIndex key={reviews.indexOf()} reviews={sortedReviews} userId={this.props.user} deleteReview={this.props.deleteReview}/>
+            </div>
 
-              </div>
-              <div className="dispensary-right">
-                  <ReviewFormContainer dispensary={dispensary} />
-                  <ReviewIndex reviews={sortedReviews} userId={this.props.user} deleteReview={this.props.deleteReview}/>
-              </div>
-
-          </div>
-      )
+        </div>
+    )
   }
 
 }

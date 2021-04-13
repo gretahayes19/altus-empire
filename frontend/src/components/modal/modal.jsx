@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import LoginFormContainer from '../session/login_form_container';
 import SignupFormContainer from '../session/signup_form_container';
 import Under21Container from '../main/under21_container';
+// import DeleteReviewContainer from '../dispensary/delete_review_container';
 
 import '../../styles/modal.css'
 import '../../styles/under21_main.css'
@@ -21,6 +22,9 @@ function Modal({modal, closeModal}) {
         case "under21":
             component = <Under21Container />;
             break;
+        // case "delete":
+        //     component = <DeleteReviewContainer />;
+        //     break;
         default:
             return null;
     }

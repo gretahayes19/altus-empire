@@ -1,7 +1,7 @@
-import React from "react";
 import { connect } from "react-redux";
 import ReviewForm from './review_form';
-import { createReview } from '../../actions/rating_actions'
+import { createReview } from '../../actions/rating_actions';
+import { openModal } from '../../actions/modal_actions';
 
 const mSTP = (state, ownProps) => {
     return {
@@ -16,6 +16,7 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = (dispatch) => ({
     createReview: review => dispatch(createReview(review)),
+    openModal: modal => dispatch(openModal(modal))
 })
 
 export default connect(mSTP, mDTP)(ReviewForm)
