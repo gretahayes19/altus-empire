@@ -40,10 +40,6 @@ class SignupForm extends React.Component {
       });
   }
 
-  componentDidMount() {
-    console.log(this.state);
-  }
-
   handleSubmit(e) {
     e.preventDefault();
     let user = {
