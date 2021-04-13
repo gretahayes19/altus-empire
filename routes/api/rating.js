@@ -57,4 +57,11 @@ router.get('/dispensary/:dispensaryId', async function (req, res) {
     res.json(data);
 })
 
+router.delete('/:ratingId', async function (req, res) {
+    // res.send("got delete")
+    const deleteRating = await Rating.deleteOne({_id: req.params.ratingId}).catch(err => res.status(400).json(err))
+    
+    res.send(deleteRating)
+})
+
 module.exports = router

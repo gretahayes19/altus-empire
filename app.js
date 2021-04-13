@@ -13,7 +13,6 @@ const app = express();
 const port = process.env.PORT || 5000;
 const path = require("path");
 
-
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("frontend/build"));
     app.get("/", (req, res) => {
@@ -38,3 +37,4 @@ app.use(passport.initialize());
 require('./config/passport')(passport);
 
 app.listen(port, () => console.log(`Server is running on port ${port}`));
+
