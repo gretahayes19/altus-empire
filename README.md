@@ -26,6 +26,13 @@ In addition, this project will include:
   * text search for dispensaries near them
   * text search for specific products
 
+## Wireframe
+
+<img width="500" alt="Screen Shot 2021-04-13 at 10 49 23 AM" src="https://user-images.githubusercontent.com/72277593/114572962-f1e62380-9c45-11eb-8edb-b3d30d818d8a.png">
+<img width="500" alt="Screen Shot 2021-04-13 at 10 47 17 AM" src="https://user-images.githubusercontent.com/72277593/114572812-d3802800-9c45-11eb-907b-e244b56a37ea.png">
+<img width="500" alt="Screen Shot 2021-04-13 at 10 47 43 AM" src="https://user-images.githubusercontent.com/72277593/114572822-d549eb80-9c45-11eb-86d6-c7ca21abfb52.png">
+
+
 ## Architecture and Technology
 
   * MongoDB
