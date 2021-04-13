@@ -5,13 +5,13 @@ Welcome to the altus-empire wiki!
 
 Altus Empire is a web app that allows a user (21+) to search and locate cannabis dispensaries in NYC. In addition, users can leave reviews on the website for other users to see, or remove their reviews.
 
-### Authors
+## Authors
 Greta Hayes (Team Lead)
 Christine Yang (Frontend Developer)
 Hank Chen (Backend Developer)
 Kevin Mao (Flex Developer)
 
-### Functionality and MVP
+## Functionality and MVP
 In `Altus Empire`, users will be able to:
   * sign up, sign in, log out
   * use a demo login to try the site
@@ -26,7 +26,7 @@ In addition, this project will include:
   * text search for dispensaries near them
   * text search for specific products
 
-### Architecture and Technology
+## Architecture and Technology
 
   * MongoDB
   * Express
@@ -35,7 +35,7 @@ In addition, this project will include:
   * Google Maps API
   * AWS
 
-### Implementation Timeline
+## Implementation Timeline
 
   * Day 0 - Database Schema → Hank, Frontend Routes → Christine, Backend Routes → Greta, State → Kevin
   * Day 1 - Generate db/models → Hank, User auth → Greta/Kevin, Splash/Login → Christine
