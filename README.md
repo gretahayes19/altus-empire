@@ -6,7 +6,7 @@
 ![GitHub Forks](https://img.shields.io/github/forks/gretahayes19/altus-empire)
 ![GitHub Stars](https://img.shields.io/github/stars/gretahayes19/altus-empire)
 
-### Installing `Altus Empire`
+### Installing `altus-empire`
 
 To install `altus-empire`, follow these steps for Linux and macOS:
 ```
@@ -20,7 +20,7 @@ Altus Empire's live link https://altusempire.herokuapp.com/#/
 
 Add run commands and examples you think users will find useful. Provide an options reference for bonus points!
 
-### Contributing to <project_name>
+### Contributing to `altus-empire`
 <!--- If your README is long or you have some specific process or steps you want contributors to follow, consider creating a separate CONTRIBUTING.md file--->
 To contribute to `altus-empire`, follow these steps:
 
