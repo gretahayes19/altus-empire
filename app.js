@@ -22,8 +22,8 @@ if (process.env.NODE_ENV === "production") {
 
 mongoose
     .connect(db, { userNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log("Connected to MongoDB successfully"))
-    .catch((err) => console.log(err));
+    // .then(() => console.log("Connected to MongoDB successfully"))
+    // .catch((err) => console.log(err));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());

@@ -33,7 +33,6 @@ const receiveReview = (review) => {
 }
 
 const removeReview = (reviewId) => {
-    console.log("hi2")
     return ({
         type: REMOVE_REVIEW,
         reviewId
@@ -66,7 +65,6 @@ export const deleteReview = reviewId => dispatch => {
     // debugger;
     return RatingAPIUtil.deleteReview(reviewId).then(
         (res) => {
-            console.log(res)
             return dispatch(removeReview(reviewId)
         )}
         ).catch(
