@@ -11,6 +11,8 @@
 To install `altus-empire`, follow these steps for Linux and macOS:
 ```
 # Run commands in the terminal
+git clone https://github.com/gretahayes19/altus-empire.git
+# Run following command in both the root directory and frontend directory
 npm install 
 ```
 
