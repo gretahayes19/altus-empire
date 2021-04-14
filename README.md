@@ -1,17 +1,52 @@
-# Altus Empire
+<img src="https://user-images.githubusercontent.com/72277593/114740576-faa72a00-9d17-11eb-9cc6-b6548c550c6f.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="220" height="100" />
 
-## Background and Overview
-Welcome to the altus-empire wiki!
+![GitHub repo size](https://img.shields.io/github/repo-size/gretahayes19/altus-empire)
+![GitHub Contributors](https://img.shields.io/github/contributors/gretahayes19/altus-empire)
+![GitHub Issues](https://img.shields.io/github/issues/gretahayes19/altus-empire)
+![GitHub Forks](https://img.shields.io/github/forks/gretahayes19/altus-empire)
+![GitHub Stars](https://img.shields.io/github/stars/gretahayes19/altus-empire)
 
-Altus Empire is a web app that allows a user (21+) to search and locate cannabis dispensaries in NYC. In addition, users can leave reviews on the website for other users to see, or remove their reviews.
+## Installing `Altus Empire`
 
-## Authors
-![ae1](https://user-images.githubusercontent.com/72277593/114606414-3a630880-9c69-11eb-86be-83f0d7788fac.jpg)
-Left to right:
-Christine Yang (Frontend Developer)
-Greta Hayes (Team Lead)
-Hank Chen (Backend Developer)
-Kevin Mao (Flex Developer)
+To install `Altus Empire`, follow these steps:
+
+Linux and macOS:
+run this command in the root and frontend directories
+```
+npm install 
+```
+
+## Using `Altus Empire`
+
+Altus Empire's live link https://altusempire.herokuapp.com/#/
+
+Add run commands and examples you think users will find useful. Provide an options reference for bonus points!
+
+## Contributing to <project_name>
+<!--- If your README is long or you have some specific process or steps you want contributors to follow, consider creating a separate CONTRIBUTING.md file--->
+To contribute to <project_name>, follow these steps:
+
+1. Fork this repository.
+2. Create a branch: `git checkout -b <branch_name>`.
+3. Make your changes and commit them: `git commit -m '<commit_message>'`
+4. Push to the original branch: `git push origin <project_name>/<location>`
+5. Create the pull request.
+
+Alternatively see the GitHub documentation on [creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+
+## Contributors
+
+Thanks to the following people who have contributed to this project:
+
+* [@yangc95](https://github.com/yangc95) 📖
+* [@hankc97](https://github.com/hankc97) 🐛
+* [@kevinxmao](https://github.com/kevinxmao) 🐛
+
+You might want to consider using something like the [All Contributors](https://github.com/all-contributors/all-contributors) specification and its [emoji key](https://allcontributors.org/docs/en/emoji-key).
+
+## Contact
+
+If you want to contact me you can reach me at <your_email@address.com>.
 
 ## Functionality and MVP
 In `Altus Empire`, users will be able to:
@@ -28,13 +63,6 @@ In addition, this project will include:
   * text search for dispensaries near them
   * text search for specific products
 
-## Wireframe
-
-<img width="500" alt="Screen Shot 2021-04-13 at 10 49 23 AM" src="https://user-images.githubusercontent.com/72277593/114572962-f1e62380-9c45-11eb-8edb-b3d30d818d8a.png">
-<img width="500" alt="Screen Shot 2021-04-13 at 10 47 17 AM" src="https://user-images.githubusercontent.com/72277593/114572812-d3802800-9c45-11eb-907b-e244b56a37ea.png">
-<img width="500" alt="Screen Shot 2021-04-13 at 10 47 43 AM" src="https://user-images.githubusercontent.com/72277593/114572822-d549eb80-9c45-11eb-86d6-c7ca21abfb52.png">
-
-
 ## Architecture and Technology
 
   * MongoDB
@@ -43,12 +71,3 @@ In addition, this project will include:
   * Node.js
   * Google Maps API
   * AWS
-
-## Implementation Timeline
-
-  * Day 0 - Database Schema → Hank, Frontend Routes → Christine, Backend Routes → Greta, State → Kevin
-  * Day 1 - Generate db/models → Hank, User auth → Greta/Kevin, Splash/Login → Christine
-  * Day 2 - Connect map API → Greta/Kevin, Build map layout → Kevin/Christine, Business list index from database(images/business names and info) → Hank
-  * Day 3 - Render search results on map and list → Greta/Kevin, Frontend rendering/styling of search bar → Christine, Fetch info from database(items index) → Hank
-  * Day 4 - Review Form → Greta, Business Info Page → Christine, Store Reviews inside database (reviews index) → Hank/Kevin
-  * Day 5 - Bug/fix/styling → everyone
