@@ -149,3 +149,7 @@ Thanks to the following people who have contributed to this project:
 * [@yangc95](https://github.com/yangc95) 📖🐛
 * [@hankc97](https://github.com/hankc97) 📖🐛
 * [@kevinxmao](https://github.com/kevinxmao) 📖🐛
+
+![ae](https://user-images.githubusercontent.com/72277593/114893587-d7de4980-9ddb-11eb-95da-425e6bbf7243.jpg)
+(Left to right) Christine Yang -> Frontend Lead, Greta Hayes -> Team Lead, Hank Chen -> Backend Lead, Kevin Mao -> Flex Lead
+
