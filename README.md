@@ -18,7 +18,7 @@ The MERN stack was utilized to create `altus-empire`. These include MongoDB Atla
 ## Main features
 
 Altus Empire includes an interactive search bar for users to query the dispensary database. This is done by setting a local state within a `SearchBar` class and setting functions to update this state accordingly.
-When you set the state with `this.setState()` it creates another render of the component. This caused the dispensaries to be fetched repeatedly. This issue then caused an extra re-render on the map. To solve this issue, debounce is utilized to solve the issue of repeated re-rendering and prevent instant state change.
+When you set the state with `this.setState()` it creates another render of the component. This caused the dispensaries to be fetched repeatedly causing an extra re-render on the map. Debounce is utilized to solve the issue of repeated re-rendering and prevent instant state change.
 
 ```
 class SearchBar extends React.Component {
