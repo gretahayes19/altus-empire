@@ -71,7 +71,7 @@ class SearchBar extends React.Component {
 }
 ```
 
-On line 85, we ensured that users would not be able to register with the same e-mail. This would ensure users to not be able to create more than one account per e-mail. A status 400 on line 88 would be returned, otherwise, the user would be created if all the credentials were entered correctly. ![Bcrypt](https://www.npmjs.com/package/bcrypt) is used for the authentication process.
+On line 85, we ensured that users would not be able to register with the same e-mail. This would ensure users to not be able to create more than one account per e-mail. A status 400 on line 88 would be returned, otherwise, the user would be created if all the credentials were entered correctly. [Bcrypt](https://www.npmjs.com/package/bcrypt) is used for the authentication process.
 ```
 router.post('/register', (req, res) => {
     const { errors, isValid } = validateRegisterInput(req.body);
