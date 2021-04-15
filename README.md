@@ -115,7 +115,7 @@ router.post('/register', (req, res) => {
 })
 ```
 
-### Installing `altus-empire`
+## Installing `altus-empire`
 
 To install `altus-empire`, follow these steps for Linux and macOS:
 ```
@@ -129,7 +129,7 @@ npm install
 ```
 
 
-### Contributing to `altus-empire`
+## Contributing to `altus-empire`
 <!--- If your README is long or you have some specific process or steps you want contributors to follow, consider creating a separate CONTRIBUTING.md file--->
 To contribute to `altus-empire`, follow these steps:
 
@@ -142,7 +142,7 @@ To contribute to `altus-empire`, follow these steps:
 Alternatively, see the GitHub documentation on [creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
 
-### Contributors
+## Contributors
 
 Thanks to the following people who have contributed to this project:
 
