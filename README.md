@@ -82,10 +82,10 @@ router.post('/register', (req, res) => {
     
     User.findOne({ email: req.body.email })
         .then(user => {
-            if (user) {
+85          if (user) {
                 return res.status(400).json({ email: "A user has already registered with this address" })
             } else {
-                const newUser = new User({
+88              const newUser = new User({
                     username: req.body.username,
                     email: req.body.email,
                     password: req.body.password,
