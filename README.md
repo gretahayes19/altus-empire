@@ -146,11 +146,11 @@ Alternatively, see the GitHub documentation on [creating a pull request](https:/
 
 Thanks to the following people who have contributed to this project:
 
-* [@gretahayes19](https://github.com/gretahayes19) 📖🐛
-* [@kevinxmao](https://github.com/kevinxmao) 📖🐛
-* [@yangc95](https://github.com/yangc95) 📖🐛
-* [@hankc97](https://github.com/hankc97) 📖🐛
+* [@gretahayes19](https://github.com/gretahayes19) 📖🐛 Team Lead
+* [@kevinxmao](https://github.com/kevinxmao) 📖🐛 Flex Lead
+* [@yangc95](https://github.com/yangc95) 📖🐛 Frontend Lead
+* [@hankc97](https://github.com/hankc97) 📖🐛 Backend Lead
 
 ![ae](https://user-images.githubusercontent.com/72277593/114893587-d7de4980-9ddb-11eb-95da-425e6bbf7243.jpg)
-(Left to right) Christine Yang -> Frontend Lead, Greta Hayes -> Team Lead, Hank Chen -> Backend Lead, Kevin Mao -> Flex Lead
+(Left to right) Christine Yang, Greta Hayes, Hank Chen, Kevin Mao
 
