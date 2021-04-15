@@ -7,20 +7,18 @@
 ![GitHub Stars](https://img.shields.io/github/stars/gretahayes19/altus-empire?style=social)
 
 
-## Using `Altus Empire`
-
 Altus Empire's live link https://altusempire.herokuapp.com/#/
 
 
 ## Architecture and Technology
 
-The MERN stack was utilized to create `altus-empire`. These include MongoDB Atlas as NoSQL database, Express.js as a framework for Node.js, and React/Redux for state management. In addition, Google Maps API allows an embedded interactive map and Amazon Web Services S3 allows for dispensary image storage and display.
+The MERN stack was utilized to create `altus-empire`. These include MongoDB Atlas as NoSQL database, Express.js as a framework for Node.js, and React/Redux for state management. Also, Google Maps API allows an embedded interactive map, and Amazon Web Services S3 allows for dispensary image storage and display.
 
 
 ## Main features
 
-Altus Empire includes an interactive search bar for users to query the dispensary database. This is done through setting a local state within a `SearchBar` class and setting functions to update this state accordingly.
-When you set the state with `this.setState()` it creates another render of the component. This caused the dispensaries to be fetched repeatedly. This issue then caused an extra re-render on the map. To solve this issue, debounce is utilized to stop calling `this.props.storeKeyWord` for `200 milliseconds`, allowing for improved performance of the `SearchBar` component.
+Altus Empire includes an interactive search bar for users to query the dispensary database. This is done by setting a local state within a `SearchBar` class and setting functions to update this state accordingly.
+When you set the state with `this.setState()` it creates another render of the component. This caused the dispensaries to be fetched repeatedly. This issue then caused an extra re-render on the map. To solve this issue, debounce is utilized to solve the issue of repeated re-rendering and prevent instant state change.
 
 ```
 class SearchBar extends React.Component {
@@ -73,7 +71,7 @@ class SearchBar extends React.Component {
 }
 ```
 
-In addition, on line 85, we ensured that users would not be able to register with the same e-mail. This would ensure users to not be able to create more than one account per e-mail. A status 400 on line 88 would be returned, otherwise the user would be created if all the credentials were entered correctly. You can read more on the password salting and hashing here: https://www.npmjs.com/package/bcrypt
+On line 85, we ensured that users would not be able to register with the same e-mail. This would ensure users to not be able to create more than one account per e-mail. A status 400 on line 88 would be returned, otherwise, the user would be created if all the credentials were entered correctly. ![Bcrypt](https://www.npmjs.com/package/bcrypt) is used for the authentication process.
 ```
 router.post('/register', (req, res) => {
     const { errors, isValid } = validateRegisterInput(req.body);
@@ -125,7 +123,7 @@ To install `altus-empire`, follow these steps for Linux and macOS:
 
 git clone https://github.com/gretahayes19/altus-empire.git
 
-# Run following command in both the root directory and frontend directory:
+# Run the following command in both the root directory and frontend directory:
 
 npm install 
 ```
@@ -141,7 +139,7 @@ To contribute to `altus-empire`, follow these steps:
 4. Push to the original branch: `git push origin altus-empire/<location>`
 5. Create the pull request.
 
-Alternatively see the GitHub documentation on [creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+Alternatively, see the GitHub documentation on [creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
 
 ### Contributors
